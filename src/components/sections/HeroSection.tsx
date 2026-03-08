@@ -1,3 +1,4 @@
+import google_logo from '../../assets/google.svg';
 
 export default function HeroSection() {
     return (
@@ -21,7 +22,7 @@ export default function HeroSection() {
                     {/* Google Rating */}
                     <div className="flex flex-col items-center border-b sm:border-b-0 sm:border-r border-gray-500/50 pb-4 sm:pb-0 sm:pr-12">
                         <div className="flex items-center gap-2 mb-1">
-                            <img src={"../assets/google.svg"} alt="Google" className={`h-8 md:h-10 object-contain -mt-1 transition-all duration-300`} />
+                            <img src={google_logo} alt="Google" className={`h-8 md:h-10 object-contain -mt-1 transition-all duration-300`} />
                             <span className="font-bold text-xl whitespace-nowrap">4.6 out of 5</span>
                         </div>
                         <div className="flex items-center gap-2">
