@@ -15,7 +15,7 @@ export default function FAQSection() {
     const [openIdx, setOpenIdx] = useState(0);
 
     return (
-        <section className="py-20 bg-gray-50/30">
+        <section className="py-12 bg-gray-50/30">
             <div className="container mx-auto px-4 md:px-8 max-w-4xl">
                 <h2 className="text-3xl text-center font-bold text-gray-800 mb-12">
                     Frequently Asked <span className="text-[var(--color-brand-secondary)]">Questions</span>

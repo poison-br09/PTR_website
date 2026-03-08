@@ -27,12 +27,12 @@ export default function WhyChooseUs() {
     ];
 
     return (
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 bg-gray-50">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="text-center md:text-left mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
                     <div className="max-w-xl">
                         <h4 className="text-[var(--color-brand-secondary)] font-bold tracking-widest text-sm uppercase mb-2">
-                            WHY REGISTERKARO
+                            WHY Your Professional
                         </h4>
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-brand-primary)]">
                             Some Numbers are important

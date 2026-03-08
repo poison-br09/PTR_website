@@ -1,45 +1,45 @@
 export default function Testimonials() {
     const testimonials = [
         {
-            name: "Sawai Singh",
+            name: "Random User 1",
             rating: 5,
-            text: "The experience is very good and loved the team how they work smoothly that's is commendable.",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
             avatar: "https://randomuser.me/api/portraits/men/32.jpg"
         },
         {
-            name: "Dr. Luqman Khan",
+            name: "Random User 2",
             rating: 4,
-            text: "I am the partner of the Medrix Records Management Services LLP and working with Ujjwal and timely information provided by him and resolve and issue/queries. Our experience is very good and would like to work continue in future.",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
             avatar: "https://randomuser.me/api/portraits/men/44.jpg"
         },
         {
-            name: "Ajayraj Infratech Pvt. Ltd.",
+            name: "Random User 3",
             rating: 4,
-            text: "All team members in registerkaro.in are very helpful and well experienced in their field/department. Ms/Mrs. Mamata Rathore Coordinator with us is very helpful, responsible and punctual in filing GST & other government documents/compliances.",
+            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
             avatar: "https://randomuser.me/api/portraits/men/85.jpg"
         }
     ];
 
     return (
-        <section className="py-24 bg-[var(--color-brand-primary)]">
+        <section className="py-12 bg-white">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="flex justify-between items-end mb-12 text-white">
-                    <h2 className="text-3xl md:text-4xl font-bold max-w-lg leading-tight">
+                <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 text-[#090a3d] gap-4">
+                    <h2 className="text-3xl md:text-4xl font-bold leading-tight text-center md:text-left">
                         Testimonials That Speak for Us
                     </h2>
                     <div className="hidden md:flex gap-4">
-                        <button className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:bg-gray-800 transition-colors">
-                            <span className="text-xl">❮</span>
+                        <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <span className="text-xl text-gray-500">❮</span>
                         </button>
-                        <button className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center hover:bg-gray-800 transition-colors">
-                            <span className="text-xl">❯</span>
+                        <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors">
+                            <span className="text-xl text-gray-500">❯</span>
                         </button>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {testimonials.map((testimonial, idx) => (
-                        <div key={idx} className="bg-[#10134f] p-8 rounded-2xl shadow-lg border border-blue-900/50 flex flex-col">
+                        <div key={idx} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col hover:shadow-xl transition-shadow">
                             <div className="flex items-center gap-4 mb-6">
                                 <img
                                     src={testimonial.avatar}
@@ -47,14 +47,14 @@ export default function Testimonials() {
                                     className="w-14 h-14 rounded-full border-2 border-[var(--color-brand-secondary)] object-cover"
                                 />
                                 <div>
-                                    <h4 className="text-white font-bold">{testimonial.name}</h4>
+                                    <h4 className="text-[#090a3d] font-bold">{testimonial.name}</h4>
                                     <div className="flex items-center gap-1 text-yellow-500 text-sm mt-1">
                                         {'★'.repeat(testimonial.rating)}{'☆'.repeat(5 - testimonial.rating)}
-                                        <span className="text-gray-400 text-xs ml-2 select-none border-l pl-2 border-gray-600">{testimonial.rating}/5</span>
+                                        <span className="text-gray-500 text-xs ml-2 select-none border-l pl-2 border-gray-300">{testimonial.rating}/5</span>
                                     </div>
                                 </div>
                             </div>
-                            <p className="text-gray-300 text-sm leading-relaxed flex-grow">
+                            <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                                 "{testimonial.text}"
                             </p>
                         </div>

@@ -2,7 +2,7 @@ export default function FeaturedIn() {
     const brandNames = ["India.com", "mid-day", "mint", "Forbes", "The Hindu"];
 
     return (
-        <section className="py-16 bg-white overflow-hidden">
+        <section className="py-10 bg-white overflow-hidden">
             <div className="container mx-auto px-4 md:px-8">
                 <h2 className="text-3xl font-bold text-[#090a3d] text-center mb-10">
                     Featured In

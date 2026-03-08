@@ -1,7 +1,7 @@
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/sections/HeroSection';
-import TrustedPartners from './components/sections/TrustedPartners';
+// import TrustedPartners from './components/sections/TrustedPartners';
 import Services from './components/sections/Services';
 import WhyChooseUs from './components/sections/WhyChooseUs';
 import FeaturedIn from './components/sections/FeaturedIn';
@@ -16,7 +16,7 @@ function App() {
 
       <main className="flex-grow">
         <HeroSection />
-        <TrustedPartners />
+        {/* <TrustedPartners /> */}
         <Services />
         <WhyChooseUs />
         <FeaturedIn />
