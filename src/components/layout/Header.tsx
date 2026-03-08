@@ -4,6 +4,16 @@ import logo from '../../assets/logo.svg';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearch = (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        if (searchQuery.trim()) {
+            alert(`Searching for: ${searchQuery}`);
+            setSearchQuery('');
+            setIsSearchOpen(false);
+        }
+    };
 
     return (
         <header className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-7xl z-50 rounded-full transition-all duration-300 bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
@@ -30,17 +40,20 @@ export default function Header() {
 
                     {/* Search Bar (Replaces Nav Links) */}
                     <div className={`w-full max-w-2xl flex items-center transition-all duration-300 absolute ${isSearchOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none'}`}>
-                        <div className="relative w-full flex items-center">
+                        <form onSubmit={handleSearch} className="relative w-full flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 absolute left-4 text-gray-400">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                             </svg>
                             <input
                                 type="text"
                                 placeholder="Search for services, blogs, etc..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                                 className="w-full bg-gray-50 border border-gray-200 rounded-full pl-12 pr-10 py-2.5 text-sm focus:outline-none focus:border-[var(--color-brand-secondary)] focus:ring-2 focus:ring-[var(--color-brand-secondary)]/20 transition-all text-gray-800 shadow-sm"
                                 autoFocus={isSearchOpen}
                             />
                             <button
+                                type="button"
                                 onClick={() => setIsSearchOpen(false)}
                                 className="absolute right-3 p-1.5 text-gray-400 hover:text-gray-700 hover:bg-gray-200 rounded-full transition-colors"
                             >
@@ -48,7 +61,7 @@ export default function Header() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                 </svg>
                             </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
@@ -65,12 +78,13 @@ export default function Header() {
                         </button>
                     </div>
 
-                    <button className="border px-4 py-1.5 rounded-full transition-colors font-semibold text-sm text-[#090a3d] border-gray-200 hover:bg-gray-50">
+                    <button className="hidden border px-4 py-1.5 rounded-full transition-colors font-semibold text-sm text-[#090a3d] border-gray-200 hover:bg-gray-50">
                         Login
                     </button>
 
-                    <button className="hidden lg:block bg-[var(--color-brand-secondary)] text-white px-5 py-2 rounded-full hover:bg-[#a17500] transition-all font-semibold shadow-sm hover:shadow-md text-sm">
-                        Talk to Experts
+                    <button className="hidden lg:flex justify-center items-center bg-[var(--color-brand-secondary)] text-white py-2 rounded-full hover:bg-[#a17500] transition-all font-semibold shadow-sm hover:shadow-md text-sm w-[150px] group">
+                        <span className="group-hover:hidden">Talk to Experts</span>
+                        <span className="hidden group-hover:inline">+91-8271909697</span>
                     </button>
 
                     {/* Mobile toggle button */}
