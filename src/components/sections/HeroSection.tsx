@@ -1,88 +1,131 @@
-import googleLogo from '../../assets/google.svg';
 
 export default function HeroSection() {
     return (
-        <section className="bg-gradient-to-br from-blue-50 to-white pt-32 pb-24 px-4 md:px-8 relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-100 opacity-20 -skew-x-12 transform origin-top translate-x-1/4"></div>
+        <section className="bg-[#090a3d] pt-36 pb-24 px-4 md:px-8 relative overflow-hidden text-white min-h-screen flex flex-col items-center justify-center">
+            {/* Decorative Glowing Elements */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-[var(--color-brand-secondary)] opacity-10 blur-[120px] rounded-full z-0"></div>
 
-            <div className="container mx-auto flex flex-col lg:flex-row items-center relative z-10">
-                {/* Left Content */}
-                <div className="w-full lg:w-1/2 flex flex-col items-start gap-6 relative">
-                    <div className="flex items-center gap-2 mb-2 font-medium">
-                        <span className="flex items-center gap-1 text-gray-800">
-                            <span className="text-yellow-500 font-bold">★</span>
-                            <img src={googleLogo} alt="Google" className="h-5 object-contain ml-1" />
-                            Rating
-                        </span>
-                        <span className="flex text-yellow-500 text-sm ml-1 tracking-widest">★★★★★</span>
-                    </div>
+            <div className="container mx-auto flex flex-col items-center relative z-10 text-center max-w-6xl">
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#090a3d] leading-tight">
-                        Your trusted partner<br />for compliance needs
-                    </h1>
+                {/* Headlines */}
+                <h1 className="text-4xl md:text-5xl lg:text-[64px] font-extrabold text-white leading-tight mb-6">
+                    Register Your Business in Just 7 Days
+                </h1>
 
-                    <p className="text-xl text-gray-600 max-w-xl">
-                        An online business compliance platform that helps entrepreneurs and other individuals with various, registrations, tax filings, and other legal matters.
-                    </p>
+                <p className="text-lg md:text-xl text-gray-300 max-w-3xl mb-8">
+                    Get fast, reliable, and customizable online business solutions & legal services with free expert consultation.
+                </p>
 
-                    <div className="flex flex-wrap items-center gap-6 my-4">
-                        <div className="flex items-center gap-3">
-                            <div className="text-3xl">📊</div>
-                            <div className="flex flex-col">
-                                <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-500">4.5+</span>
-                                <span className="text-sm text-gray-500">Customer Rating</span>
-                            </div>
+                {/* Ratings Row */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mb-12">
+                    {/* Google Rating */}
+                    <div className="flex flex-col items-center border-b sm:border-b-0 sm:border-r border-gray-500/50 pb-4 sm:pb-0 sm:pr-12">
+                        <div className="flex items-center gap-2 mb-1">
+                            <img src={"../assets/google.jpg"} alt="Google" className={`h-8 md:h-10 object-contain -mt-1 transition-all duration-300`} />
+                            <span className="font-bold text-xl whitespace-nowrap">4.6 out of 5</span>
                         </div>
-
-                        <div className="flex items-center gap-3">
-                            <div className="text-3xl">👥</div>
-                            <div className="flex flex-col">
-                                <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-500">20,000+</span>
-                                <span className="text-sm text-gray-500">Clients</span>
-                            </div>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                            <div className="text-3xl">🤝</div>
-                            <div className="flex flex-col">
-                                <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-500">99.8%</span>
-                                <span className="text-sm text-gray-500">Financial Stability</span>
-                            </div>
+                        <div className="flex items-center gap-2">
+                            <span className="flex text-yellow-500 text-lg tracking-widest">★★★★★</span>
+                            <span className="text-gray-400 text-sm">(7142)</span>
                         </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto">
-                        <button className="bg-[#090a3d] text-white px-8 py-3 rounded hover:bg-blue-900 transition-all font-semibold shadow-lg text-lg">
-                            Talk An Expert
-                        </button>
-                        <button className="flex items-center justify-center gap-2 px-8 py-3 rounded font-semibold text-gray-700 hover:text-red-500 transition-colors">
-                            <span className="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center p-1">
-                                ▶
-                            </span>
-                            See how it works
-                        </button>
+                    {/* Trustpilot / Excellence Rating */}
+                    <div className="flex flex-col items-center">
+                        <div className="flex items-center gap-2 mb-1">
+                            <div className="bg-[var(--color-brand-secondary)] text-white rounded px-1 font-bold text-sm tracking-tighter">★E</div>
+                            <span className="font-bold text-xl whitespace-nowrap">4.7 out of 5</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="flex text-[var(--color-brand-secondary)] text-lg tracking-widest">★★★★★</span>
+                            <span className="text-gray-400 text-sm">(3784)</span>
+                        </div>
                     </div>
                 </div>
 
-                {/* Right Content / Image Area */}
-                <div className="w-full lg:w-1/2 mt-12 lg:mt-0 flex justify-end relative">
-                    <div className="relative w-full max-w-lg aspect-square">
-                        {/* Target icon placeholder */}
-                        <div className="absolute top-0 right-0 z-20 bg-white p-3 rounded-xl shadow-lg animate-bounce">
-                            🎯 Annual Compliance
+                {/* The Glowing Consultation Form */}
+                <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 md:p-8 w-full max-w-4xl shadow-[0_0_60px_rgba(199,145,0,0.2)] md:shadow-[0_0_100px_rgba(199,145,0,0.3)] border border-white/20 relative z-20 mb-16">
+                    <form className="flex flex-col gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {/* Name Input */}
+                            <input
+                                type="text"
+                                placeholder="Enter Your Name"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:border-[var(--color-brand-secondary)] focus:ring-1 focus:ring-[var(--color-brand-secondary)]"
+                            />
+
+                            {/* Phone Input with Country Code */}
+                            <div className="flex rounded-lg border border-gray-200 bg-gray-50 overflow-hidden focus-within:border-[var(--color-brand-secondary)] focus-within:ring-1 focus-within:ring-[var(--color-brand-secondary)]">
+                                <select className="bg-gray-100 border-r border-gray-200 px-3 py-3 text-gray-600 focus:outline-none cursor-pointer">
+                                    <option>+91</option>
+                                    <option>+1</option>
+                                    <option>+44</option>
+                                </select>
+                                <input
+                                    type="tel"
+                                    placeholder="Enter your PhoneNo."
+                                    className="w-full bg-transparent px-4 py-3 text-gray-800 focus:outline-none"
+                                />
+                            </div>
+
+                            {/* Email Input */}
+                            <input
+                                type="email"
+                                placeholder="Enter your Email"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-800 focus:outline-none focus:border-[var(--color-brand-secondary)] focus:ring-1 focus:ring-[var(--color-brand-secondary)]"
+                            />
                         </div>
-                        {/* Chart icon placeholder */}
-                        <div className="absolute bottom-1/4 -left-4 z-20 bg-white p-3 rounded-xl shadow-lg animate-bounce" style={{ animationDelay: "1s" }}>
-                            📈 Payroll Services
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {/* Service Selection */}
+                            <div className="relative">
+                                <select className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-800 appearance-none focus:outline-none focus:border-[var(--color-brand-secondary)] focus:ring-1 focus:ring-[var(--color-brand-secondary)] cursor-pointer">
+                                    <option value="">Select your service</option>
+                                    <option value="registration">Company Registration</option>
+                                    <option value="trademark">Trademark Registration</option>
+                                    <option value="compliance">Annual Compliance</option>
+                                </select>
+                                <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+
+                            {/* Submit Button */}
+                            <button
+                                type="button"
+                                className="w-full bg-[var(--color-brand-secondary)] hover:bg-[#a17500] text-white font-bold rounded-lg px-4 py-3 transition-colors uppercase tracking-wide text-sm shadow-md"
+                            >
+                                Claim Your Free Consultation
+                            </button>
                         </div>
-                        {/* Person holding laptop illustration placeholder */}
-                        <div className="w-full h-full bg-gray-200 rounded-3xl overflow-hidden relative shadow-2xl flex flex-col items-center justify-end border-8 border-white bg-gradient-to-b from-blue-100 to-blue-50 text-center p-8">
-                            <span className="text-6xl mb-4">👨‍💼</span>
-                            <p className="text-gray-500 text-lg font-medium">Illustration Base</p>
+                    </form>
+                </div>
+
+                {/* Stats Bar */}
+                <div className="flex flex-col md:flex-row items-center gap-3 w-full justify-center pb-8 border-b-0 border-white/10 lg:pl-12 lg:pr-12 md:bg-white/5 md:rounded-full md:border p-2">
+                    <div className="bg-[var(--color-brand-secondary)] rounded-full px-5 py-2 font-bold text-sm text-white flex items-center gap-2 whitespace-nowrap shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                            <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clipRule="evenodd" />
+                        </svg>
+                        What Sets Us Apart
+                    </div>
+
+                    <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+                        <div className="bg-white text-gray-800 rounded-full px-4 py-1.5 text-xs font-semibold shadow-sm flex items-center">
+                            <span className="text-[var(--color-brand-secondary)] mr-1">500+</span> MCA Certified Experts
+                        </div>
+                        <div className="bg-white text-gray-800 rounded-full px-4 py-1.5 text-xs font-semibold shadow-sm flex items-center">
+                            <span className="text-[var(--color-brand-secondary)] mr-1">10,000+</span> Verified Reviews
+                        </div>
+                        <div className="bg-white text-gray-800 rounded-full px-4 py-1.5 text-xs font-semibold shadow-sm flex items-center">
+                            <span className="text-[var(--color-brand-secondary)] mr-1">2500+</span> Monthly Clients Onboardings
+                        </div>
+                        <div className="bg-white text-gray-800 rounded-full px-4 py-1.5 text-xs font-semibold shadow-sm">
+                            Serving Businesses Across India
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
     );
