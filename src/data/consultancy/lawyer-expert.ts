@@ -1,0 +1,282 @@
+import type { ServiceData } from '../services';
+
+const data: Record<string, ServiceData> = {
+
+    'consumer-complaint': {
+        slug: 'consumer-complaint',
+        title: 'Consumer Complaint Filing in India',
+        subtitle: 'Protect your consumer rights and seek redressal for defective products, deficient services, unfair trade practices, and overcharging — Your Professional guides you through every stage of filing and resolving consumer complaints under the Consumer Protection Act, 2019.',
+        heroFeatures: [
+            'Expert Drafting of Consumer Complaints',
+            'Filing Before District, State & National Commission',
+            'End-to-End Representation & Follow-Up',
+            'Compensation & Refund Recovery Assistance',
+            'Free Case Evaluation by Legal Experts',
+        ],
+        overview: {
+            heading: 'What is a Consumer Complaint?',
+            paragraphs: [
+                'A consumer complaint is a formal legal grievance filed by a consumer against a manufacturer, seller, service provider, or trader for any deficiency in goods or services, unfair trade practices, misleading advertisements, or overcharging. Under the Consumer Protection Act, 2019, every individual who purchases goods or avails services for personal use has the right to seek redressal through the three-tier consumer dispute redressal mechanism comprising District Commissions, State Commissions, and the National Consumer Disputes Redressal Commission (NCDRC).',
+                'The Consumer Protection Act, 2019 replaced the earlier 1986 Act and introduced significant reforms including e-filing of complaints, mediation as an alternative dispute resolution mechanism, provisions for product liability, and the establishment of the Central Consumer Protection Authority (CCPA). The Act empowers consumers with six fundamental rights — the right to safety, the right to be informed, the right to choose, the right to be heard, the right to seek redressal, and the right to consumer education. Any person aggrieved by unfair practices or deficient goods and services can now file complaints online through the e-Daakhil portal or physically before the appropriate consumer forum.',
+                'Your Professional provides comprehensive consumer complaint filing services — from initial case evaluation and legal notice drafting to complaint preparation, evidence compilation, filing before the appropriate forum, and representation throughout hearings. Our experienced consumer rights attorneys have successfully resolved thousands of complaints involving e-commerce disputes, insurance claim rejections, banking irregularities, builder-buyer conflicts, medical negligence, telecom overcharging, and defective product claims. We ensure that your rights as a consumer are fully protected and that you receive the compensation, replacement, or refund you are entitled to under the law.',
+            ],
+            highlights: [
+                { icon: '⚖️', text: 'Three-tier redressal system — District, State & National Commission' },
+                { icon: '💻', text: 'E-filing available through the e-Daakhil portal for all consumer forums' },
+                { icon: '🛡️', text: 'Product liability provisions hold manufacturers & sellers accountable' },
+                { icon: '⏱️', text: 'Complaints must be filed within 2 years from the date of cause of action' },
+            ],
+        },
+        types: [
+            { title: 'Complaint for Defective Goods', desc: 'Filed when a product purchased has manufacturing defects, does not conform to the stated specifications or quality standards, or is unfit for the purpose for which it was marketed. Covers electronics, automobiles, appliances, packaged goods, and all consumer products.' },
+            { title: 'Complaint for Deficiency in Services', desc: 'Filed against service providers for poor quality, negligence, or failure to perform services as promised. Covers sectors such as banking, insurance, healthcare, telecom, education, hospitality, real estate, and professional services.' },
+            { title: 'Complaint for Unfair Trade Practices', desc: 'Filed when a seller or service provider engages in deceptive advertising, false representation of goods, bait-and-switch tactics, hidden charges, or any practice that misleads consumers about the nature, quality, or price of products or services.' },
+            { title: 'Complaint for Restrictive Trade Practices', desc: 'Filed when businesses manipulate market conditions, enforce unreasonable terms in contracts, impose tie-in arrangements, or restrict consumer choice through monopolistic or anti-competitive behaviour affecting consumer interests.' },
+            { title: 'Product Liability Complaint', desc: 'Filed under the product liability provisions of the Consumer Protection Act, 2019, holding manufacturers, product sellers, and service providers liable for harm caused by defective products, inadequate instructions, or failure to warn consumers of potential risks.' },
+        ],
+        eligibility: [
+            'Any person who has purchased goods or availed services for personal use and consideration (not for resale or commercial purpose) qualifies as a consumer under the Act.',
+            'A complaint may be filed by the consumer, any recognised consumer association, one or more consumers on behalf of numerous consumers sharing the same interest, or the Central or State Government.',
+            'Legal heirs or representatives of a deceased consumer may file or continue a complaint on behalf of the deceased.',
+            'The complaint must be filed within two years from the date on which the cause of action arose; delay beyond this period requires a satisfactory explanation to the commission.',
+            'Complaints involving goods or services valued up to ₹1 crore are filed before the District Commission; up to ₹10 crore before the State Commission; and above ₹10 crore before the National Commission.',
+            'The complainant must have proof of purchase such as a bill, invoice, receipt, warranty card, or any written agreement for the goods or services in question.',
+            'E-commerce transactions are fully covered — consumers can file complaints against online sellers, platforms, and marketplace aggregators.',
+            'Foreign nationals who have purchased goods or services in India for personal consumption are also eligible to file consumer complaints.',
+        ],
+        documents: [
+            {
+                category: 'Complaint & Identity Documents',
+                items: [
+                    'Aadhaar Card, PAN Card, or Voter ID of the complainant for identity verification',
+                    'Detailed written complaint describing the grievance, facts, and relief sought',
+                    'Affidavit in support of the complaint sworn before a notary or oath commissioner',
+                    'Proof of address of the complainant (utility bill, passport, or driving licence)',
+                    'Authorisation letter or Vakalatnama if complaint is filed through an advocate',
+                ],
+            },
+            {
+                category: 'Transaction & Purchase Documents',
+                items: [
+                    'Purchase invoice, bill, receipt, or order confirmation as proof of transaction',
+                    'Warranty or guarantee card provided with the product or service',
+                    'Payment proof — bank statement, credit/debit card statement, UPI transaction record, or cancelled cheque',
+                    'Copy of the agreement, terms of service, or contract entered into with the opposite party',
+                    'Delivery challan, shipping receipt, or proof of delivery of goods',
+                ],
+            },
+            {
+                category: 'Evidence & Correspondence Documents',
+                items: [
+                    'Photographs, videos, or screenshots of the defective product or deficient service',
+                    'Copies of all correspondence with the opposite party — emails, letters, chat transcripts, SMS, and complaint reference numbers',
+                    'Expert opinion or inspection report (if applicable) on the defect or deficiency',
+                    'Legal notice sent to the opposite party and any reply received thereto',
+                    'Medical reports or bills in case of complaints involving personal injury or health hazards',
+                ],
+            },
+        ],
+        process: [
+            { title: 'Free Case Evaluation', desc: 'Our consumer rights experts review your case details, purchase documents, evidence, and correspondence to assess the merits of your complaint and advise on the appropriate legal course of action.', time: '1–2 days' },
+            { title: 'Legal Notice to Opposite Party', desc: 'Your Professional drafts and sends a formal legal notice to the seller, manufacturer, or service provider demanding redressal, compensation, or refund within a stipulated timeframe, which strengthens your case and often leads to out-of-court settlement.', time: '3–5 days' },
+            { title: 'Complaint Drafting & Documentation', desc: 'Our legal team prepares the consumer complaint petition in the prescribed format, including detailed facts, legal grounds under the Consumer Protection Act, evidence annexures, affidavit, and the specific relief claimed.', time: '3–5 days' },
+            { title: 'Filing Before Appropriate Forum', desc: 'The complaint is filed electronically through the e-Daakhil portal or physically before the District Commission, State Commission, or National Commission based on the value of goods or services involved. Court fees are paid as per the prescribed schedule.', time: '1–2 days' },
+            { title: 'Admission & Notice to Opposite Party', desc: 'Once the commission admits the complaint, it issues a notice to the opposite party directing them to file their written response within the prescribed period (typically 30–45 days).', time: '30–45 days' },
+            { title: 'Hearings, Evidence & Arguments', desc: 'Your Professional represents you during commission hearings, presents documentary and oral evidence, cross-examines the opposite party\'s witnesses, and delivers final arguments to establish your claim.', time: '2–6 months' },
+            { title: 'Order & Execution', desc: 'The commission passes a final order granting compensation, refund, replacement, or other appropriate relief. We assist with execution proceedings if the opposite party fails to comply with the order within the stipulated period.', time: '30–60 days' },
+        ],
+        fees: [
+            { item: 'Initial Case Evaluation & Legal Consultation', cost: '₹499 – ₹999' },
+            { item: 'Legal Notice Drafting & Dispatch', cost: '₹1,999 – ₹3,999' },
+            { item: 'Consumer Complaint Drafting & Filing (District Commission)', cost: '₹4,999 – ₹9,999' },
+            { item: 'Consumer Complaint Filing (State Commission)', cost: '₹7,999 – ₹14,999' },
+            { item: 'Consumer Complaint Filing (National Commission — NCDRC)', cost: '₹14,999 – ₹29,999' },
+            { item: 'Court Fee (varies by claim value and forum)', cost: '₹100 – ₹5,000' },
+        ],
+        penalties: [
+            { violation: 'Non-compliance with Commission order by the opposite party', penalty: 'Imprisonment of not less than 1 month extendable up to 3 years, or fine of ₹25,000 to ₹1,00,000, or both under Section 72 of the Consumer Protection Act, 2019' },
+            { violation: 'Misleading advertisements by manufacturers or endorsers', penalty: 'CCPA may impose penalty up to ₹10 lakhs on manufacturer and up to ₹10 lakhs on endorser for first offence; subsequent offences attract up to ₹50 lakhs and prohibition on endorsements for up to 3 years' },
+            { violation: 'Failure to withdraw or modify misleading advertisement as directed', penalty: 'Penalty up to ₹50 lakhs and imprisonment up to 2 years for subsequent non-compliance as prescribed under Section 21 of the Act' },
+            { violation: 'Manufacturing or selling adulterated or spurious goods causing injury', penalty: 'Imprisonment up to 7 years and fine up to ₹5 lakhs; in case of grievous hurt, imprisonment up to 7 years and fine up to ₹10 lakhs as per Section 89 and 90 of the Act' },
+        ],
+        advantages: [
+            { icon: '⚡', title: 'Speedy Redressal', desc: 'Consumer commissions are mandated to dispose of complaints within 3–5 months from the date of receipt of the opposite party\'s response, ensuring faster justice compared to regular civil courts.' },
+            { icon: '💰', title: 'Cost-Effective Legal Remedy', desc: 'Consumer forum proceedings involve minimal court fees and do not necessarily require a lawyer, making it one of the most affordable legal remedies available to individuals in India.' },
+            { icon: '🌐', title: 'E-Filing Convenience', desc: 'The e-Daakhil portal enables consumers to file complaints electronically from anywhere in India, eliminating the need to physically visit the commission office and reducing paperwork significantly.' },
+            { icon: '🔄', title: 'Multiple Relief Options', desc: 'Commissions can grant diverse remedies including monetary compensation, product replacement, refund of amount paid, rectification of deficiency, removal of defects, and punitive damages against negligent businesses.' },
+            { icon: '🛡️', title: 'Product Liability Protection', desc: 'The 2019 Act introduces strict product liability provisions that hold manufacturers, sellers, and service providers accountable for harm caused by defective products, shifting the burden of proof in the consumer\'s favour.' },
+            { icon: '🤝', title: 'Mediation as Alternative Resolution', desc: 'Consumer commissions can refer parties to mediation for amicable settlement, which is faster, less adversarial, and cost-effective while preserving business relationships and achieving mutually beneficial outcomes.' },
+        ],
+        disadvantages: [
+            'Complaints must be filed within the limitation period of two years from the cause of action; delayed filing requires satisfactory justification and the commission may still refuse to condone the delay.',
+            'Consumer commissions across India face a significant backlog of pending cases, which can result in hearings being adjourned multiple times and actual resolution taking considerably longer than the prescribed timeline.',
+            'The Act only covers consumers who purchase goods or services for personal use — individuals buying for resale, commercial, or business purposes cannot avail this remedy and must approach civil courts instead.',
+            'Enforcement of commission orders can be challenging in practice, as the opposite party may file appeals at higher forums causing further delays, and execution proceedings may require additional time and effort.',
+        ],
+        compliance: [
+            { area: 'Filing Limitation', details: 'Consumer complaints must be filed within 2 years from the date on which the cause of action first arose. Applications for condonation of delay must demonstrate sufficient cause for the delay and are subject to the commission\'s discretion.' },
+            { area: 'Jurisdictional Requirements', details: 'Complaints must be filed before the commission having territorial jurisdiction where the opposite party resides or carries on business, or where the cause of action arose. Pecuniary jurisdiction determines whether the District, State, or National Commission is the appropriate forum.' },
+            { area: 'Document Preservation', details: 'Consumers must preserve all original purchase documents, warranty cards, correspondence, and evidence for the entire duration of proceedings. Courts may require original documents during hearings for verification purposes.' },
+            { area: 'Order Compliance', details: 'Both parties must comply with interim and final orders of the commission within the stipulated timeframe. Non-compliance attracts contempt proceedings and criminal penalties including imprisonment and fine.' },
+        ],
+        faqs: [
+            { q: 'Who can file a consumer complaint in India?', a: 'Any person who buys goods or avails services for personal use and consideration can file a consumer complaint. Additionally, consumer associations registered under law, one or more consumers on behalf of many with common interest, legal heirs of a deceased consumer, and the Central or State Government may also file complaints.' },
+            { q: 'What is the time limit for filing a consumer complaint?', a: 'A consumer complaint must be filed within 2 years from the date on which the cause of action arose — typically the date of purchase, date of defect discovery, or date of service deficiency. If the complaint is filed beyond this period, the consumer must file an application for condonation of delay with a valid explanation.' },
+            { q: 'How much does it cost to file a consumer complaint?', a: 'The court fee for consumer complaints varies based on the claim value and the forum. For District Commissions, fees range from ₹100 to ₹4,000. For State Commissions, fees range up to ₹5,000. The National Commission charges fees based on the claim amount as prescribed in the Consumer Protection Rules. No court fee is required for claims up to ₹5 lakhs in District Commissions.' },
+            { q: 'Can I file a consumer complaint online?', a: 'Yes, the Government of India has launched the e-Daakhil portal (edaakhil.nic.in) that allows consumers to file complaints electronically before District Commissions, State Commissions, and the National Commission. The portal facilitates online filing, fee payment, document upload, and hearing schedule tracking.' },
+            { q: 'How long does it take to resolve a consumer complaint?', a: 'As per the Consumer Protection Act, 2019, complaints should be disposed of within 3 months if no testing of goods is required, and within 5 months if testing is required. In practice, resolution timelines vary based on case complexity, the forum\'s pendency, and the opposite party\'s cooperation, and can range from 3 months to over a year.' },
+            { q: 'What kind of compensation can I get through a consumer complaint?', a: 'Consumer commissions can award compensation for financial loss, mental agony, harassment, and physical suffering. Additionally, they can order product replacement, refund of the purchase amount with interest, rectification of service deficiency, removal of product defects, and punitive damages to deter unfair trade practices.' },
+            { q: 'Can I file a consumer complaint against an e-commerce company?', a: 'Yes, the Consumer Protection Act, 2019 and the Consumer Protection (E-Commerce) Rules, 2020 explicitly cover e-commerce transactions. Complaints can be filed against online sellers, marketplace platforms, and aggregators for issues like non-delivery, defective products, false descriptions, delayed refunds, and failure to honour return policies.' },
+            { q: 'Do I need a lawyer to file a consumer complaint?', a: 'No, a lawyer is not mandatory for consumer complaint proceedings. Consumers can personally appear and argue their case before the commission. However, engaging an experienced consumer rights lawyer significantly improves the quality of complaint drafting, evidence presentation, and legal arguments, especially in complex or high-value disputes.' },
+        ],
+        cta: {
+            heading: 'File Your Consumer Complaint with Confidence',
+            subheading: 'Don\'t let unfair practices go unchallenged — Your Professional\'s expert consumer rights team ensures swift complaint filing, strong legal representation, and maximum compensation recovery for your grievance.',
+            features: [
+                'Free initial case evaluation by consumer law experts',
+                'Professional complaint drafting and e-filing assistance',
+                'Representation before District, State & National Commission',
+                'Track record of successful complaint resolutions across India',
+            ],
+        },
+    },
+
+    'cheque-bounce-notice': {
+        slug: 'cheque-bounce-notice',
+        title: 'Cheque Bounce Notice & Legal Proceedings in India',
+        subtitle: 'Take swift legal action against dishonoured cheques — Your Professional handles demand notice drafting, complaint filing under Section 138 of the Negotiable Instruments Act, and complete courtroom representation to recover your dues effectively.',
+        heroFeatures: [
+            'Expert Legal Notice Drafting Under Section 138 NI Act',
+            'Complaint Filing Before Magistrate Court',
+            'Complete Courtroom Representation & Hearings',
+            'Recovery of Cheque Amount with Interest & Compensation',
+            'Fast-Track Resolution Through Summary Trial Procedure',
+        ],
+        overview: {
+            heading: 'What is a Cheque Bounce Notice?',
+            paragraphs: [
+                'A cheque bounce notice is a formal legal demand sent to the drawer (issuer) of a cheque that has been dishonoured by the bank due to insufficient funds, account closure, signature mismatch, payment stopped by the drawer, or any other reason attributable to the drawer. Under Section 138 of the Negotiable Instruments Act, 1881, the dishonour of a cheque for insufficiency of funds or if the amount exceeds the arrangement made with the bank constitutes a criminal offence punishable with imprisonment up to two years, or a monetary fine up to twice the cheque amount, or both. The legal notice is the mandatory first step before initiating criminal proceedings and must be sent within 30 days of receiving the bank\'s cheque return memo.',
+                'The Negotiable Instruments Act provides a structured legal framework for cheque bounce cases. Once the cheque is dishonoured, the payee must send a written demand notice to the drawer within 30 days of receiving information about the dishonour from the bank. The drawer then has 15 days from receipt of the notice to make the payment. If the drawer fails to pay within this 15-day period, the payee can file a criminal complaint under Section 138 before the competent Magistrate Court within one month of the expiry of the 15-day notice period. The Supreme Court of India has consistently held that strict compliance with these timelines is essential for maintaining a valid prosecution under the Act.',
+                'Your Professional offers end-to-end cheque bounce legal services — from issuing the statutory demand notice to filing the criminal complaint and representing you through all stages of trial proceedings. Our team of experienced litigation lawyers specialises in Negotiable Instruments Act cases and has successfully recovered crores of rupees for clients through effective legal prosecution. We handle cases involving post-dated cheques, EMI cheques, security cheques, loan repayment cheques, business transaction cheques, and all other negotiable instruments that have been dishonoured. With our expertise, you can ensure timely legal action and maximum recovery of your outstanding dues along with interest and litigation costs.',
+            ],
+            highlights: [
+                { icon: '📋', text: 'Statutory demand notice must be sent within 30 days of cheque return memo' },
+                { icon: '⏳', text: 'Drawer gets 15 days from notice receipt to make payment' },
+                { icon: '⚖️', text: 'Criminal complaint under Section 138 NI Act — imprisonment up to 2 years' },
+                { icon: '💵', text: 'Court can award compensation up to twice the cheque amount' },
+            ],
+        },
+        types: [
+            { title: 'Cheque Dishonour for Insufficient Funds', desc: 'The most common type of cheque bounce, occurring when the drawer\'s bank account does not have sufficient balance to honour the cheque amount. This directly attracts criminal liability under Section 138 of the NI Act and is the primary ground for prosecution.' },
+            { title: 'Cheque Dishonour for Account Closure', desc: 'When the drawer has closed the bank account on which the cheque was drawn before the cheque is presented for encashment, it constitutes dishonour. Courts have held that account closure is equivalent to insufficiency of funds for the purpose of Section 138 proceedings.' },
+            { title: 'Cheque Dishonour for Payment Stopped by Drawer', desc: 'When the drawer instructs the bank to stop payment on a cheque that was issued for discharge of a legally enforceable debt or liability, the payee can initiate Section 138 proceedings. The Supreme Court has held that stopping payment does not absolve the drawer of criminal liability if the cheque was issued for a valid consideration.' },
+            { title: 'Cheque Dishonour for Exceeding Arrangement', desc: 'When the amount written on the cheque exceeds the arrangement (overdraft limit or credit facility) the drawer has with the bank, the cheque is returned unpaid. This is treated at par with insufficiency of funds under Section 138 and attracts the same criminal consequences.' },
+        ],
+        eligibility: [
+            'The payee or holder in due course of the dishonoured cheque is eligible to send the legal demand notice and file a complaint under Section 138 of the NI Act.',
+            'The cheque must have been issued for the discharge of a legally enforceable debt or liability — cheques given as gifts, security without consideration, or donations are not covered under Section 138.',
+            'The cheque must have been presented to the bank within its validity period (3 months from the date of issue or the date mentioned on the cheque, whichever is later).',
+            'The cheque must have been dishonoured by the bank for reasons attributable to the drawer, such as insufficient funds, account closure, payment stopped, or exceeding the arrangement.',
+            'The demand notice must be sent to the drawer within 30 days of receiving the cheque return memo or bank intimation about the dishonour.',
+            'The criminal complaint must be filed within one month from the date of expiry of the 15-day notice period if the drawer fails to make payment.',
+            'Companies, partnerships, LLPs, proprietorship firms, and individuals can all initiate cheque bounce proceedings as payees or holders in due course.',
+            'In case the drawer is a company, the complaint can be filed against the company as well as its directors and officers who were responsible for the conduct of the company\'s business at the time of the offence.',
+        ],
+        documents: [
+            {
+                category: 'Cheque & Banking Documents',
+                items: [
+                    'Original dishonoured cheque (to be preserved carefully and produced before court)',
+                    'Cheque return memo issued by the bank stating the reason for dishonour',
+                    'Bank statement of the payee showing the cheque deposit and return entries',
+                    'Copy of the bank account details where the cheque was deposited for collection',
+                ],
+            },
+            {
+                category: 'Notice & Legal Documents',
+                items: [
+                    'Copy of the legal demand notice sent to the drawer under Section 138',
+                    'Postal receipt, speed post acknowledgement, or courier tracking proof of notice delivery',
+                    'Acknowledgement due (AD) card signed by the drawer or returned as "refused" or "unclaimed"',
+                    'Any written reply received from the drawer in response to the demand notice',
+                    'Affidavit of the complainant in support of the complaint petition',
+                ],
+            },
+            {
+                category: 'Transaction & Identity Documents',
+                items: [
+                    'Proof of the underlying transaction — agreement, invoice, loan document, or acknowledgement of debt for which the cheque was issued',
+                    'Identity proof of the complainant — Aadhaar Card, PAN Card, Voter ID, or Passport',
+                    'Address proof of the complainant and the accused (drawer) for jurisdictional purposes',
+                    'Board resolution or authorisation letter if the complaint is filed on behalf of a company or firm',
+                ],
+            },
+        ],
+        process: [
+            { title: 'Case Assessment & Document Review', desc: 'Our legal experts thoroughly review the dishonoured cheque, return memo, underlying transaction documents, and timeline compliance to assess the strength of your case and confirm eligibility for Section 138 proceedings.', time: '1–2 days' },
+            { title: 'Drafting of Statutory Demand Notice', desc: 'Your Professional drafts a comprehensive legal demand notice addressed to the drawer, clearly stating the cheque details, dishonour particulars, the legally enforceable debt or liability, and demanding payment of the cheque amount within 15 days of receipt of the notice.', time: '1–2 days' },
+            { title: 'Dispatch of Legal Notice', desc: 'The demand notice is sent to the drawer via registered post with acknowledgement due (RPAD) and speed post to ensure valid service. We also send a copy via courier and email for additional evidence of delivery. The notice must be sent within 30 days of the cheque return memo.', time: '1–3 days' },
+            { title: 'Monitoring the 15-Day Notice Period', desc: 'We monitor the statutory 15-day waiting period from the date the drawer receives (or is deemed to have received) the notice. If the drawer makes payment during this period, the matter is settled. If not, we prepare for filing the criminal complaint.', time: '15–30 days' },
+            { title: 'Filing Criminal Complaint Under Section 138', desc: 'If the drawer fails to make payment within 15 days, we prepare and file a detailed criminal complaint petition before the competent Magistrate Court within the statutory one-month window. The complaint includes all supporting documents, the original cheque, return memo, notice copies, and delivery proof.', time: '2–5 days' },
+            { title: 'Court Proceedings & Trial', desc: 'Your Professional represents you through all stages of the trial — initial hearing, recording of complainant\'s evidence on affidavit, cross-examination, recording of defence evidence, and final arguments. We leverage the summary trial procedure under Section 143 for expedited disposal of the case.', time: '6–18 months' },
+            { title: 'Judgment & Recovery', desc: 'Upon conviction, the court awards compensation up to twice the cheque amount along with the cheque value. We assist with execution of the court\'s order and recovery of the awarded amount through legal enforcement mechanisms if the convicted person fails to pay voluntarily.', time: '30–90 days' },
+        ],
+        fees: [
+            { item: 'Initial Case Assessment & Consultation', cost: '₹499 – ₹999' },
+            { item: 'Legal Demand Notice Drafting & Dispatch', cost: '₹1,999 – ₹4,999' },
+            { item: 'Criminal Complaint Drafting & Filing (Section 138)', cost: '₹5,999 – ₹14,999' },
+            { item: 'Court Representation Per Hearing', cost: '₹2,999 – ₹7,999' },
+            { item: 'Complete Cheque Bounce Case Package (Notice to Judgment)', cost: '₹19,999 – ₹49,999' },
+            { item: 'Court Fee & Process Fee (as per State schedule)', cost: '₹200 – ₹2,000' },
+        ],
+        penalties: [
+            { violation: 'Dishonour of cheque for insufficiency of funds or exceeding arrangement (Section 138)', penalty: 'Imprisonment up to 2 years, or monetary fine which may extend to twice the amount of the cheque, or both. The court may also direct the drawer to pay compensation to the complainant under Section 143A of the NI Act.' },
+            { violation: 'Failure to pay interim compensation directed by the court under Section 143A', penalty: 'The court may direct the drawer to pay interim compensation up to 20% of the cheque amount during the pendency of the case. Non-payment may result in additional contempt proceedings and adverse inference during trial.' },
+            { violation: 'Repeat offence of cheque dishonour by the same drawer', penalty: 'Courts take a stricter view of habitual offenders and may impose the maximum sentence of 2 years imprisonment along with the maximum fine of twice the cheque amount. Bail conditions are also more stringent for repeat offenders.' },
+            { violation: 'Non-compliance with court order to pay compensation after conviction', penalty: 'The convicted person may face execution proceedings including attachment and sale of property, garnishment of bank accounts, and civil imprisonment for wilful non-compliance with the court\'s decree.' },
+        ],
+        advantages: [
+            { icon: '⚖️', title: 'Criminal Deterrent Effect', desc: 'Section 138 proceedings carry criminal consequences including imprisonment up to 2 years, which serves as a powerful deterrent and significantly motivates the drawer to settle the outstanding amount rather than face prosecution.' },
+            { icon: '💰', title: 'Double Compensation Recovery', desc: 'The Magistrate Court can award compensation up to twice the cheque amount in addition to the cheque value itself, ensuring that the complainant is adequately compensated for the financial loss, delay, and legal expenses incurred.' },
+            { icon: '⚡', title: 'Summary Trial Procedure', desc: 'Section 143 of the NI Act mandates that cheque bounce cases be tried as summary trials, which are significantly faster than regular criminal trials, with the court expected to conclude proceedings within a shorter timeframe.' },
+            { icon: '🔒', title: 'Interim Compensation Provision', desc: 'Section 143A empowers the court to direct the accused to pay interim compensation of up to 20% of the cheque amount during the pendency of the trial, providing immediate partial relief to the complainant before the final judgment.' },
+            { icon: '📍', title: 'Flexible Jurisdiction Options', desc: 'The complainant can file the case at the place where the cheque was delivered for collection, where the bank branch of the payee is located, or where the cheque was dishonoured, providing convenient forum selection options.' },
+            { icon: '🏢', title: 'Corporate Accountability', desc: 'When the drawer is a company, its directors and officers responsible for the conduct of business at the relevant time can be made co-accused, ensuring personal accountability and increasing the pressure for settlement and recovery.' },
+        ],
+        disadvantages: [
+            'Strict adherence to statutory timelines is absolutely critical — failure to send the demand notice within 30 days, or to file the complaint within one month of the notice period expiry, permanently extinguishes the right to prosecute under Section 138.',
+            'Cheque bounce cases in many metropolitan and district courts face significant pendency and backlog, resulting in frequent adjournments and actual resolution timelines stretching beyond 1–2 years despite the summary trial provision.',
+            'The complainant bears the initial burden of proving that the cheque was issued for a legally enforceable debt or liability; cheques issued as gifts, security deposits without consideration, or for time-barred debts may not sustain prosecution.',
+            'Even after obtaining a favourable judgment, actual recovery of the compensation amount can be difficult if the convicted person has no attachable assets, has absconded, or has deliberately dissipated assets to frustrate execution proceedings.',
+        ],
+        compliance: [
+            { area: '30-Day Notice Requirement', details: 'The demand notice under Section 138 must be sent to the drawer within 30 days of receiving the cheque return memo from the bank. Failure to send the notice within this mandatory period renders the complaint non-maintainable and the right to prosecute is permanently lost.' },
+            { area: '15-Day Payment Period Compliance', details: 'After sending the demand notice, the payee must wait for the full 15-day period (calculated from the date of receipt or deemed receipt of notice by the drawer) before filing the complaint. Filing before the expiry of this period renders the complaint premature and liable to be dismissed.' },
+            { area: 'One-Month Filing Window', details: 'The criminal complaint under Section 138 must be filed before the Magistrate Court within one month from the date of expiry of the 15-day notice period. The court may condone a delay of up to 30 additional days if sufficient cause is shown, but further delay cannot be condoned.' },
+            { area: 'Cheque Validity & Presentation', details: 'The cheque must be presented for encashment within its validity period of 3 months from the date of issue. Presenting a cheque after its validity has expired does not constitute valid dishonour under Section 138, and no prosecution can be initiated on the basis of a stale cheque.' },
+        ],
+        faqs: [
+            { q: 'What should I do immediately after my cheque bounces?', a: 'Immediately collect the cheque return memo from your bank, which states the reason for dishonour. Preserve the original dishonoured cheque safely. Contact a lawyer within a few days to send the statutory demand notice to the cheque issuer within the mandatory 30-day period from the date you received the return memo.' },
+            { q: 'What is the mandatory legal notice period for cheque bounce cases?', a: 'The payee must send a written demand notice to the drawer within 30 days of receiving the bank\'s cheque return memo. The drawer then has 15 days from receipt of this notice to make the payment. If the payment is not made within 15 days, the payee must file a criminal complaint within one month of the expiry of this 15-day period.' },
+            { q: 'Can I file a cheque bounce case if the cheque was given as security?', a: 'A cheque given as security for a loan or transaction that has crystallised into a legally enforceable debt can sustain Section 138 proceedings. However, if the cheque was given purely as a blank security without any actual debt or liability arising, the prosecution may not be maintainable. The key question is whether there exists a legally enforceable debt or liability at the time the cheque was presented.' },
+            { q: 'What is the maximum punishment for cheque bounce?', a: 'Under Section 138 of the NI Act, the maximum punishment is imprisonment up to 2 years, or a fine up to twice the cheque amount, or both. Additionally, the court can direct the accused to pay interim compensation of up to 20% of the cheque amount during trial (Section 143A) and final compensation up to twice the cheque amount upon conviction.' },
+            { q: 'Can I file a cheque bounce case against a company?', a: 'Yes, when a company issues a dishonoured cheque, the complaint can be filed against the company as a legal entity as well as against every person who was in charge of and responsible for the conduct of the company\'s business at the time of the offence, including directors and officers. This ensures personal criminal liability alongside corporate accountability.' },
+            { q: 'What happens if the cheque issuer has left the country?', a: 'The court can issue a non-bailable warrant against the accused if they fail to appear. If the accused has absconded or left the country, the court can declare them a proclaimed offender and issue a warrant through Interpol channels for serious cases. The complaint proceedings continue in the accused\'s absence, and the court can proceed to trial and pass judgment ex-parte.' },
+            { q: 'Can a cheque bounce case be settled out of court?', a: 'Yes, cheque bounce cases under Section 138 are compoundable offences, meaning they can be settled at any stage of the proceedings with the permission of the court. If the drawer pays the full cheque amount along with interest and agreed compensation, the complainant can file a compounding application before the court to close the case.' },
+            { q: 'What if the demand notice is returned undelivered?', a: 'If the notice is returned with endorsements such as "refused," "left without address," or "not claimed," the courts have held that the notice is deemed to have been served. The drawer cannot benefit from deliberately avoiding service of notice. However, if the notice is returned with "addressee not found" or "wrong address," the complainant should verify the correct address and resend the notice.' },
+        ],
+        cta: {
+            heading: 'Recover Your Money from Bounced Cheques',
+            subheading: 'Don\'t let dishonoured cheques drain your finances — Your Professional\'s litigation experts ensure timely legal notice, swift court proceedings, and maximum compensation recovery under the Negotiable Instruments Act.',
+            features: [
+                'Statutory demand notice drafted and dispatched within 24 hours',
+                'Criminal complaint filing with meticulous documentation',
+                'Experienced courtroom representation through all trial stages',
+                'Proven track record of successful cheque amount recovery across India',
+            ],
+        },
+    },
+
+};
+
+export default data;
