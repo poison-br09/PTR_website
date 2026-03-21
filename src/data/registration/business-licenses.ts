@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const BUSINESS_LICENSES: Record<string, RegistrationData> = {
+export const BUSINESS_LICENSES: Record<string, ServiceData> = {
 
 
     /* ──────────────────────────────────────────────────────────────

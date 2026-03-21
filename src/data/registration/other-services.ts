@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const OTHER_SERVICES: Record<string, RegistrationData> = {
+export const OTHER_SERVICES: Record<string, ServiceData> = {
 
     'sa8000-certification': {
         slug: 'sa8000-certification',

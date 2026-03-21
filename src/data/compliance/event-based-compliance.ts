@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const EVENT_BASED_COMPLIANCE: Record<string, RegistrationData> = {
+export const EVENT_BASED_COMPLIANCE: Record<string, ServiceData> = {
     'winding-up-of-company': {
         slug: 'winding-up-of-company',
         title: 'Winding Up of a Company in India',

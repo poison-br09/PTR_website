@@ -1,4 +1,4 @@
-export interface RegistrationData {
+export interface ServiceData {
     slug: string;
     title: string;
     subtitle: string;
@@ -46,7 +46,7 @@ export const REGISTRATION_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'BIS Certification', slug: 'bis-certification' },
 ];
 
-export const REGISTRATIONS: Record<string, RegistrationData> = {
+export const SERVICES: Record<string, ServiceData> = {
     'private-limited-company-registration': {
         slug: 'private-limited-company-registration',
         title: 'Private Limited Company Registration Online in India',
@@ -1308,29 +1308,36 @@ export const GOVERNMENT_REGISTRATION_MENU_ITEMS: { label: string; slug: string }
     { label: 'Tobacco License', slug: 'tobacco-license' },
 ];
 
-// --- Import and merge government registration data ---
-import { GOVT_REGISTRATIONS } from './govt-registrations';
-import { FSSAI_REGISTRATIONS } from './fssai-registrations';
-import { TRADE_REGISTRATIONS } from './trade-registrations';
-import { BUSINESS_CERTIFICATES } from './business-certificates';
-import { BUSINESS_LICENSES } from './business-licenses';
-import { BIS_REGISTRATIONS } from './bis-registrations';
-import { NGO_REGISTRATIONS } from './ngo-registrations';
-import { INTERNATIONAL_REGISTRATIONS } from './international-registrations';
-import { OTHER_SERVICES } from './other-services';
-import { COMPANY_COMPLIANCE } from './company-compliance';
-import { ANNUAL_COMPLIANCE } from './annual-compliance';
-import { MCA_SERVICES } from './mca-services';
-import { EVENT_BASED_COMPLIANCE } from './event-based-compliance';
-import { CONVERT_BUSINESS } from './convert-business';
-import { IPR_REGISTRATIONS } from './ipr-registrations';
+// --- Import and merge all service data ---
+// Registration
+import { GOVT_REGISTRATIONS } from './registration/govt-registrations';
+import { FSSAI_REGISTRATIONS } from './registration/fssai-registrations';
+import { TRADE_REGISTRATIONS } from './registration/trade-registrations';
+import { BUSINESS_CERTIFICATES } from './registration/business-certificates';
+import { BUSINESS_LICENSES } from './registration/business-licenses';
+import { BIS_REGISTRATIONS } from './registration/bis-registrations';
+import { NGO_REGISTRATIONS } from './registration/ngo-registrations';
+import { INTERNATIONAL_REGISTRATIONS } from './registration/international-registrations';
+import { OTHER_SERVICES } from './registration/other-services';
+// Compliance
+import { COMPANY_COMPLIANCE } from './compliance/company-compliance';
+import { ANNUAL_COMPLIANCE } from './compliance/annual-compliance';
+import { MCA_SERVICES } from './compliance/mca-services';
+import { EVENT_BASED_COMPLIANCE } from './compliance/event-based-compliance';
+import { CONVERT_BUSINESS } from './compliance/convert-business';
+// IPR
+import { IPR_REGISTRATIONS } from './ipr/ipr-registrations';
+// Taxation
+import INCOME_TAX from './taxation/income-tax';
+import GST from './taxation/gst';
 
-Object.assign(REGISTRATIONS,
+Object.assign(SERVICES,
     GOVT_REGISTRATIONS, FSSAI_REGISTRATIONS, TRADE_REGISTRATIONS,
     BUSINESS_CERTIFICATES, BUSINESS_LICENSES, BIS_REGISTRATIONS,
     NGO_REGISTRATIONS, INTERNATIONAL_REGISTRATIONS, OTHER_SERVICES,
     COMPANY_COMPLIANCE, ANNUAL_COMPLIANCE, MCA_SERVICES,
     EVENT_BASED_COMPLIANCE, CONVERT_BUSINESS, IPR_REGISTRATIONS,
+    INCOME_TAX, GST,
 );
 
 // --- FSSAI Registration Menu Items ---
@@ -1505,4 +1512,30 @@ export const IPR_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Patent Registration', slug: 'patent-registration' },
     { label: 'Design Registration', slug: 'design-registration' },
     { label: 'Patent Search', slug: 'patent-search' },
+];
+
+// --- Income Tax Menu Items ---
+export const INCOME_TAX_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Income Tax Return Filing', slug: 'income-tax-return-filing' },
+    { label: 'TDS Return Filing', slug: 'tds-return-filing' },
+    { label: 'PF Return Filing', slug: 'pf-return-filing' },
+    { label: 'ITR 2 Form Filing', slug: 'itr-2-form-filing' },
+    { label: 'ITR 7 Form Filing', slug: 'itr-7-form-filing' },
+    { label: 'ITR 1 Form Filing', slug: 'itr-1-form-filing' },
+    { label: '80-IAC Tax Exemption', slug: '80-iac-tax-exemption' },
+];
+
+// --- GST Menu Items ---
+export const GST_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'GST Registration', slug: 'gst-registration' },
+    { label: 'GST Return Filing', slug: 'gst-return-filing' },
+    { label: 'GSTR9 Return Filing', slug: 'gstr9-return-filing' },
+    { label: 'Cancel GST Registration', slug: 'cancel-gst-registration' },
+    { label: 'Virtual Place of Business in GST', slug: 'virtual-place-of-business-gst' },
+    { label: 'Additional Place of Business in GST', slug: 'additional-place-of-business-gst' },
+    { label: 'GST Registration for E-commerce', slug: 'gst-registration-ecommerce' },
+    { label: 'GST Return Filing for E-commerce', slug: 'gst-return-filing-ecommerce' },
+    { label: 'Input Tax Credit', slug: 'input-tax-credit' },
+    { label: 'GST E-Invoice', slug: 'gst-e-invoice' },
+    { label: 'E-Way Bill Registration', slug: 'e-way-bill-registration' },
 ];

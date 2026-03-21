@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-import { REGISTRATIONS, type RegistrationData } from '../data/registrations';
+import { SERVICES, type ServiceData } from '../data/services';
 
 const SERVICES_LIST = [
     "Private Limited Company Registration",
@@ -37,7 +37,7 @@ function SectionTitle({ badge, title }: { badge?: string; title: string }) {
 }
 
 /* ═══════════════════ HERO ═══════════════════ */
-function HeroSection({ data }: { data: RegistrationData }) {
+function HeroSection({ data }: { data: ServiceData }) {
     const [phoneError, setPhoneError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -127,7 +127,7 @@ function HeroSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ TABLE OF CONTENTS ═══════════════════ */
-function TableOfContents({ data }: { data: RegistrationData }) {
+function TableOfContents({ data }: { data: ServiceData }) {
     const items = [
         { id: 'overview', label: 'Overview' },
     ];
@@ -154,7 +154,7 @@ function TableOfContents({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ OVERVIEW ═══════════════════ */
-function OverviewSection({ data }: { data: RegistrationData }) {
+function OverviewSection({ data }: { data: ServiceData }) {
     return (
         <Section id="overview">
             <SectionTitle title={data.overview.heading} />
@@ -174,7 +174,7 @@ function OverviewSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ ELIGIBILITY ═══════════════════ */
-function EligibilitySection({ data }: { data: RegistrationData }) {
+function EligibilitySection({ data }: { data: ServiceData }) {
     return (
         <Section id="eligibility" className="bg-gray-50">
             <SectionTitle badge="Requirements" title="Eligibility Criteria" />
@@ -191,7 +191,7 @@ function EligibilitySection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ DOCUMENTS ═══════════════════ */
-function DocumentsSection({ data }: { data: RegistrationData }) {
+function DocumentsSection({ data }: { data: ServiceData }) {
     const [openIdx, setOpenIdx] = useState<number | null>(0);
     return (
         <Section id="documents">
@@ -222,7 +222,7 @@ function DocumentsSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ PROCESS ═══════════════════ */
-function ProcessSection({ data }: { data: RegistrationData }) {
+function ProcessSection({ data }: { data: ServiceData }) {
     return (
         <Section id="process" className="bg-gray-50">
             <SectionTitle badge="Step by Step" title="Registration Process" />
@@ -246,7 +246,7 @@ function ProcessSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ FEES ═══════════════════ */
-function FeesSection({ data }: { data: RegistrationData }) {
+function FeesSection({ data }: { data: ServiceData }) {
     return (
         <Section id="fees">
             <SectionTitle badge="Pricing" title="Fees & Charges" />
@@ -273,7 +273,7 @@ function FeesSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ ADVANTAGES ═══════════════════ */
-function AdvantagesSection({ data }: { data: RegistrationData }) {
+function AdvantagesSection({ data }: { data: ServiceData }) {
     return (
         <Section id="advantages" className="bg-gray-50">
             <SectionTitle badge="Benefits" title="Key Advantages" />
@@ -291,7 +291,7 @@ function AdvantagesSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ FAQ ═══════════════════ */
-function FAQSection({ data }: { data: RegistrationData }) {
+function FAQSection({ data }: { data: ServiceData }) {
     const [openIdx, setOpenIdx] = useState<number | null>(0);
     return (
         <Section id="faq">
@@ -341,7 +341,7 @@ function WhyChooseUsSection() {
 /* ═══════════════════ MAIN PAGE WRAPPER ═══════════════════ */
 export default function RegistrationPage() {
     const { slug } = useParams<{ slug: string }>();
-    const data = slug ? REGISTRATIONS[slug] : undefined;
+    const data = slug ? SERVICES[slug] : undefined;
 
     if (!data) return <Navigate to="/" replace />;
 

@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const NGO_REGISTRATIONS: Record<string, RegistrationData> = {
+export const NGO_REGISTRATIONS: Record<string, ServiceData> = {
     'section-8-company-registration': {
         slug: 'section-8-company-registration',
         title: 'Section 8 Company Registration Online in India',

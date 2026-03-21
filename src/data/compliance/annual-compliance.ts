@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const ANNUAL_COMPLIANCE: Record<string, RegistrationData> = {
+export const ANNUAL_COMPLIANCE: Record<string, ServiceData> = {
 
     'llp-annual-compliance': {
         slug: 'llp-annual-compliance',

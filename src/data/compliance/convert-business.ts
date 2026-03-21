@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const CONVERT_BUSINESS: Record<string, RegistrationData> = {
+export const CONVERT_BUSINESS: Record<string, ServiceData> = {
     'convert-partnership-into-llp': {
         slug: 'convert-partnership-into-llp',
         title: 'Convert Partnership Firm Into LLP in India',

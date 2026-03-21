@@ -73,10 +73,15 @@ export default function Footer() {
                         <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">IPR</h4>
                         <ul className="flex flex-col gap-3 text-sm text-gray-300">
                             <li><Link to="/trademark-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trademark Registration</Link></li>
-                            <li><Link to="/trademark-renewal" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trademark Renewal</Link></li>
                             <li><Link to="/copyright-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Copyright Registration</Link></li>
                             <li><Link to="/patent-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Patent Registration</Link></li>
-                            <li><Link to="/design-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Design Registration</Link></li>
+                        </ul>
+                        <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">TAXATION</h4>
+                        <ul className="flex flex-col gap-3 text-sm text-gray-300">
+                            <li><Link to="/income-tax-return-filing" className="hover:text-[var(--color-brand-secondary)] transition-colors">Income Tax Return Filing</Link></li>
+                            <li><Link to="/gst-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">GST Registration</Link></li>
+                            <li><Link to="/gst-return-filing" className="hover:text-[var(--color-brand-secondary)] transition-colors">GST Return Filing</Link></li>
+                            <li><Link to="/tds-return-filing" className="hover:text-[var(--color-brand-secondary)] transition-colors">TDS Return Filing</Link></li>
                         </ul>
                     </div>
 

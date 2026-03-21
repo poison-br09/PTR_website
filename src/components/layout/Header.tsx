@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import { REGISTRATION_MENU_ITEMS, GOVERNMENT_REGISTRATION_MENU_ITEMS, FSSAI_MENU_ITEMS, TRADE_LICENCE_MENU_ITEMS, BUSINESS_CERTIFICATES_MENU_ITEMS, BUSINESS_LICENSES_MENU_ITEMS, BIS_MENU_ITEMS, NGO_MENU_ITEMS, INTERNATIONAL_MENU_ITEMS, OTHER_SERVICES_MENU_ITEMS, COMPANY_COMPLIANCE_MENU_ITEMS, ANNUAL_COMPLIANCE_MENU_ITEMS, MCA_SERVICES_MENU_ITEMS, EVENT_COMPLIANCE_MENU_ITEMS, CONVERT_BUSINESS_MENU_ITEMS, IPR_MENU_ITEMS } from '../../data/registrations';
+import { REGISTRATION_MENU_ITEMS, GOVERNMENT_REGISTRATION_MENU_ITEMS, FSSAI_MENU_ITEMS, TRADE_LICENCE_MENU_ITEMS, BUSINESS_CERTIFICATES_MENU_ITEMS, BUSINESS_LICENSES_MENU_ITEMS, BIS_MENU_ITEMS, NGO_MENU_ITEMS, INTERNATIONAL_MENU_ITEMS, OTHER_SERVICES_MENU_ITEMS, COMPANY_COMPLIANCE_MENU_ITEMS, ANNUAL_COMPLIANCE_MENU_ITEMS, MCA_SERVICES_MENU_ITEMS, EVENT_COMPLIANCE_MENU_ITEMS, CONVERT_BUSINESS_MENU_ITEMS, IPR_MENU_ITEMS, INCOME_TAX_MENU_ITEMS, GST_MENU_ITEMS } from '../../data/services';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null);
-    const [megaMenuTab, setMegaMenuTab] = useState<'company' | 'government' | 'fssai' | 'trade' | 'certificates' | 'licenses' | 'bis' | 'ngo' | 'international' | 'other' | 'compliance' | 'ipr'>('company');
+    const [megaMenuTab, setMegaMenuTab] = useState<'company' | 'government' | 'fssai' | 'trade' | 'certificates' | 'licenses' | 'bis' | 'ngo' | 'international' | 'other' | 'compliance' | 'ipr' | 'taxation'>('company');
     const [searchQuery, setSearchQuery] = useState('');
     const megaMenuRef = useRef<HTMLDivElement>(null);
     const megaMenuTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -41,6 +41,7 @@ export default function Header() {
         { key: 'international', label: 'International Business', items: INTERNATIONAL_MENU_ITEMS },
         { key: 'compliance', label: 'Compliance', items: [...COMPANY_COMPLIANCE_MENU_ITEMS, ...ANNUAL_COMPLIANCE_MENU_ITEMS, ...MCA_SERVICES_MENU_ITEMS, ...EVENT_COMPLIANCE_MENU_ITEMS, ...CONVERT_BUSINESS_MENU_ITEMS] },
         { key: 'ipr', label: 'IPR', items: IPR_MENU_ITEMS },
+        { key: 'taxation', label: 'Taxation', items: [...INCOME_TAX_MENU_ITEMS, ...GST_MENU_ITEMS] },
         { key: 'other', label: 'Other Services', items: OTHER_SERVICES_MENU_ITEMS },
     ];
 

@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const GOVT_REGISTRATIONS: Record<string, RegistrationData> = {
+export const GOVT_REGISTRATIONS: Record<string, ServiceData> = {
 'drug-license': {
         slug: 'drug-license',
         title: 'Drug License Registration Online in India',

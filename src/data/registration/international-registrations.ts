@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const INTERNATIONAL_REGISTRATIONS: Record<string, RegistrationData> = {
+export const INTERNATIONAL_REGISTRATIONS: Record<string, ServiceData> = {
 
 
 

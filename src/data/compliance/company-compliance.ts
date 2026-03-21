@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const COMPANY_COMPLIANCE: Record<string, RegistrationData> = {
+export const COMPANY_COMPLIANCE: Record<string, ServiceData> = {
 
     /* ────────────────────────────────────────────────────────────── 1. MSME REGISTRATION ────────────────────────────────────────────────────────────── */
 

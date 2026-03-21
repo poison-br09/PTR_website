@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const FSSAI_REGISTRATIONS: Record<string, RegistrationData> = {
+export const FSSAI_REGISTRATIONS: Record<string, ServiceData> = {
     'fssai-registration': {
     slug: 'fssai-registration',
     title: 'FSSAI Registration Online in India',

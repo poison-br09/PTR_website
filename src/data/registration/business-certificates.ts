@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const BUSINESS_CERTIFICATES: Record<string, RegistrationData> = {
+export const BUSINESS_CERTIFICATES: Record<string, ServiceData> = {
 'rera-registration': {
         slug: 'rera-registration',
         title: 'RERA Registration Online in India',

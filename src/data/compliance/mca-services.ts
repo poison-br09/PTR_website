@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const MCA_SERVICES: Record<string, RegistrationData> = {
+export const MCA_SERVICES: Record<string, ServiceData> = {
 
 // ──────────────────────────────────────────────────────────────
     // 1. Change Private Limited Company Name

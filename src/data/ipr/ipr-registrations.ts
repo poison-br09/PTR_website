@@ -1,10 +1,10 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 //  IPR REGISTRATIONS — All IPR Registration Data (Consolidated)
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-export const IPR_REGISTRATIONS: Record<string, RegistrationData> = {
+export const IPR_REGISTRATIONS: Record<string, ServiceData> = {
 // ─── 1. TRADEMARK REGISTRATION ──────────────────────────────────────────────
 
     'trademark-registration': {

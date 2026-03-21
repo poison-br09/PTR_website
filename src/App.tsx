@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/common/ScrollToTop';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import HeroSection from './components/sections/HeroSection';
-// import TrustedPartners from './components/sections/TrustedPartners';
-import Services from './components/sections/Services';
-import WhyChooseUs from './components/sections/WhyChooseUs';
-import FeaturedIn from './components/sections/FeaturedIn';
-import FAQSection from './components/sections/FAQSection';
-import LatestBlogs from './components/sections/LatestBlogs';
-import Testimonials from './components/sections/Testimonials';
+import HeroSection from './components/home/HeroSection';
+// import TrustedPartners from './components/home/TrustedPartners';
+import Services from './components/home/Services';
+import WhyChooseUs from './components/home/WhyChooseUs';
+import FeaturedIn from './components/home/FeaturedIn';
+import FAQSection from './components/home/FAQSection';
+import LatestBlogs from './components/home/LatestBlogs';
+import Testimonials from './components/home/Testimonials';
 import CompanyRegistration from './pages/CompanyRegistration';
-import RegistrationPage from './pages/RegistrationPage';
+import ServicePage from './pages/ServicePage';
 
 function HomePage() {
   return (
@@ -39,7 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/company-registration" element={<CompanyRegistration />} />
-        <Route path="/:slug" element={<RegistrationPage />} />
+        <Route path="/:slug" element={<ServicePage />} />
       </Routes>
     </BrowserRouter>
   );

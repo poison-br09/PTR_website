@@ -1,6 +1,6 @@
-import type { RegistrationData } from './registrations';
+import type { ServiceData } from '../services';
 
-export const BIS_REGISTRATIONS: Record<string, RegistrationData> = {
+export const BIS_REGISTRATIONS: Record<string, ServiceData> = {
     'bis-certification': {
         slug: 'bis-certification',
         title: 'BIS Certification Online in India',
