@@ -14,6 +14,7 @@ export interface RegistrationData {
     disadvantages?: string[];
     compliance?: { area: string; details: string }[];
     faqs: { q: string; a: string }[];
+    cta?: { heading: string; subheading: string; features: string[] };
 }
 
 export const REGISTRATION_MENU_ITEMS: { label: string; slug: string }[] = [
@@ -1321,6 +1322,10 @@ import { FSSAI_PRODUCT_APPROVAL } from './fssai-product-approval';
 import { FSSAI_LICENSE_RENEWAL } from './fssai-license-renewal';
 import { HALAL_CERTIFICATION } from './halal-certification';
 
+// --- Import Trade Licence data ---
+import { TRADE_LICENCE_REGISTRATION } from './trade-licence-registration';
+import { TRADE_LICENCE_RENEWAL } from './trade-licence-renewal';
+
 Object.assign(REGISTRATIONS, GOVT_REGISTRATIONS_A, GOVT_REGISTRATIONS_B, GOVT_REGISTRATIONS_C, GOVT_REGISTRATIONS_D, {
     'fssai-registration': FSSAI_REGISTRATION,
     'fssai-central-license': FSSAI_CENTRAL_LICENSE,
@@ -1328,6 +1333,8 @@ Object.assign(REGISTRATIONS, GOVT_REGISTRATIONS_A, GOVT_REGISTRATIONS_B, GOVT_RE
     'fssai-product-approval': FSSAI_PRODUCT_APPROVAL,
     'fssai-license-renewal': FSSAI_LICENSE_RENEWAL,
     'halal-certification': HALAL_CERTIFICATION,
+    'trade-licence-registration': TRADE_LICENCE_REGISTRATION,
+    'trade-licence-renewal': TRADE_LICENCE_RENEWAL,
 });
 
 // --- FSSAI Registration Menu Items ---
@@ -1338,4 +1345,10 @@ export const FSSAI_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'FSSAI Product Approval', slug: 'fssai-product-approval' },
     { label: 'FSSAI License Renewal', slug: 'fssai-license-renewal' },
     { label: 'Halal Certification', slug: 'halal-certification' },
+];
+
+// --- Trade Licence Menu Items ---
+export const TRADE_LICENCE_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Trade Licence Registration', slug: 'trade-licence-registration' },
+    { label: 'Trade Licence Renewal', slug: 'trade-licence-renewal' },
 ];

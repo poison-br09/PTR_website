@@ -66,6 +66,11 @@ export default function Footer() {
                             <li><Link to="/icegate-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">ICEGATE Registration</Link></li>
                             <li><Link to="/rcmc-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">RCMC Registration</Link></li>
                         </ul>
+                        <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">TRADE LICENCE</h4>
+                        <ul className="flex flex-col gap-3 text-sm text-gray-300">
+                            <li><Link to="/trade-licence-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trade Licence Registration</Link></li>
+                            <li><Link to="/trade-licence-renewal" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trade Licence Renewal</Link></li>
+                        </ul>
                     </div>
 
                     <div>
