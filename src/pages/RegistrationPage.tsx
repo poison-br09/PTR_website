@@ -127,7 +127,7 @@ function HeroSection({ data }: { data: RegistrationData }) {
 }
 
 /* ═══════════════════ TABLE OF CONTENTS ═══════════════════ */
-function TableOfContents() {
+function TableOfContents({ data }: { data: RegistrationData }) {
     const items = [
         { id: 'overview', label: 'Overview' },
     ];
@@ -350,7 +350,7 @@ export default function RegistrationPage() {
             <Header />
             <main className="flex-grow">
                 <HeroSection data={data} />
-                <TableOfContents />
+                <TableOfContents data={data} />
                 <OverviewSection data={data} />
                 <EligibilitySection data={data} />
                 <DocumentsSection data={data} />

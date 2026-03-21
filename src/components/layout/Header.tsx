@@ -1,13 +1,16 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import { REGISTRATION_MENU_ITEMS } from '../../data/registrations';
+import { REGISTRATION_MENU_ITEMS, GOVERNMENT_REGISTRATION_MENU_ITEMS, FSSAI_MENU_ITEMS } from '../../data/registrations';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const [isMobileRegOpen, setIsMobileRegOpen] = useState(false);
+    const [isMobileGovtRegOpen, setIsMobileGovtRegOpen] = useState(false);
+    const [isMobileFssaiOpen, setIsMobileFssaiOpen] = useState(false);
+    const [megaMenuTab, setMegaMenuTab] = useState<'company' | 'government' | 'fssai'>('company');
     const [searchQuery, setSearchQuery] = useState('');
     const megaMenuRef = useRef<HTMLDivElement>(null);
     const megaMenuTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -28,9 +31,25 @@ export default function Header() {
         }
     };
 
-    const col1 = REGISTRATION_MENU_ITEMS.slice(0, 9);
-    const col2 = REGISTRATION_MENU_ITEMS.slice(9, 18);
-    const col3 = REGISTRATION_MENU_ITEMS.slice(18);
+    // Company Registration columns (3 columns)
+    const compCol1 = REGISTRATION_MENU_ITEMS.slice(0, 9);
+    const compCol2 = REGISTRATION_MENU_ITEMS.slice(9, 18);
+    const compCol3 = REGISTRATION_MENU_ITEMS.slice(18);
+
+    // Government Registration columns (3 columns)
+    const govtCol1 = GOVERNMENT_REGISTRATION_MENU_ITEMS.slice(0, 10);
+    const govtCol2 = GOVERNMENT_REGISTRATION_MENU_ITEMS.slice(10, 20);
+    const govtCol3 = GOVERNMENT_REGISTRATION_MENU_ITEMS.slice(20);
+
+    // FSSAI items (single column since only 6 items)
+    const fssaiCol1 = FSSAI_MENU_ITEMS.slice(0, 3);
+    const fssaiCol2 = FSSAI_MENU_ITEMS.slice(3);
+
+    const activeItems = megaMenuTab === 'company'
+        ? [compCol1, compCol2, compCol3]
+        : megaMenuTab === 'government'
+            ? [govtCol1, govtCol2, govtCol3]
+            : [fssaiCol1, fssaiCol2];
 
     return (
         <header className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-7xl z-50 rounded-full transition-all duration-300 bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
@@ -53,26 +72,38 @@ export default function Header() {
                             </div>
                             {/* Mega Menu */}
                             <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200 ${isMegaMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
-                                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-[700px]">
-                                    <div className="grid grid-cols-3 gap-4">
-                                        <div className="space-y-1">
-                                            {col1.map((item) => (
-                                                <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
-                                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
-                                            ))}
-                                        </div>
-                                        <div className="space-y-1">
-                                            {col2.map((item) => (
-                                                <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
-                                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
-                                            ))}
-                                        </div>
-                                        <div className="space-y-1">
-                                            {col3.map((item) => (
-                                                <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
-                                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
-                                            ))}
-                                        </div>
+                                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-[750px]">
+                                    {/* Tabs */}
+                                    <div className="flex gap-2 mb-4 border-b border-gray-100 pb-3">
+                                        <button
+                                            onClick={() => setMegaMenuTab('company')}
+                                            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${megaMenuTab === 'company' ? 'bg-[var(--color-brand-secondary)] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                                        >
+                                            Company Registration
+                                        </button>
+                                        <button
+                                            onClick={() => setMegaMenuTab('government')}
+                                            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${megaMenuTab === 'government' ? 'bg-[var(--color-brand-secondary)] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                                        >
+                                            Government Registration
+                                        </button>
+                                        <button
+                                            onClick={() => setMegaMenuTab('fssai')}
+                                            className={`px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${megaMenuTab === 'fssai' ? 'bg-[var(--color-brand-secondary)] text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                                        >
+                                            FSSAI Registration
+                                        </button>
+                                    </div>
+                                    {/* Menu Items Grid */}
+                                    <div className={`grid gap-4 max-h-[400px] overflow-y-auto ${megaMenuTab === 'fssai' ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                                        {activeItems.map((col, colIdx) => (
+                                            <div key={colIdx} className="space-y-1">
+                                                {col.map((item) => (
+                                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
+                                                        className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
+                                                ))}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +199,7 @@ export default function Header() {
                     <div className="border-b border-gray-50">
                         <button onClick={() => setIsMobileRegOpen(!isMobileRegOpen)}
                             className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
-                            Registrations
+                            Company Registration
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileRegOpen ? 'rotate-90' : ''}`}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -182,8 +213,43 @@ export default function Header() {
                             </div>
                         )}
                     </div>
+                    {/* Mobile: Government Registration expandable */}
+                    <div className="border-b border-gray-50">
+                        <button onClick={() => setIsMobileGovtRegOpen(!isMobileGovtRegOpen)}
+                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
+                            Government Registration
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileGovtRegOpen ? 'rotate-90' : ''}`}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                        {isMobileGovtRegOpen && (
+                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
+                                {GOVERNMENT_REGISTRATION_MENU_ITEMS.map((item) => (
+                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileGovtRegOpen(false); }}
+                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                    {/* Mobile: FSSAI Registration expandable */}
+                    <div className="border-b border-gray-50">
+                        <button onClick={() => setIsMobileFssaiOpen(!isMobileFssaiOpen)}
+                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
+                            FSSAI Registration
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileFssaiOpen ? 'rotate-90' : ''}`}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                        {isMobileFssaiOpen && (
+                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
+                                {FSSAI_MENU_ITEMS.map((item) => (
+                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileFssaiOpen(false); }}
+                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                     {[
-                        'Compliance',
                         'IPR',
                         'Taxation',
                         'Consultation',

@@ -4,11 +4,15 @@ export interface RegistrationData {
     subtitle: string;
     heroFeatures: string[];
     overview: { heading: string; paragraphs: string[]; highlights: { icon: string; text: string }[] };
+    types?: { title: string; desc: string }[];
     eligibility: string[];
     documents: { category: string; items: string[] }[];
     process: { title: string; desc: string; time?: string }[];
     fees: { item: string; cost: string }[];
+    penalties?: { violation: string; penalty: string }[];
     advantages: { icon: string; title: string; desc: string }[];
+    disadvantages?: string[];
+    compliance?: { area: string; details: string }[];
     faqs: { q: string; a: string }[];
 }
 
@@ -1270,3 +1274,68 @@ export const REGISTRATIONS: Record<string, RegistrationData> = {
         ],
     },
 };
+
+// --- Government Registration Menu Items ---
+export const GOVERNMENT_REGISTRATION_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Drug License', slug: 'drug-license' },
+    { label: 'Liquor License', slug: 'liquor-license' },
+    { label: 'ISO Registration', slug: 'iso-registration' },
+    { label: 'Ayush License', slug: 'ayush-license' },
+    { label: 'FIEO Registration', slug: 'fieo-registration' },
+    { label: 'Medical Device Registration', slug: 'medical-device-registration' },
+    { label: 'ISI Mark Certification', slug: 'isi-mark-certification' },
+    { label: 'Professional Tax Registration', slug: 'professional-tax-registration' },
+    { label: 'PTEC Registration', slug: 'ptec-registration' },
+    { label: 'RCMC Registration', slug: 'rcmc-registration' },
+    { label: 'Factory License', slug: 'factory-license' },
+    { label: 'ICEGATE Registration', slug: 'icegate-registration' },
+    { label: 'Petrol Pump License', slug: 'petrol-pump-license' },
+    { label: 'Network License', slug: 'network-license' },
+    { label: 'TEC Certification', slug: 'tec-certification' },
+    { label: 'SPICe+ Form', slug: 'spice-plus-form' },
+    { label: 'ISSN Number', slug: 'issn-number' },
+    { label: 'ISO 22000 FSMS Certification', slug: 'iso-22000-certification' },
+    { label: 'ISO 50001 Certification', slug: 'iso-50001-certification' },
+    { label: 'ISO 31000 Certification', slug: 'iso-31000-certification' },
+    { label: 'ISO 9001 Certification', slug: 'iso-9001-certification' },
+    { label: 'ISO 27001 Certification', slug: 'iso-27001-certification' },
+    { label: 'ISO 14001 Certification', slug: 'iso-14001-certification' },
+    { label: 'DUNS Number', slug: 'duns-number' },
+    { label: 'Geographical Indication Registration', slug: 'geographical-indication-registration' },
+    { label: 'GMP Certification', slug: 'gmp-certification' },
+    { label: 'ISBN Number Registration', slug: 'isbn-number-registration' },
+    { label: 'Tobacco License', slug: 'tobacco-license' },
+];
+
+// --- Import and merge government registration data ---
+import { GOVT_REGISTRATIONS_A } from './govt-registrations-a';
+import { GOVT_REGISTRATIONS_B } from './govt-registrations-b';
+import { GOVT_REGISTRATIONS_C } from './govt-registrations-c';
+import { GOVT_REGISTRATIONS_D } from './govt-registrations-d';
+
+// --- Import FSSAI & Halal registration data ---
+import { FSSAI_REGISTRATION } from './fssai-registration';
+import { FSSAI_CENTRAL_LICENSE } from './fssai-central-license';
+import { FSSAI_STATE_LICENSE } from './fssai-state-license';
+import { FSSAI_PRODUCT_APPROVAL } from './fssai-product-approval';
+import { FSSAI_LICENSE_RENEWAL } from './fssai-license-renewal';
+import { HALAL_CERTIFICATION } from './halal-certification';
+
+Object.assign(REGISTRATIONS, GOVT_REGISTRATIONS_A, GOVT_REGISTRATIONS_B, GOVT_REGISTRATIONS_C, GOVT_REGISTRATIONS_D, {
+    'fssai-registration': FSSAI_REGISTRATION,
+    'fssai-central-license': FSSAI_CENTRAL_LICENSE,
+    'fssai-state-license': FSSAI_STATE_LICENSE,
+    'fssai-product-approval': FSSAI_PRODUCT_APPROVAL,
+    'fssai-license-renewal': FSSAI_LICENSE_RENEWAL,
+    'halal-certification': HALAL_CERTIFICATION,
+});
+
+// --- FSSAI Registration Menu Items ---
+export const FSSAI_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'FSSAI Registration', slug: 'fssai-registration' },
+    { label: 'FSSAI Central License', slug: 'fssai-central-license' },
+    { label: 'FSSAI State License', slug: 'fssai-state-license' },
+    { label: 'FSSAI Product Approval', slug: 'fssai-product-approval' },
+    { label: 'FSSAI License Renewal', slug: 'fssai-license-renewal' },
+    { label: 'Halal Certification', slug: 'halal-certification' },
+];
