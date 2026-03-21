@@ -1312,8 +1312,26 @@ export const GOVERNMENT_REGISTRATION_MENU_ITEMS: { label: string; slug: string }
 import { GOVT_REGISTRATIONS } from './govt-registrations';
 import { FSSAI_REGISTRATIONS } from './fssai-registrations';
 import { TRADE_REGISTRATIONS } from './trade-registrations';
+import { BUSINESS_CERTIFICATES } from './business-certificates';
+import { BUSINESS_LICENSES } from './business-licenses';
+import { BIS_REGISTRATIONS } from './bis-registrations';
+import { NGO_REGISTRATIONS } from './ngo-registrations';
+import { INTERNATIONAL_REGISTRATIONS } from './international-registrations';
+import { OTHER_SERVICES } from './other-services';
+import { COMPANY_COMPLIANCE } from './company-compliance';
+import { ANNUAL_COMPLIANCE } from './annual-compliance';
+import { MCA_SERVICES } from './mca-services';
+import { EVENT_BASED_COMPLIANCE } from './event-based-compliance';
+import { CONVERT_BUSINESS } from './convert-business';
+import { IPR_REGISTRATIONS } from './ipr-registrations';
 
-Object.assign(REGISTRATIONS, GOVT_REGISTRATIONS, FSSAI_REGISTRATIONS, TRADE_REGISTRATIONS);
+Object.assign(REGISTRATIONS,
+    GOVT_REGISTRATIONS, FSSAI_REGISTRATIONS, TRADE_REGISTRATIONS,
+    BUSINESS_CERTIFICATES, BUSINESS_LICENSES, BIS_REGISTRATIONS,
+    NGO_REGISTRATIONS, INTERNATIONAL_REGISTRATIONS, OTHER_SERVICES,
+    COMPANY_COMPLIANCE, ANNUAL_COMPLIANCE, MCA_SERVICES,
+    EVENT_BASED_COMPLIANCE, CONVERT_BUSINESS, IPR_REGISTRATIONS,
+);
 
 // --- FSSAI Registration Menu Items ---
 export const FSSAI_MENU_ITEMS: { label: string; slug: string }[] = [
@@ -1329,4 +1347,162 @@ export const FSSAI_MENU_ITEMS: { label: string; slug: string }[] = [
 export const TRADE_LICENCE_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Trade Licence Registration', slug: 'trade-licence-registration' },
     { label: 'Trade Licence Renewal', slug: 'trade-licence-renewal' },
+];
+
+// --- Business Certificates Menu Items ---
+export const BUSINESS_CERTIFICATES_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'RERA Registration', slug: 'rera-registration' },
+    { label: 'NSIC Registration', slug: 'nsic-registration' },
+    { label: 'PESO Certificate', slug: 'peso-certificate' },
+    { label: 'Hallmark Registration', slug: 'hallmark-registration' },
+    { label: 'Rubber Board Registration', slug: 'rubber-board-registration' },
+    { label: 'IJCEPA Certificate', slug: 'ijcepa-certificate' },
+    { label: 'FPO Mark Certification', slug: 'fpo-mark-certification' },
+    { label: 'Spice Board Registration', slug: 'spice-board-registration' },
+    { label: 'BEE Registration', slug: 'bee-registration' },
+    { label: 'Make In India Certificate', slug: 'make-in-india-certificate' },
+    { label: 'ZED Certification', slug: 'zed-certification' },
+    { label: 'NSDC Registration', slug: 'nsdc-registration' },
+    { label: 'NGO Project Report', slug: 'ngo-project-report' },
+    { label: 'CMMI Certification', slug: 'cmmi-certification' },
+    { label: 'APEDA Registration', slug: 'apeda-registration' },
+    { label: 'TEXPROCIL Registration', slug: 'texprocil-registration' },
+    { label: 'Certificate of Good Standing', slug: 'certificate-of-good-standing' },
+    { label: 'CE Certification', slug: 'ce-certification' },
+];
+
+// --- Business Licenses Menu Items ---
+export const BUSINESS_LICENSES_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'RNI Registration', slug: 'rni-registration' },
+    { label: 'CDSCO Registration', slug: 'cdsco-registration' },
+    { label: 'AD Code Registration', slug: 'ad-code-registration' },
+    { label: 'GSP Registration', slug: 'gsp-registration' },
+    { label: 'SAFTA License', slug: 'safta-license' },
+    { label: 'WPC Certificate', slug: 'wpc-certificate' },
+    { label: 'MSTC License Registration', slug: 'mstc-license-registration' },
+    { label: 'AGMARK License', slug: 'agmark-license' },
+];
+
+// --- BIS Registration Menu Items ---
+export const BIS_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'BIS Certification', slug: 'bis-certification' },
+    { label: 'BIS Certification for Power Banks', slug: 'bis-certification-power-banks' },
+    { label: 'BIS FMCS Certification', slug: 'bis-fmcs-certification' },
+    { label: 'BIS Certification for Toys', slug: 'bis-certification-toys' },
+];
+
+// --- NGO Menu Items ---
+export const NGO_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Section 8 Company Registration', slug: 'section-8-company-registration' },
+    { label: 'Section 8 Microfinance Company', slug: 'section-8-microfinance-company-registration' },
+    { label: 'Darpan Registration', slug: 'darpan-registration' },
+    { label: '12A and 80G Registration', slug: '12a-and-80g-registration' },
+    { label: 'FCRA Registration', slug: 'fcra-registration' },
+    { label: 'NGO Accounting', slug: 'ngo-accounting' },
+];
+
+// --- International Business Setup Menu Items ---
+export const INTERNATIONAL_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Company Registration in Dubai', slug: 'company-registration-in-dubai' },
+    { label: 'UK Company Registration', slug: 'uk-company-registration' },
+    { label: 'Singapore Company Registration', slug: 'singapore-company-registration' },
+    { label: 'USA Company Registration', slug: 'usa-company-registration' },
+    { label: 'Canada Company Registration', slug: 'canada-company-registration' },
+    { label: 'Oman Company Registration', slug: 'oman-company-registration' },
+    { label: 'Malaysia Company Registration', slug: 'malaysia-company-registration' },
+    { label: 'Australia Company Registration', slug: 'australia-company-registration' },
+    { label: 'Thailand Company Registration', slug: 'thailand-company-registration' },
+    { label: 'Hong Kong Company Registration', slug: 'hong-kong-company-registration' },
+    { label: 'Indonesia Company Registration', slug: 'indonesia-company-registration' },
+    { label: 'Qatar Company Registration', slug: 'qatar-company-registration' },
+    { label: 'Italy Company Registration', slug: 'italy-company-registration' },
+    { label: 'Sweden Company Registration', slug: 'sweden-company-registration' },
+    { label: 'Ireland Company Registration', slug: 'ireland-company-registration' },
+    { label: 'Netherlands Company Registration', slug: 'netherlands-company-registration' },
+    { label: 'Mauritius Company Registration', slug: 'mauritius-company-registration' },
+    { label: 'Saudi Arabia Company Registration', slug: 'saudi-arabia-company-registration' },
+    { label: 'France Company Registration', slug: 'france-company-registration' },
+    { label: 'Germany Company Registration', slug: 'germany-company-registration' },
+    { label: 'British Virgin Islands Registration', slug: 'british-virgin-islands-registration' },
+    { label: 'New Zealand Company Registration', slug: 'new-zealand-company-registration' },
+    { label: 'Dubai Free Zone Company Registration', slug: 'dubai-free-zone-company-registration' },
+];
+
+// --- Other Services Menu Items ---
+export const OTHER_SERVICES_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'SA8000 Certification', slug: 'sa8000-certification' },
+    { label: 'Virtual CFO Services', slug: 'virtual-cfo-services' },
+    { label: 'Tea Board Registration', slug: 'tea-board-registration' },
+    { label: 'Insurance Repository Registration', slug: 'insurance-repository-registration' },
+    { label: 'SEPC License', slug: 'sepc-license' },
+    { label: 'GJEPC Registration', slug: 'gjepc-registration' },
+    { label: 'ISP Registration', slug: 'isp-registration' },
+];
+
+// --- Compliance Menu Items ---
+export const COMPANY_COMPLIANCE_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'MSME Registration', slug: 'msme-registration' },
+    { label: 'EPF Registration', slug: 'epf-registration' },
+    { label: 'Shop & Establishment Registration', slug: 'shop-and-establishment-registration' },
+];
+
+export const ANNUAL_COMPLIANCE_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'LLP Annual Compliance', slug: 'llp-annual-compliance' },
+    { label: 'Private Limited Annual Compliance', slug: 'annual-compliance-private-limited' },
+    { label: 'Outsource Bookkeeping Services', slug: 'outsource-bookkeeping-services' },
+    { label: 'Bookkeeping & Accounting Services', slug: 'bookkeeping-and-accounting-services' },
+    { label: 'Nidhi Company Compliance', slug: 'nidhi-company-compliance' },
+    { label: 'Change in LLP Agreement', slug: 'change-in-llp-agreement' },
+    { label: 'Appointment of Auditor', slug: 'appointment-of-auditor' },
+    { label: 'NGO Compliance', slug: 'ngo-compliance' },
+    { label: 'Annual Compliance for Society', slug: 'annual-compliance-society' },
+    { label: 'Annual Compliance for Partnership', slug: 'annual-compliance-partnership-firm' },
+    { label: 'Form INC-20A', slug: 'form-inc-20a' },
+    { label: 'Trust Annual Compliance', slug: 'trust-annual-compliance' },
+    { label: 'Partnership Firm Tax Return Filing', slug: 'partnership-firm-tax-return-filing' },
+];
+
+export const MCA_SERVICES_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Change Pvt Ltd Company Name', slug: 'change-private-limited-company-name' },
+    { label: 'Close Private Limited Company', slug: 'close-private-limited-company' },
+    { label: 'Change in Registered Office', slug: 'change-in-registered-office' },
+    { label: 'Change in Object Clause', slug: 'change-in-object-clause' },
+    { label: 'Revival of Struck Off Companies', slug: 'revival-of-struck-off-companies' },
+    { label: 'Change in Director', slug: 'change-in-director' },
+    { label: 'Add Designated Partner', slug: 'add-designated-partner' },
+    { label: 'DIR-3 KYC for Directors', slug: 'dir-3-kyc-for-directors' },
+    { label: 'Strike off Section 8 Companies', slug: 'strike-off-section-8-companies' },
+];
+
+export const EVENT_COMPLIANCE_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Winding Up of a Company', slug: 'winding-up-of-company' },
+    { label: 'Director Appointment', slug: 'director-appointment' },
+    { label: 'Increase Authorized Capital', slug: 'increase-authorized-capital' },
+    { label: 'Removal of Director', slug: 'removal-of-director' },
+    { label: 'Change of Auditor', slug: 'change-of-auditor' },
+    { label: 'Issue of Shares', slug: 'issue-of-shares' },
+    { label: 'Transfer of Shares', slug: 'transfer-of-shares' },
+];
+
+export const CONVERT_BUSINESS_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Convert Partnership Into LLP', slug: 'convert-partnership-into-llp' },
+];
+
+// --- IPR Menu Items ---
+export const IPR_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Trademark Registration', slug: 'trademark-registration' },
+    { label: 'Trademark Renewal', slug: 'trademark-renewal' },
+    { label: 'Trademark Objection', slug: 'trademark-objection' },
+    { label: 'Trademark Opposition', slug: 'trademark-opposition' },
+    { label: 'International Trademark Registration', slug: 'international-trademark-registration' },
+    { label: 'Trademark Rectification', slug: 'trademark-rectification' },
+    { label: 'Trademark Registration for E-commerce', slug: 'trademark-registration-ecommerce' },
+    { label: 'Trademark Hearing', slug: 'trademark-hearing' },
+    { label: 'Response to Trademark Objection', slug: 'response-to-trademark-objection' },
+    { label: 'Trademark Infringement', slug: 'trademark-infringement' },
+    { label: 'Trademark Assignment', slug: 'trademark-assignment' },
+    { label: 'Copyright Registration', slug: 'copyright-registration' },
+    { label: 'Patent Registration', slug: 'patent-registration' },
+    { label: 'Design Registration', slug: 'design-registration' },
+    { label: 'Patent Search', slug: 'patent-search' },
 ];

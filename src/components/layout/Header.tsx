@@ -1,17 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import { REGISTRATION_MENU_ITEMS, GOVERNMENT_REGISTRATION_MENU_ITEMS, FSSAI_MENU_ITEMS, TRADE_LICENCE_MENU_ITEMS } from '../../data/registrations';
+import { REGISTRATION_MENU_ITEMS, GOVERNMENT_REGISTRATION_MENU_ITEMS, FSSAI_MENU_ITEMS, TRADE_LICENCE_MENU_ITEMS, BUSINESS_CERTIFICATES_MENU_ITEMS, BUSINESS_LICENSES_MENU_ITEMS, BIS_MENU_ITEMS, NGO_MENU_ITEMS, INTERNATIONAL_MENU_ITEMS, OTHER_SERVICES_MENU_ITEMS, COMPANY_COMPLIANCE_MENU_ITEMS, ANNUAL_COMPLIANCE_MENU_ITEMS, MCA_SERVICES_MENU_ITEMS, EVENT_COMPLIANCE_MENU_ITEMS, CONVERT_BUSINESS_MENU_ITEMS, IPR_MENU_ITEMS } from '../../data/registrations';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
-    const [isMobileRegOpen, setIsMobileRegOpen] = useState(false);
-    const [isMobileGovtRegOpen, setIsMobileGovtRegOpen] = useState(false);
-    const [isMobileFssaiOpen, setIsMobileFssaiOpen] = useState(false);
-    const [isMobileTradeLicOpen, setIsMobileTradeLicOpen] = useState(false);
-    const [megaMenuTab, setMegaMenuTab] = useState<'company' | 'government' | 'fssai' | 'trade'>('company');
+    const [mobileOpenSection, setMobileOpenSection] = useState<string | null>(null);
+    const [megaMenuTab, setMegaMenuTab] = useState<'company' | 'government' | 'fssai' | 'trade' | 'certificates' | 'licenses' | 'bis' | 'ngo' | 'international' | 'other' | 'compliance' | 'ipr'>('company');
     const [searchQuery, setSearchQuery] = useState('');
     const megaMenuRef = useRef<HTMLDivElement>(null);
     const megaMenuTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -32,30 +29,26 @@ export default function Header() {
         }
     };
 
-    // Company Registration columns (3 columns)
-    const compCol1 = REGISTRATION_MENU_ITEMS.slice(0, 9);
-    const compCol2 = REGISTRATION_MENU_ITEMS.slice(9, 18);
-    const compCol3 = REGISTRATION_MENU_ITEMS.slice(18);
+    const menuConfig: { key: string; label: string; items: { label: string; slug: string }[] }[] = [
+        { key: 'company', label: 'Company Registration', items: REGISTRATION_MENU_ITEMS },
+        { key: 'government', label: 'Government Registration', items: GOVERNMENT_REGISTRATION_MENU_ITEMS },
+        { key: 'fssai', label: 'FSSAI Registration', items: FSSAI_MENU_ITEMS },
+        { key: 'trade', label: 'Trade Licence', items: TRADE_LICENCE_MENU_ITEMS },
+        { key: 'certificates', label: 'Business Certificates', items: BUSINESS_CERTIFICATES_MENU_ITEMS },
+        { key: 'licenses', label: 'Business Licenses', items: BUSINESS_LICENSES_MENU_ITEMS },
+        { key: 'bis', label: 'BIS Registration', items: BIS_MENU_ITEMS },
+        { key: 'ngo', label: 'NGO', items: NGO_MENU_ITEMS },
+        { key: 'international', label: 'International Business', items: INTERNATIONAL_MENU_ITEMS },
+        { key: 'compliance', label: 'Compliance', items: [...COMPANY_COMPLIANCE_MENU_ITEMS, ...ANNUAL_COMPLIANCE_MENU_ITEMS, ...MCA_SERVICES_MENU_ITEMS, ...EVENT_COMPLIANCE_MENU_ITEMS, ...CONVERT_BUSINESS_MENU_ITEMS] },
+        { key: 'ipr', label: 'IPR', items: IPR_MENU_ITEMS },
+        { key: 'other', label: 'Other Services', items: OTHER_SERVICES_MENU_ITEMS },
+    ];
 
-    // Government Registration columns (3 columns)
-    const govtCol1 = GOVERNMENT_REGISTRATION_MENU_ITEMS.slice(0, 10);
-    const govtCol2 = GOVERNMENT_REGISTRATION_MENU_ITEMS.slice(10, 20);
-    const govtCol3 = GOVERNMENT_REGISTRATION_MENU_ITEMS.slice(20);
-
-    // FSSAI items (2 columns)
-    const fssaiCol1 = FSSAI_MENU_ITEMS.slice(0, 3);
-    const fssaiCol2 = FSSAI_MENU_ITEMS.slice(3);
-
-    // Trade Licence items (single column since only 2 items)
-    const tradeCol1 = TRADE_LICENCE_MENU_ITEMS;
-
-    const activeItems = megaMenuTab === 'company'
-        ? [compCol1, compCol2, compCol3]
-        : megaMenuTab === 'government'
-            ? [govtCol1, govtCol2, govtCol3]
-            : megaMenuTab === 'fssai'
-                ? [fssaiCol1, fssaiCol2]
-                : [tradeCol1];
+    const activeConfig = menuConfig.find(c => c.key === megaMenuTab) || menuConfig[0];
+    const activeItemsList = activeConfig.items;
+    const colCount = activeItemsList.length > 12 ? 3 : activeItemsList.length > 4 ? 2 : 1;
+    const colSize = Math.ceil(activeItemsList.length / colCount);
+    const activeItems = Array.from({ length: colCount }, (_, i) => activeItemsList.slice(i * colSize, (i + 1) * colSize));
 
     return (
         <header className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-7xl z-50 rounded-full transition-all duration-300 bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
@@ -78,19 +71,14 @@ export default function Header() {
                             </div>
                             {/* Mega Menu */}
                             <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200 ${isMegaMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
-                                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 w-[800px] flex overflow-hidden">
+                                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 w-[850px] flex overflow-hidden">
                                     {/* Vertical Sidebar Tabs */}
-                                    <div className="w-[200px] bg-gray-50 border-r border-gray-100 py-3 flex flex-col shrink-0">
-                                        {([
-                                            { key: 'company' as const, label: 'Company Registration' },
-                                            { key: 'government' as const, label: 'Government Registration' },
-                                            { key: 'fssai' as const, label: 'FSSAI Registration' },
-                                            { key: 'trade' as const, label: 'Trade Licence' },
-                                        ]).map((tab) => (
+                                    <div className="w-[220px] bg-gray-50 border-r border-gray-100 py-2 flex flex-col shrink-0 max-h-[450px] overflow-y-auto">
+                                        {menuConfig.map((tab) => (
                                             <button
                                                 key={tab.key}
-                                                onClick={() => setMegaMenuTab(tab.key)}
-                                                className={`text-left px-5 py-3 text-sm font-semibold transition-colors relative ${megaMenuTab === tab.key
+                                                onClick={() => setMegaMenuTab(tab.key as typeof megaMenuTab)}
+                                                className={`text-left px-5 py-2.5 text-sm font-semibold transition-colors relative ${megaMenuTab === tab.key
                                                     ? 'text-[var(--color-brand-secondary)] bg-white'
                                                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                                                     }`}
@@ -103,7 +91,7 @@ export default function Header() {
                                         ))}
                                     </div>
                                     {/* Menu Items Grid */}
-                                    <div className={`flex-1 p-5 grid gap-4 max-h-[420px] overflow-y-auto ${megaMenuTab === 'trade' ? 'grid-cols-1' : megaMenuTab === 'fssai' ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                                    <div className={`flex-1 p-5 grid gap-4 max-h-[450px] overflow-y-auto ${colCount === 3 ? 'grid-cols-3' : colCount === 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
                                         {activeItems.map((col, colIdx) => (
                                             <div key={colIdx} className="space-y-1">
                                                 {col.map((item) => (
@@ -116,11 +104,6 @@ export default function Header() {
                                 </div>
                             </div>
                         </div>
-                        <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Compliance</a>
-                        <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">IPR</a>
-                        <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Taxation</a>
-                        <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Consultation</a>
-                        <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">More</a>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Contact Us</a>
                     </nav>
 
@@ -203,90 +186,24 @@ export default function Header() {
                             </svg>
                         </div>
                     </div>
-                    {/* Mobile: Registrations expandable */}
-                    <div className="border-b border-gray-50">
-                        <button onClick={() => setIsMobileRegOpen(!isMobileRegOpen)}
-                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
-                            Company Registration
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileRegOpen ? 'rotate-90' : ''}`}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                        {isMobileRegOpen && (
-                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
-                                {REGISTRATION_MENU_ITEMS.map((item) => (
-                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileRegOpen(false); }}
-                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    {/* Mobile: Government Registration expandable */}
-                    <div className="border-b border-gray-50">
-                        <button onClick={() => setIsMobileGovtRegOpen(!isMobileGovtRegOpen)}
-                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
-                            Government Registration
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileGovtRegOpen ? 'rotate-90' : ''}`}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                        {isMobileGovtRegOpen && (
-                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
-                                {GOVERNMENT_REGISTRATION_MENU_ITEMS.map((item) => (
-                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileGovtRegOpen(false); }}
-                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    {/* Mobile: FSSAI Registration expandable */}
-                    <div className="border-b border-gray-50">
-                        <button onClick={() => setIsMobileFssaiOpen(!isMobileFssaiOpen)}
-                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
-                            FSSAI Registration
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileFssaiOpen ? 'rotate-90' : ''}`}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                        {isMobileFssaiOpen && (
-                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
-                                {FSSAI_MENU_ITEMS.map((item) => (
-                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileFssaiOpen(false); }}
-                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    {/* Mobile: Trade Licence expandable */}
-                    <div className="border-b border-gray-50">
-                        <button onClick={() => setIsMobileTradeLicOpen(!isMobileTradeLicOpen)}
-                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
-                            Trade Licence
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileTradeLicOpen ? 'rotate-90' : ''}`}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </button>
-                        {isMobileTradeLicOpen && (
-                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
-                                {TRADE_LICENCE_MENU_ITEMS.map((item) => (
-                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileTradeLicOpen(false); }}
-                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    {[
-                        'IPR',
-                        'Taxation',
-                        'Consultation',
-                        'More'
-                    ].map((item) => (
-                        <a key={item} href="#" className="flex justify-between items-center text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 border-b border-gray-50 transition-colors">
-                            {item}
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-gray-400">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </a>
+                    {menuConfig.map((section) => (
+                        <div key={section.key} className="border-b border-gray-50">
+                            <button onClick={() => setMobileOpenSection(mobileOpenSection === section.key ? null : section.key)}
+                                className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
+                                {section.label}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${mobileOpenSection === section.key ? 'rotate-90' : ''}`}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </button>
+                            {mobileOpenSection === section.key && (
+                                <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
+                                    {section.items.map((item) => (
+                                        <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setMobileOpenSection(null); }}
+                                            className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                     ))}
 
                 </div>

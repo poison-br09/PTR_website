@@ -37,6 +37,11 @@ export default function Footer() {
                             <li><Link to="/sole-proprietorship-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Sole Proprietorship</Link></li>
                             <li><Link to="/startup-india-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Startup India</Link></li>
                         </ul>
+                        <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">TRADE LICENCE</h4>
+                        <ul className="flex flex-col gap-3 text-sm text-gray-300">
+                            <li><Link to="/trade-licence-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trade Licence Registration</Link></li>
+                            <li><Link to="/trade-licence-renewal" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trade Licence Renewal</Link></li>
+                        </ul>
                     </div>
 
                     <div>
@@ -52,34 +57,43 @@ export default function Footer() {
                             <li><Link to="/fssai-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">FSSAI Registration</Link></li>
                             <li><Link to="/fssai-central-license" className="hover:text-[var(--color-brand-secondary)] transition-colors">FSSAI Central License</Link></li>
                             <li><Link to="/fssai-state-license" className="hover:text-[var(--color-brand-secondary)] transition-colors">FSSAI State License</Link></li>
-                            <li><Link to="/fssai-product-approval" className="hover:text-[var(--color-brand-secondary)] transition-colors">FSSAI Product Approval</Link></li>
                             <li><Link to="/fssai-license-renewal" className="hover:text-[var(--color-brand-secondary)] transition-colors">FSSAI License Renewal</Link></li>
-                            <li><Link to="/halal-certification" className="hover:text-[var(--color-brand-secondary)] transition-colors">Halal Certification</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-xl mb-4 tracking-wide text-[var(--color-brand-secondary)]">COMPLIANCE & TAX</h4>
+                        <h4 className="font-semibold text-xl mb-4 tracking-wide text-[var(--color-brand-secondary)]">COMPLIANCE</h4>
                         <ul className="flex flex-col gap-3 text-sm text-gray-300">
-                            <li><Link to="/professional-tax-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Professional Tax</Link></li>
-                            <li><Link to="/ptec-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">PTEC Registration</Link></li>
-                            <li><Link to="/icegate-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">ICEGATE Registration</Link></li>
-                            <li><Link to="/rcmc-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">RCMC Registration</Link></li>
+                            <li><Link to="/msme-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">MSME Registration</Link></li>
+                            <li><Link to="/llp-annual-compliance" className="hover:text-[var(--color-brand-secondary)] transition-colors">LLP Annual Compliance</Link></li>
+                            <li><Link to="/annual-compliance-private-limited" className="hover:text-[var(--color-brand-secondary)] transition-colors">Pvt Ltd Annual Compliance</Link></li>
+                            <li><Link to="/change-company-name" className="hover:text-[var(--color-brand-secondary)] transition-colors">Change Company Name</Link></li>
+                            <li><Link to="/winding-up-company" className="hover:text-[var(--color-brand-secondary)] transition-colors">Winding Up of Company</Link></li>
                         </ul>
-                        <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">TRADE LICENCE</h4>
+                        <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">IPR</h4>
                         <ul className="flex flex-col gap-3 text-sm text-gray-300">
-                            <li><Link to="/trade-licence-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trade Licence Registration</Link></li>
-                            <li><Link to="/trade-licence-renewal" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trade Licence Renewal</Link></li>
+                            <li><Link to="/trademark-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trademark Registration</Link></li>
+                            <li><Link to="/trademark-renewal" className="hover:text-[var(--color-brand-secondary)] transition-colors">Trademark Renewal</Link></li>
+                            <li><Link to="/copyright-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Copyright Registration</Link></li>
+                            <li><Link to="/patent-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Patent Registration</Link></li>
+                            <li><Link to="/design-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Design Registration</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-xl mb-4 tracking-wide text-[var(--color-brand-secondary)]">BIS & CDSCO</h4>
+                        <h4 className="font-semibold text-xl mb-4 tracking-wide text-[var(--color-brand-secondary)]">BIS & NGO</h4>
                         <ul className="flex flex-col gap-3 text-sm text-gray-300">
                             <li><Link to="/bis-certification" className="hover:text-[var(--color-brand-secondary)] transition-colors">BIS Certification</Link></li>
-                            <li><Link to="/medical-device-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Medical Device Registration</Link></li>
-                            <li><Link to="/gmp-certification" className="hover:text-[var(--color-brand-secondary)] transition-colors">GMP Certification</Link></li>
-                            <li><Link to="/iso-9001-certification" className="hover:text-[var(--color-brand-secondary)] transition-colors">ISO 9001 Certification</Link></li>
+                            <li><Link to="/section-8-company-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Section 8 Company</Link></li>
+                            <li><Link to="/12a-80g-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">12A & 80G Registration</Link></li>
+                            <li><Link to="/fcra-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">FCRA Registration</Link></li>
+                        </ul>
+                        <h4 className="font-semibold text-xl mt-6 mb-4 tracking-wide text-[var(--color-brand-secondary)]">INTERNATIONAL</h4>
+                        <ul className="flex flex-col gap-3 text-sm text-gray-300">
+                            <li><Link to="/company-registration-dubai" className="hover:text-[var(--color-brand-secondary)] transition-colors">Dubai Company Registration</Link></li>
+                            <li><Link to="/uk-company-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">UK Company Registration</Link></li>
+                            <li><Link to="/singapore-company-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">Singapore Company</Link></li>
+                            <li><Link to="/usa-company-registration" className="hover:text-[var(--color-brand-secondary)] transition-colors">USA Company Registration</Link></li>
                         </ul>
                     </div>
                 </div>
