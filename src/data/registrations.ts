@@ -1309,33 +1309,11 @@ export const GOVERNMENT_REGISTRATION_MENU_ITEMS: { label: string; slug: string }
 ];
 
 // --- Import and merge government registration data ---
-import { GOVT_REGISTRATIONS_A } from './govt-registrations-a';
-import { GOVT_REGISTRATIONS_B } from './govt-registrations-b';
-import { GOVT_REGISTRATIONS_C } from './govt-registrations-c';
-import { GOVT_REGISTRATIONS_D } from './govt-registrations-d';
+import { GOVT_REGISTRATIONS } from './govt-registrations';
+import { FSSAI_REGISTRATIONS } from './fssai-registrations';
+import { TRADE_REGISTRATIONS } from './trade-registrations';
 
-// --- Import FSSAI & Halal registration data ---
-import { FSSAI_REGISTRATION } from './fssai-registration';
-import { FSSAI_CENTRAL_LICENSE } from './fssai-central-license';
-import { FSSAI_STATE_LICENSE } from './fssai-state-license';
-import { FSSAI_PRODUCT_APPROVAL } from './fssai-product-approval';
-import { FSSAI_LICENSE_RENEWAL } from './fssai-license-renewal';
-import { HALAL_CERTIFICATION } from './halal-certification';
-
-// --- Import Trade Licence data ---
-import { TRADE_LICENCE_REGISTRATION } from './trade-licence-registration';
-import { TRADE_LICENCE_RENEWAL } from './trade-licence-renewal';
-
-Object.assign(REGISTRATIONS, GOVT_REGISTRATIONS_A, GOVT_REGISTRATIONS_B, GOVT_REGISTRATIONS_C, GOVT_REGISTRATIONS_D, {
-    'fssai-registration': FSSAI_REGISTRATION,
-    'fssai-central-license': FSSAI_CENTRAL_LICENSE,
-    'fssai-state-license': FSSAI_STATE_LICENSE,
-    'fssai-product-approval': FSSAI_PRODUCT_APPROVAL,
-    'fssai-license-renewal': FSSAI_LICENSE_RENEWAL,
-    'halal-certification': HALAL_CERTIFICATION,
-    'trade-licence-registration': TRADE_LICENCE_REGISTRATION,
-    'trade-licence-renewal': TRADE_LICENCE_RENEWAL,
-});
+Object.assign(REGISTRATIONS, GOVT_REGISTRATIONS, FSSAI_REGISTRATIONS, TRADE_REGISTRATIONS);
 
 // --- FSSAI Registration Menu Items ---
 export const FSSAI_MENU_ITEMS: { label: string; slug: string }[] = [
