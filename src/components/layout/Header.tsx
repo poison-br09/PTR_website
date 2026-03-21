@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 
 export default function Header() {
@@ -20,16 +21,16 @@ export default function Header() {
             {/* Main Navigation */}
             <div className="px-6 py-3 flex justify-between items-center h-16 relative">
                 {/* Logo */}
-                <div className={`flex items-center gap-3 font-bold text-xl transition-opacity duration-300 text-[#090a3d] ${isSearchOpen ? 'opacity-0 md:opacity-100' : 'opacity-100'}`}>
+                <Link to="/" className={`flex items-center gap-3 font-bold text-xl transition-opacity duration-300 text-[#090a3d] ${isSearchOpen ? 'opacity-0 md:opacity-100' : 'opacity-100'}`}>
                     <img src={logo} alt="Your Professional Logo" className="h-8 md:h-10 object-contain -mt-1 transition-all duration-300" />
                     <span className="hidden sm:block">Your Professional</span>
-                </div>
+                </Link>
 
                 {/* Desktop Nav - Centered OR Search Bar */}
                 <div className="hidden lg:flex flex-1 justify-center items-center px-8 relative">
                     {/* Navigation Links */}
                     <nav className={`flex items-center gap-6 xl:gap-8 font-medium text-sm transition-all duration-300 absolute ${isSearchOpen ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}>
-                        <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Registrations</a>
+                        <Link to="/company-registration" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Registrations</Link>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Compliance</a>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">IPR</a>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Taxation</a>

@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/sections/HeroSection';
@@ -8,12 +9,12 @@ import FeaturedIn from './components/sections/FeaturedIn';
 import FAQSection from './components/sections/FAQSection';
 import LatestBlogs from './components/sections/LatestBlogs';
 import Testimonials from './components/sections/Testimonials';
+import CompanyRegistration from './pages/CompanyRegistration';
 
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen flex flex-col font-sans">
       <Header />
-
       <main className="flex-grow">
         <HeroSection />
         {/* <TrustedPartners /> */}
@@ -24,9 +25,19 @@ function App() {
         <LatestBlogs />
         <Testimonials />
       </main>
-
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/company-registration" element={<CompanyRegistration />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
