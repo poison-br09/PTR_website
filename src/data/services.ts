@@ -108,6 +108,14 @@ import GST from './taxation/gst';
 import CA_SERVICES from './consultancy/ca-services';
 import BUSINESS_CONSULTANTS from './consultancy/business-consultants';
 import LAWYER_EXPERT from './consultancy/lawyer-expert';
+// Environmental
+import { ENVIRONMENTAL } from './environmental/environmental';
+// Agreements & Contracts
+import { AGREEMENTS } from './agreements/agreements';
+// Regulatory
+import { REGULATORY } from './regulatory/regulatory';
+// Tools & Calculators
+import { TOOLS_CALCULATORS } from './tools/tools-calculators';
 
 Object.assign(SERVICES,
     GOVT_REGISTRATIONS, FSSAI_REGISTRATIONS, TRADE_REGISTRATIONS,
@@ -116,7 +124,7 @@ Object.assign(SERVICES,
     COMPANY_COMPLIANCE, ANNUAL_COMPLIANCE, MCA_SERVICES,
     EVENT_BASED_COMPLIANCE, CONVERT_BUSINESS, IPR_REGISTRATIONS,
     INCOME_TAX, GST, CA_SERVICES, BUSINESS_CONSULTANTS, LAWYER_EXPERT,
-    COMPANY_REGISTRATIONS,
+    COMPANY_REGISTRATIONS, ENVIRONMENTAL, AGREEMENTS, REGULATORY, TOOLS_CALCULATORS,
 );
 
 // --- FSSAI Registration Menu Items ---
@@ -339,4 +347,70 @@ export const BUSINESS_CONSULTANTS_MENU_ITEMS: { label: string; slug: string }[] 
 export const LAWYER_EXPERT_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Consumer Complaint', slug: 'consumer-complaint' },
     { label: 'Cheque Bounce Notice', slug: 'cheque-bounce-notice' },
+];
+
+// --- Environmental Menu Items ---
+export const ENVIRONMENTAL_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Consent to Establish', slug: 'consent-to-establish' },
+    { label: 'Environmental Due Diligence', slug: 'environmental-due-diligence' },
+    { label: 'EPR Registration', slug: 'epr-registration' },
+    { label: 'Environmental Auditing', slug: 'environmental-auditing' },
+    { label: 'Plastic Waste Authorization', slug: 'plastic-waste-authorization' },
+    { label: 'EPR Authorization for E-Waste', slug: 'epr-authorization-e-waste' },
+    { label: 'Environmental Impact Assessment (EIA)', slug: 'environmental-impact-assessment' },
+    { label: 'ROHS Certification', slug: 'rohs-certification' },
+    { label: 'Environmental Management Plan Report', slug: 'environmental-management-plan' },
+];
+
+// --- Agreements & Contracts Menu Items ---
+export const AGREEMENTS_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Memorandum of Understanding (MOU)', slug: 'memorandum-of-understanding' },
+    { label: 'Joint Venture Agreement', slug: 'joint-venture-agreement' },
+    { label: 'Franchise Agreement', slug: 'franchise-agreement' },
+    { label: "Shareholder's Agreement", slug: 'shareholders-agreement' },
+    { label: 'Founders Agreement', slug: 'founders-agreement' },
+    { label: 'Legal Heir Certificate', slug: 'legal-heir-certificate' },
+    { label: 'Sale Deed', slug: 'sale-deed' },
+    { label: 'Terms of Use Agreement', slug: 'terms-of-use-agreement' },
+    { label: 'Master Service Agreement', slug: 'master-service-agreement' },
+    { label: 'Succession Certificate', slug: 'succession-certificate' },
+    { label: 'Gift Deed', slug: 'gift-deed' },
+    { label: 'Relinquishment Deed', slug: 'relinquishment-deed' },
+    { label: 'Transfer Pricing Agreement', slug: 'transfer-pricing-agreement' },
+    { label: 'Non-Disclosure Agreement (NDA)', slug: 'non-disclosure-agreement' },
+    { label: 'Share Purchase Agreement', slug: 'share-purchase-agreement' },
+    { label: 'Service Level Agreement', slug: 'service-level-agreement' },
+    { label: 'Probate of Will', slug: 'probate-of-will' },
+    { label: 'Fire Department NOC', slug: 'fire-department-noc' },
+    { label: 'Non-Compete Agreement', slug: 'non-compete-agreement' },
+];
+
+// --- Regulatory Menu Items ---
+export const REGULATORY_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'NBFC Registration', slug: 'nbfc-registration' },
+    { label: 'NBFC Compliance', slug: 'nbfc-compliance' },
+    { label: 'Payment Bank License', slug: 'payment-bank-license' },
+    { label: 'Payment Gateway License', slug: 'payment-gateway-license' },
+    { label: 'Legal Notice for Defamation', slug: 'legal-notice-defamation' },
+    { label: 'Legal Notice', slug: 'legal-notice' },
+];
+
+// --- Tools & Calculators Menu Items ---
+export const TOOLS_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'NIC Code', slug: 'nic-code' },
+    { label: 'Company Name Check', slug: 'company-name-check' },
+    { label: 'Search Registered Company Details', slug: 'search-registered-company' },
+    { label: 'Trademark Search', slug: 'trademark-search' },
+    { label: 'Trademark Registration Details', slug: 'trademark-registration-details' },
+    { label: 'Trademark Class Search', slug: 'trademark-class-search' },
+    { label: '8th Pay Commission Salary Calculator', slug: '8th-pay-commission-calculator' },
+    { label: 'SIP Calculator', slug: 'sip-calculator' },
+    { label: 'Step Up SIP Calculator', slug: 'step-up-sip-calculator' },
+    { label: 'HDFC Home Loan EMI Calculator', slug: 'home-loan-emi-calculator' },
+    { label: 'GST Calculator', slug: 'gst-calculator' },
+    { label: 'Income Tax Calculator', slug: 'income-tax-calculator' },
+    { label: 'TDS Interest Calculator', slug: 'tds-interest-calculator' },
+    { label: 'TDS Calculator', slug: 'tds-calculator' },
+    { label: 'PPF Calculator', slug: 'ppf-calculator' },
+    { label: 'GST Interest Calculator', slug: 'gst-interest-calculator' },
 ];
