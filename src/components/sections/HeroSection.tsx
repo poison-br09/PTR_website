@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import google_logo from '../../assets/google.svg';
+// import google_logo from '../../assets/google.svg';
 
 const SERVICES_LIST = [
     "Private Limited Company Registration",
