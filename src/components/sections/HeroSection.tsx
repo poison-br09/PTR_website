@@ -77,8 +77,7 @@ export default function HeroSection() {
 
         setIsSubmitting(true);
         try {
-            // NOTE: Replace this URL with your deployed Google Apps Script Web App URL
-            const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbIMciYiHa_C2y-8oem8xzUK7-VwuLfWlAM364mLeLm0Qg1u8QzGPXTn7UqwrZFRyy6A/exec';
+            const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
             const formBody = new URLSearchParams();
             formBody.append("Name", formData.name);
