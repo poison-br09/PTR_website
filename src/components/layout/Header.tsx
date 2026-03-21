@@ -1,11 +1,23 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
+import { REGISTRATION_MENU_ITEMS } from '../../data/registrations';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+    const [isMobileRegOpen, setIsMobileRegOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const megaMenuRef = useRef<HTMLDivElement>(null);
+    const megaMenuTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+    useEffect(() => {
+        return () => { if (megaMenuTimeout.current) clearTimeout(megaMenuTimeout.current); };
+    }, []);
+
+    const handleMegaEnter = () => { if (megaMenuTimeout.current) clearTimeout(megaMenuTimeout.current); setIsMegaMenuOpen(true); };
+    const handleMegaLeave = () => { megaMenuTimeout.current = setTimeout(() => setIsMegaMenuOpen(false), 200); };
 
     const handleSearch = (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -15,6 +27,10 @@ export default function Header() {
             setIsSearchOpen(false);
         }
     };
+
+    const col1 = REGISTRATION_MENU_ITEMS.slice(0, 9);
+    const col2 = REGISTRATION_MENU_ITEMS.slice(9, 18);
+    const col3 = REGISTRATION_MENU_ITEMS.slice(18);
 
     return (
         <header className="fixed top-4 left-4 right-4 md:left-8 md:right-8 lg:left-1/2 lg:-translate-x-1/2 lg:w-full lg:max-w-7xl z-50 rounded-full transition-all duration-300 bg-white/95 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)]">
@@ -30,7 +46,37 @@ export default function Header() {
                 <div className="hidden lg:flex flex-1 justify-center items-center px-8 relative">
                     {/* Navigation Links */}
                     <nav className={`flex items-center gap-6 xl:gap-8 font-medium text-sm transition-all duration-300 absolute ${isSearchOpen ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100'}`}>
-                        <Link to="/company-registration" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Registrations</Link>
+                        <div className="relative" onMouseEnter={handleMegaEnter} onMouseLeave={handleMegaLeave} ref={megaMenuRef}>
+                            <div className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)] flex items-center gap-1">
+                                Registrations
+                                <svg className={`w-3.5 h-3.5 transition-transform ${isMegaMenuOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                            </div>
+                            {/* Mega Menu */}
+                            <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200 ${isMegaMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                                <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 w-[700px]">
+                                    <div className="grid grid-cols-3 gap-4">
+                                        <div className="space-y-1">
+                                            {col1.map((item) => (
+                                                <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
+                                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
+                                            ))}
+                                        </div>
+                                        <div className="space-y-1">
+                                            {col2.map((item) => (
+                                                <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
+                                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
+                                            ))}
+                                        </div>
+                                        <div className="space-y-1">
+                                            {col3.map((item) => (
+                                                <Link key={item.slug} to={`/${item.slug}`} onClick={() => setIsMegaMenuOpen(false)}
+                                                    className="block px-3 py-2 text-sm text-gray-700 hover:text-[var(--color-brand-secondary)] hover:bg-amber-50 rounded-lg transition-colors">{item.label}</Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Compliance</a>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">IPR</a>
                         <a href="#" className="transition-colors whitespace-nowrap text-gray-700 hover:text-[var(--color-brand-secondary)]">Taxation</a>
@@ -118,8 +164,25 @@ export default function Header() {
                             </svg>
                         </div>
                     </div>
+                    {/* Mobile: Registrations expandable */}
+                    <div className="border-b border-gray-50">
+                        <button onClick={() => setIsMobileRegOpen(!isMobileRegOpen)}
+                            className="flex justify-between items-center w-full text-sm font-bold text-gray-800 hover:text-[var(--color-brand-secondary)] px-6 py-4 transition-colors">
+                            Registrations
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 text-gray-400 transition-transform ${isMobileRegOpen ? 'rotate-90' : ''}`}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                        {isMobileRegOpen && (
+                            <div className="bg-gray-50 px-6 pb-3 max-h-60 overflow-y-auto">
+                                {REGISTRATION_MENU_ITEMS.map((item) => (
+                                    <Link key={item.slug} to={`/${item.slug}`} onClick={() => { setIsMenuOpen(false); setIsMobileRegOpen(false); }}
+                                        className="block py-2 text-sm text-gray-600 hover:text-[var(--color-brand-secondary)] transition-colors">{item.label}</Link>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                     {[
-                        'Registrations',
                         'Compliance',
                         'IPR',
                         'Taxation',

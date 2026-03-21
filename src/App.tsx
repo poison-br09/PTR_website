@@ -10,6 +10,7 @@ import FAQSection from './components/sections/FAQSection';
 import LatestBlogs from './components/sections/LatestBlogs';
 import Testimonials from './components/sections/Testimonials';
 import CompanyRegistration from './pages/CompanyRegistration';
+import RegistrationPage from './pages/RegistrationPage';
 
 function HomePage() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/company-registration" element={<CompanyRegistration />} />
+        <Route path="/:slug" element={<RegistrationPage />} />
       </Routes>
     </BrowserRouter>
   );
