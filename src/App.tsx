@@ -12,6 +12,7 @@ import LatestBlogs from './components/home/LatestBlogs';
 import Testimonials from './components/home/Testimonials';
 import CompanyRegistration from './pages/CompanyRegistration';
 import ServicePage from './pages/ServicePage';
+import ContactUs from './pages/ContactUs';
 
 function HomePage() {
   return (
@@ -38,6 +39,8 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/company-registration" element={<CompanyRegistration />} />
         <Route path="/:slug" element={<ServicePage />} />
       </Routes>

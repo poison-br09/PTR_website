@@ -224,7 +224,6 @@ export const INTERNATIONAL_MENU_ITEMS: { label: string; slug: string }[] = [
 
 // --- Other Services Menu Items ---
 export const OTHER_SERVICES_MENU_ITEMS: { label: string; slug: string }[] = [
-    { label: 'SA8000 Certification', slug: 'sa8000-certification' },
     { label: 'Virtual CFO Services', slug: 'virtual-cfo-services' },
     { label: 'Tea Board Registration', slug: 'tea-board-registration' },
     { label: 'Insurance Repository Registration', slug: 'insurance-repository-registration' },
@@ -282,8 +281,8 @@ export const CONVERT_BUSINESS_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Convert Partnership Into LLP', slug: 'convert-partnership-into-llp' },
 ];
 
-// --- IPR Menu Items ---
-export const IPR_MENU_ITEMS: { label: string; slug: string }[] = [
+// --- IPR Menu Items (split into 5 sub-categories) ---
+export const TRADEMARK_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Trademark Registration', slug: 'trademark-registration' },
     { label: 'Trademark Renewal', slug: 'trademark-renewal' },
     { label: 'Trademark Objection', slug: 'trademark-objection' },
@@ -295,10 +294,28 @@ export const IPR_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Response to Trademark Objection', slug: 'response-to-trademark-objection' },
     { label: 'Trademark Infringement', slug: 'trademark-infringement' },
     { label: 'Trademark Assignment', slug: 'trademark-assignment' },
+];
+
+export const COPYRIGHT_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Copyright Registration', slug: 'copyright-registration' },
+];
+
+export const PATENT_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Patent Registration', slug: 'patent-registration' },
+];
+
+export const DESIGN_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Design Registration', slug: 'design-registration' },
+];
+
+export const IP_DISPUTE_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'Patent Search', slug: 'patent-search' },
+];
+
+// Keep combined IPR list for backward compatibility
+export const IPR_MENU_ITEMS: { label: string; slug: string }[] = [
+    ...TRADEMARK_MENU_ITEMS, ...COPYRIGHT_MENU_ITEMS,
+    ...PATENT_MENU_ITEMS, ...DESIGN_MENU_ITEMS, ...IP_DISPUTE_MENU_ITEMS,
 ];
 
 // --- Income Tax Menu Items ---
@@ -413,4 +430,27 @@ export const TOOLS_MENU_ITEMS: { label: string; slug: string }[] = [
     { label: 'TDS Calculator', slug: 'tds-calculator' },
     { label: 'PPF Calculator', slug: 'ppf-calculator' },
     { label: 'GST Interest Calculator', slug: 'gst-interest-calculator' },
+];
+
+// --- Labor Law Menu Items ---
+export const LABOR_LAW_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'SA8000 Certification', slug: 'sa8000-certification' },
+];
+
+// --- Resources Menu Items (static links) ---
+export const RESOURCES_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Blog', slug: 'blog' },
+    { label: 'Guides', slug: 'guides' },
+];
+
+// --- Get to Know Us Menu Items (static links) ---
+export const GET_TO_KNOW_US_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'About Us', slug: 'about-us' },
+    { label: 'Contact Us', slug: 'contact-us' },
+    { label: 'Reviews', slug: 'reviews' },
+];
+
+// --- Partnership Menu Items (static link) ---
+export const PARTNERSHIP_MENU_ITEMS: { label: string; slug: string }[] = [
+    { label: 'Explore Partnerships', slug: 'partnerships' },
 ];
