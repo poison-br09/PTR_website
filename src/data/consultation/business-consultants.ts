@@ -183,12 +183,23 @@ const data: Record<string, ServiceData> = {
         title: "Cross-Border Ready",
         desc: "Our solutions natively support multi-currency processing, FEMA-compliant fund flows, and international card network certifications — enabling you to serve global merchants from day one.",
       },
+      {
+        icon: "📊",
+        title: "Dedicated Compliance Dashboard",
+        desc: "Monitor all regulatory metrics, filing deadlines, escrow account balances, and compliance status in real time through a unified digital dashboard accessible to your management team and compliance officers around the clock.",
+      },
+      {
+        icon: "💲",
+        title: "Cost Optimization Through Consolidation",
+        desc: "By integrating multiple payment channels through a single aggregation layer, you reduce per-transaction costs, minimize gateway subscription fees, and achieve volume-based pricing advantages that improve unit economics at scale.",
+      },
     ],
     disadvantages: [
       "The PA licensing process is inherently lengthy (6–12 months) due to RBI processing timelines, which are outside any consultant's control",
       "Minimum net-worth requirements of ₹15–25 crore represent a significant capital commitment, particularly for early-stage ventures or bootstrapped startups",
       "Ongoing compliance obligations — including annual PCI-DSS recertification, quarterly net-worth reporting, and periodic RBI audits — demand dedicated internal resources even after engagement completion",
       "Regulatory uncertainty around evolving guidelines (e.g., digital lending, CBDC integration) may necessitate future advisory engagements to maintain compliance",
+      "Card network rules and scheme-specific requirements (Visa, Mastercard, RuPay) add additional compliance layers that require ongoing monitoring and adaptation beyond the core RBI PA framework",
     ],
     compliance: [
       {
@@ -240,6 +251,22 @@ const data: Record<string, ServiceData> = {
       {
         q: "What ongoing support does Your Professional provide after go-live?",
         a: "Our Annual Compliance Retainer covers quarterly net-worth certificate preparation, assistance with RBI's periodic reporting requirements, PCI-DSS recertification coordination, escrow audit facilitation, policy updates in response to regulatory changes, and priority access to our regulatory advisory team for ad-hoc queries. We also provide technology support for gateway version upgrades, new payment method integrations, and reconciliation system enhancements.",
+      },
+      {
+        q: "Can we integrate UPI and BBPS alongside card-based payments?",
+        a: "Yes, our gateway architecture supports simultaneous integration of UPI (collect and intent flows), BBPS (bill payment), NEFT/RTGS/IMPS, net banking, wallets, and card-based payments through a unified API layer. NPCI onboarding for UPI is handled as part of the engagement, ensuring a single integration effort covers all major payment instruments available in India.",
+      },
+      {
+        q: "What is the difference between a Payment Aggregator and a Payment Gateway?",
+        a: "A Payment Aggregator pools funds from customers in an escrow account before settling to merchants, requiring an RBI license. A Payment Gateway merely provides the technology to route transactions to the acquiring bank without handling funds and currently does not require RBI authorization — though this regulatory distinction is narrowing. Your Professional advises on which classification applies to your business model and structures the engagement accordingly.",
+      },
+      {
+        q: "How does Your Professional assist with merchant onboarding compliance?",
+        a: "We design and implement a risk-based merchant onboarding framework including KYC verification, business due diligence, website and app review, prohibited business screening, and ongoing transaction monitoring — all aligned with RBI Master Directions on KYC and PA guidelines. The framework is scalable to handle high-volume onboarding while maintaining compliance integrity.",
+      },
+      {
+        q: "Can existing Payment Aggregators migrate from one technology stack to another?",
+        a: "Yes, we routinely assist authorized PAs in migrating between gateway vendors, upgrading reconciliation engines, and re-architecting settlement workflows without disrupting live transaction processing. Our phased migration strategy includes parallel-run validation, automated regression testing, and rollback contingency planning to ensure zero downtime during the transition.",
       },
     ],
     cta: {
@@ -437,12 +464,23 @@ const data: Record<string, ServiceData> = {
         title: "Iterative & Founder-Centric Process",
         desc: "We do not hand off a static document and disappear. Our engagement involves weekly founder workshops, iterative feedback loops, and assumption-testing exercises that ensure the final plan reflects the founding team's vision while meeting external stakeholder expectations.",
       },
+      {
+        icon: "🔐",
+        title: "IP Protection from Inception",
+        desc: "Our legal team ensures your intellectual property — brand names, logos, proprietary processes, and technology — is protected through trademark filings, patent applications, and watertight assignment agreements before you enter the market.",
+      },
+      {
+        icon: "🌐",
+        title: "Network Access & Ecosystem Integration",
+        desc: "Through our engagements, founding teams gain access to our curated ecosystem of angel investors, incubators, accelerators, mentor networks, and potential early customers — connections that can dramatically accelerate early traction and market validation.",
+      },
     ],
     disadvantages: [
       "Comprehensive startup planning engagements require 8–12 weeks of calendar time, which may feel prolonged for founders eager to launch immediately",
       "Engagement fees, while competitive for the depth of service provided, represent a meaningful investment for bootstrapped founders without initial capital",
       "The planning process may surface uncomfortable truths about market size, competitive intensity, or unit economics that require founders to adjust or abandon cherished assumptions",
       "A business plan, no matter how well-crafted, cannot guarantee market success — execution, timing, and external factors remain beyond the scope of any planning exercise",
+      "Market conditions, regulatory landscapes, and competitive dynamics evolve rapidly — a plan crafted today may require significant revision within six to twelve months as the external environment shifts",
     ],
     compliance: [
       {
@@ -494,6 +532,22 @@ const data: Record<string, ServiceData> = {
       {
         q: "What is the typical ROI of engaging Your Professional for startup planning?",
         a: "While ROI varies by stage and context, our clients consistently report three tangible returns: first, a 40–60% reduction in time-to-fundraise due to investor-ready documentation; second, avoidance of costly legal and structural mistakes that typically cost 3–5x more to fix post-incorporation; and third, significantly improved strategic decision-making confidence among founding teams, leading to more disciplined capital allocation and faster achievement of key milestones.",
+      },
+      {
+        q: "Do you help with market research and competitive analysis?",
+        a: "Yes, our research team conducts primary and secondary market research including TAM/SAM/SOM analysis, competitor benchmarking, customer surveys, and industry expert interviews. The findings are integrated into the business plan, financial model, and pitch deck to ensure all strategic decisions are evidence-based and defensible during investor discussions.",
+      },
+      {
+        q: "Can you help us apply for government grants and startup schemes?",
+        a: "Absolutely. We assist with applications for Startup India recognition (DPIIT), state-level startup policies, MSME registration, SIDBI Fund of Funds access, and sector-specific grants such as BioNEST, MeitY, and DST programs. Our team has a strong success rate in securing government financial support for early-stage ventures across multiple sectors.",
+      },
+      {
+        q: "What entity structure do you recommend for a technology startup?",
+        a: "The optimal structure depends on factors including founder count, fundraising plans, regulatory requirements, and tax implications. For most venture-fundable startups, we recommend a Private Limited Company due to its ability to issue equity, limited liability protection, and investor familiarity. LLPs suit professional services firms, while OPCs work for solo founders not seeking external investment in the near term.",
+      },
+      {
+        q: "How do you support startups in heavily regulated industries?",
+        a: "Regulated industries are a core strength. Our planning includes a comprehensive regulatory mapping phase identifying all applicable licenses, certifications, and compliance timelines. For fintech, this covers RBI and SEBI licensing; for healthtech, CDSCO and FSSAI approvals; for edtech, UGC and AICTE frameworks. Regulatory costs and timelines are factored into both the business plan and financial projections.",
       },
     ],
     cta: {
@@ -693,12 +747,23 @@ const data: Record<string, ServiceData> = {
         title: "Proactive Risk Mitigation",
         desc: "Our compliance calendar and automated alerts flag upcoming deadlines weeks in advance, eliminating the risk of missed filings and unspent-amount penalties.",
       },
+      {
+        icon: "💲",
+        title: "Tax-Efficient CSR Structuring",
+        desc: "We identify opportunities where CSR expenditure may qualify for independent tax deductions under provisions such as Section 80G, helping you maximise the fiscal efficiency of your mandatory CSR spend without compromising compliance.",
+      },
+      {
+        icon: "🌐",
+        title: "Nationwide Implementation Reach",
+        desc: "Our network of verified implementing agencies spans all 28 states and 8 Union Territories, enabling your company to execute CSR projects across diverse geographies and thematic areas with consistent quality and accountability.",
+      },
     ],
     disadvantages: [
       "CSR applicability criteria are assessed annually, meaning companies may intermittently fall in and out of the mandate, complicating long-term project planning.",
       "Identifying genuinely impactful and Schedule VII-compliant projects requires significant due diligence, especially in regions with limited NGO infrastructure.",
       "Multi-year CSR projects carry the risk of implementing agency underperformance, requiring robust monitoring frameworks and contingency plans.",
       "Administrative overhead — including committee meetings, annual action plans, and dual-form filings — can be burdensome for smaller companies near the threshold.",
+      "The Schedule VII list of eligible CSR activities, while broad, may not cover every social cause a company wishes to support, requiring careful project structuring to ensure compliance with permissible categories.",
     ],
     compliance: [
       {
@@ -754,6 +819,22 @@ const data: Record<string, ServiceData> = {
       {
         q: "How long does the entire CSR registration process take?",
         a: "With Your Professional managing the process, the initial applicability assessment and policy drafting typically take 5–7 business days. Form CSR-1 filing and approval take an additional 5–7 business days depending on MCA processing times. End to end, most companies are fully registered and compliant within 2–3 weeks.",
+      },
+      {
+        q: "Can a company carry forward excess CSR spending to future years?",
+        a: "Yes, under the 2021 amendment to the CSR Rules, any amount spent in excess of the mandatory 2% in a financial year may be set off against the CSR obligation for up to three immediately succeeding financial years, subject to Board approval and disclosure in the Annual Report on CSR Activities.",
+      },
+      {
+        q: "Does CSR apply to private limited companies and LLPs?",
+        a: "CSR provisions under Section 135 apply to every company registered under the Companies Act, 2013 — including private limited companies and subsidiaries of foreign companies — that meets the net worth, turnover, or net profit thresholds. However, LLPs are not covered under these provisions as they are governed by the LLP Act, 2008.",
+      },
+      {
+        q: "Can a company undertake CSR activities through its own foundation?",
+        a: "Yes, a company can implement CSR projects through its own Section 8 company (not-for-profit) or through registered trusts and societies established by the company itself. The implementing entity must obtain CSR Registration (Form CSR-1) from the MCA portal before receiving CSR funds from the company.",
+      },
+      {
+        q: "What is the role of the CSR Committee?",
+        a: "The CSR Committee, comprising three or more directors (at least one independent), is responsible for formulating the CSR policy, recommending the annual CSR budget to the Board, monitoring project implementation, and ensuring that the Annual Action Plan is executed within prescribed timelines and budget allocations.",
       },
     ],
     cta: {
@@ -949,12 +1030,23 @@ const data: Record<string, ServiceData> = {
         title: "Pitch-Ready Confidence",
         desc: "Our coaching sessions prepare you for real investor scrutiny — practise your delivery, sharpen your responses to tough questions, and walk into every meeting fully prepared.",
       },
+      {
+        icon: "📈",
+        title: "Data-Backed Market Sizing",
+        desc: "Every market opportunity claim in your deck is supported by verified data from credible research sources, industry reports, and bottom-up analysis — giving investors confidence in the TAM, SAM, and SOM figures you present.",
+      },
+      {
+        icon: "🔄",
+        title: "Post-Delivery Support",
+        desc: "Our engagement does not end at deck delivery. We provide ongoing support including investor feedback integration, metric updates, and deck refreshes as your startup evolves and hits new milestones.",
+      },
     ],
     disadvantages: [
       "A pitch deck is a communication tool, not a substitute for a sound business model — even the best-designed deck cannot compensate for weak fundamentals or unclear unit economics.",
       "Outsourcing deck creation requires founders to invest significant time in discovery sessions and feedback rounds to ensure the narrative authentically represents their vision.",
       "Investor preferences vary widely across geographies, sectors, and funding stages; a deck optimised for one audience may need substantial rework for another.",
       "Financial projections in early-stage decks are inherently speculative; investors discount them heavily, so over-reliance on modelled numbers without supporting traction data can backfire.",
+      "The fundraising landscape is inherently competitive — even with a world-class pitch deck, success depends on timing, investor appetite, market conditions, and the overall strength of the founding team and traction.",
     ],
     compliance: [
       {
@@ -1010,6 +1102,22 @@ const data: Record<string, ServiceData> = {
       {
         q: "What if I need to update my deck after a few months?",
         a: "We offer ongoing retainer packages for start-ups that need periodic deck updates — whether to reflect new traction data, a pivot in strategy, or preparation for a subsequent funding round. Retainer clients receive priority turnaround and discounted rates on all updates and new materials.",
+      },
+      {
+        q: "How many slides should a startup pitch deck contain?",
+        a: "We recommend 12–15 slides for the core deck shared with investors, covering problem, solution, market size, business model, traction, competitive landscape, team, financials, ask, and use of funds. An appendix of 5–10 additional slides with detailed data can be shared during or after the meeting on request.",
+      },
+      {
+        q: "Do you help with pitch coaching and investor meeting preparation?",
+        a: "Yes, our Complete Fundraising Package includes two to three mock pitch sessions where our advisors role-play as investors, ask tough questions, and provide detailed feedback on content, delivery, pacing, and body language. This preparation dramatically improves founder confidence and pitch effectiveness.",
+      },
+      {
+        q: "Can you create a pitch deck for a pre-revenue startup?",
+        a: "Absolutely. We specialise in early-stage pitch decks that focus on problem validation, market opportunity, founding team credentials, product vision, go-to-market strategy, and capital deployment plans. For pre-revenue startups, we substitute traction metrics with pilot data, waitlist numbers, letters of intent, or customer discovery insights.",
+      },
+      {
+        q: "What makes a pitch deck stand out to investors?",
+        a: "Investors evaluate thousands of decks — standout decks combine a compelling narrative, clean design, credible data, strong team credentials, and a clear articulation of why now. Your Professional ensures every slide earns its place, every claim is substantiated, and the overall flow builds a persuasive investment thesis that is difficult to ignore.",
       },
     ],
     cta: {

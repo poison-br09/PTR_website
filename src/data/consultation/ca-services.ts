@@ -184,12 +184,23 @@ const data: Record<string, ServiceData> = {
         title: "Dedicated Relationship Manager",
         desc: "Every client is assigned a single point of contact who understands their complete financial history, ensuring continuity, personalized advice, and proactive identification of tax-saving opportunities year after year.",
       },
+      {
+        icon: "📋",
+        title: "Comprehensive Service Spectrum",
+        desc: "From basic ITR filing to complex international taxation, transfer pricing, and virtual CFO services, our platform offers every CA service under one roof — eliminating the need to engage multiple firms for different compliance needs.",
+      },
+      {
+        icon: "🧮",
+        title: "Proactive Tax Planning",
+        desc: "Unlike reactive compliance-only firms, our CAs proactively identify tax-saving opportunities, advise on optimal investment structures, and implement advance tax strategies that legally minimize your tax outgo year after year.",
+      },
     ],
     disadvantages: [
       "Clients unfamiliar with digital tools may experience an initial learning curve when navigating the online portal and uploading documents, though our support team provides guided onboarding assistance",
       "Highly complex matters such as multi-jurisdictional tax disputes or NCLT proceedings may occasionally require in-person representation, which is coordinated through our partner network at additional cost",
       "Internet connectivity issues in remote areas can sometimes delay real-time consultations, though asynchronous communication via email and messaging ensures no service interruption",
       "Physical document verification required by certain government authorities may necessitate courier dispatch, adding 2–3 business days to specific processes",
+      "While our digital-first model suits the vast majority of clients, businesses with extremely high volumes of physical documentation such as cash-intensive retail operations may require additional time for document digitization during onboarding",
     ],
     compliance: [
       {
@@ -241,6 +252,22 @@ const data: Record<string, ServiceData> = {
       {
         q: "Can I switch from my current CA to Your Professional mid-year?",
         a: "Yes, transitioning is straightforward. We coordinate with your outgoing CA (or work directly with your records) to ensure seamless continuity. Our onboarding team handles data migration, reconciles books up to the transition date, and ensures no compliance gaps arise during the switch. Most transitions are completed within 5–7 business days.",
+      },
+      {
+        q: "Can you handle GST audits and departmental proceedings online?",
+        a: "Yes, our CAs handle all GST compliance including registration, return filing, reconciliation, audit preparation, and representation before GST authorities. For departmental proceedings and scrutiny assessments, our team prepares responses, attends virtual hearings, and manages the entire process remotely with full documentation support.",
+      },
+      {
+        q: "Do you provide virtual CFO services for growing businesses?",
+        a: "Absolutely. Our Virtual CFO package provides startups and SMEs with board-level financial strategy without the cost of a full-time CFO. Services include monthly MIS reporting, cash flow management, budgeting and forecasting, investor relations support, and strategic financial advisory — all delivered by senior CAs with deep industry experience.",
+      },
+      {
+        q: "How quickly can I get started with Your Professional?",
+        a: "Onboarding is designed to be fast and seamless. Once you sign up and upload your documents through our portal, a dedicated CA is assigned within 24 hours. For standard services like ITR filing, we can begin processing on the same day. Complex engagements like company audits involve an initial scoping call followed by a detailed engagement timeline.",
+      },
+      {
+        q: "What is your refund and satisfaction policy?",
+        a: "We stand behind the quality of our work with a 100% satisfaction guarantee. If you are not satisfied with any deliverable, we revise it at no additional cost. For prepaid retainer clients, unused service credits are fully refundable within the first 30 days of engagement.",
       },
     ],
     cta: {
@@ -441,12 +468,23 @@ const data: Record<string, ServiceData> = {
         title: "Confidential & Conflict-Free Advisory",
         desc: "Your Professional maintains strict confidentiality protocols and conflict-of-interest checks for every engagement. We represent only one side of any transaction and ensure information barriers are maintained throughout the deal process.",
       },
+      {
+        icon: "📊",
+        title: "Experienced Valuation Expertise",
+        desc: "Our IBBI-registered valuers and senior CAs employ multiple valuation methodologies — DCF, comparable multiples, precedent transactions, and NAV — to determine fair value ranges that protect your interests and withstand regulatory and investor scrutiny.",
+      },
+      {
+        icon: "🔧",
+        title: "Post-Merger Integration Support",
+        desc: "Beyond deal closure, we provide structured post-merger integration advisory covering Day 1 readiness, organizational design, systems harmonization, culture alignment, and synergy tracking to maximize the value created by the transaction.",
+      },
     ],
     disadvantages: [
       "M&A transactions involve significant professional fees including advisory, legal, valuation, and regulatory costs that can range from 2–5% of deal value for mid-market transactions, making thorough cost-benefit analysis essential before proceeding",
       "Regulatory approval timelines, particularly from NCLT and CCI, can be unpredictable and may extend deal closure by several months, creating uncertainty for business planning and stakeholder management",
       "Cultural integration challenges post-merger can lead to employee attrition, productivity losses, and customer disruption if not proactively managed through a structured integration program",
       "Failed transactions result in sunk costs for due diligence and advisory fees, as well as potential reputational impact and distraction of management attention from core business operations during the deal process",
+      "Cross-border M&A transactions add layers of complexity involving FEMA compliance, RBI approvals, transfer pricing implications, and multi-jurisdictional tax structuring that can significantly extend timelines and advisory costs",
     ],
     compliance: [
       {

@@ -104,18 +104,15 @@ import { IPR_REGISTRATIONS } from './ipr/ipr-registrations';
 // Taxation
 import INCOME_TAX from './taxation/income-tax';
 import GST from './taxation/gst';
-// Consultancy
-import CA_SERVICES from './consultancy/ca-services';
-import BUSINESS_CONSULTANTS from './consultancy/business-consultants';
-import LAWYER_EXPERT from './consultancy/lawyer-expert';
-// Environmental
-import { ENVIRONMENTAL } from './environmental/environmental';
-// Agreements & Contracts
-import { AGREEMENTS } from './agreements/agreements';
-// Regulatory
-import { REGULATORY } from './regulatory/regulatory';
-// Tools & Calculators
-import { TOOLS_CALCULATORS } from './tools/tools-calculators';
+// Consultation
+import CA_SERVICES from './consultation/ca-services';
+import BUSINESS_CONSULTANTS from './consultation/business-consultants';
+import LAWYER_EXPERT from './consultation/lawyer-expert';
+// More
+import { ENVIRONMENTAL } from './more/environmental';
+import { AGREEMENTS } from './more/agreements';
+import { REGULATORY } from './more/regulatory';
+import { TOOLS_CALCULATORS } from './more/tools-calculators';
 
 Object.assign(SERVICES,
     GOVT_REGISTRATIONS, FSSAI_REGISTRATIONS, TRADE_REGISTRATIONS,

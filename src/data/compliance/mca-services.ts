@@ -842,24 +842,26 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
     'add-designated-partner': {
         slug: 'add-designated-partner',
         title: 'Add Designated Partner',
-        subtitle: 'File Form 4 with the MCA to add a Designated Partner to your LLP — fully managed by Your Professional.',
+        subtitle: 'File Form 4 with the MCA to add a Designated Partner to your LLP — DPIN/DIN verification, consent management, and LLP Agreement amendment fully handled by Your Professional.',
         heroFeatures: [
             'LLP Form 4 Filing with MCA',
-            'DPIN / DIN Verification',
-            'Supplementary Agreement Drafting',
-            'ROC Update in 5–7 Days'
+            'DPIN / DIN Verification & Allotment',
+            'Supplementary LLP Agreement Drafting',
+            'Partner Consent & DSC Management',
+            'ROC Master Data Update in 5–7 Days'
         ],
         overview: {
             heading: 'What is Adding a Designated Partner to an LLP?',
             paragraphs: [
-                'A Designated Partner in a Limited Liability Partnership (LLP) is an individual responsible for regulatory compliance, statutory filings, and representing the LLP before the Registrar of Companies. Every LLP must have at least two Designated Partners, and at least one of them must be a resident of India, as per Section 7 of the LLP Act, 2008.',
-                'When an LLP wishes to add a new Designated Partner — whether to expand management, meet statutory requirements, or replace an outgoing partner — a Supplementary LLP Agreement must be executed and Form 4 must be filed with the MCA within 30 days of the change.',
-                'Your Professional manages the entire process, from verifying DPIN/DIN of the incoming partner and drafting the supplementary agreement to filing Form 4 on the MCA portal and obtaining ROC confirmation.'
+                '<p>A Designated Partner in a Limited Liability Partnership (LLP) is an individual entrusted with the responsibility of regulatory compliance, statutory filings, and representing the LLP before the Registrar of Companies (ROC). Under <strong>Section 7 of the LLP Act, 2008</strong>, every LLP must have at least two Designated Partners at all times, and at least one of them must be a resident of India — defined as an individual who has stayed in India for not fewer than 120 days during the immediately preceding financial year. Unlike ordinary partners, Designated Partners are personally accountable for penalties arising from non-compliance, making their role critical to the governance framework of any LLP.</p>',
+                '<p>The process of adding a new Designated Partner is governed by the LLP Act and the LLP Rules, 2009. Whether the LLP is expanding its management team, meeting statutory requirements after a resignation, or bringing in domain expertise, the addition requires execution of a <strong>Supplementary LLP Agreement</strong> and filing of <strong>Form 4</strong> (Notice of Appointment/Cessation of Partner or Designated Partner) with the MCA within 30 days of the change. Additionally, <strong>Form 3</strong> must be filed to intimate the ROC about amendments to the LLP Agreement. The incoming Designated Partner must hold a valid <strong>DPIN (now unified with DIN)</strong> and provide prior written consent to act in that capacity.</p>',
+                '<p>The consequences of delayed or non-compliance are significant — the LLP Act prescribes a penalty of <strong>₹100 per day of default with no upper cap</strong> for late filing of Form 4, and maintaining fewer than two Designated Partners attracts additional penalties of ₹10,000 plus ₹100 per day until the shortfall is rectified. These penalties apply both to the LLP and to every existing Designated Partner, making timely compliance essential to avoid mounting financial liabilities.</p>',
+                '<p>Your Professional manages every aspect of the addition process — from verifying or obtaining the DPIN/DIN of the incoming partner, drafting the Supplementary LLP Agreement with appropriate profit-sharing ratios and responsibility clauses, procuring Digital Signature Certificates, and coordinating partner consent, to filing Form 4 and Form 3 on the MCA portal and tracking ROC approval. Our compliance team ensures the entire process is completed within <strong>7–10 working days</strong>, with zero risk of penalties or procedural errors.</p>'
             ],
             highlights: [
-                { icon: '👥', text: 'Minimum 2 Designated Partners required per LLP' },
-                { icon: '🏠', text: 'At least one must be an Indian resident' },
-                { icon: '📝', text: 'Form 4 filing mandatory within 30 days' },
+                { icon: '👥', text: 'Minimum 2 Designated Partners required per LLP at all times' },
+                { icon: '🏠', text: 'At least one must be an Indian resident (120+ days)' },
+                { icon: '📝', text: 'Form 4 filing mandatory within 30 days of the change' },
                 { icon: '🔑', text: 'DPIN/DIN required for every Designated Partner' }
             ]
         },
@@ -869,54 +871,56 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
             { title: 'Replacement of Designated Partner', desc: 'When a Designated Partner resigns or is removed, a replacement must be appointed within 30 days to maintain the statutory minimum of two Designated Partners.' }
         ],
         eligibility: [
-            'The LLP must be registered under the LLP Act, 2008',
-            'The incoming Designated Partner must have a valid DPIN or DIN',
+            'The LLP must be registered and active under the LLP Act, 2008 with the ROC',
+            'The incoming Designated Partner must hold a valid DPIN or DIN allotted by the MCA',
             'At least one Designated Partner must be a resident of India (stayed 120+ days in India in the previous financial year)',
-            'The incoming partner must give prior consent to act as Designated Partner',
-            'All existing partners must agree to the addition (as per the LLP Agreement)',
-            'A Supplementary LLP Agreement must be executed and filed',
-            'Digital Signature Certificate (DSC) is required for the incoming and existing Designated Partners'
+            'The incoming partner must provide prior written consent to act as Designated Partner',
+            'All existing partners must agree to the addition as per the terms of the existing LLP Agreement',
+            'A Supplementary LLP Agreement must be executed on appropriate stamp paper and filed with the ROC',
+            'Digital Signature Certificate (DSC) is required for the incoming and existing Designated Partners for MCA filings',
+            'The incoming individual must not be disqualified under Section 7 of the LLP Act, 2008 — must be at least 18 years of age, of sound mind, and not an undischarged insolvent'
         ],
         documents: [
             {
-                category: 'Partner Documents',
+                category: 'Partner Identity Documents',
                 items: [
                     'PAN Card of the incoming Designated Partner',
-                    'Aadhaar Card or Passport for identity proof',
-                    'Passport-size photograph (recent)',
-                    'Proof of residential address (utility bill or bank statement not older than 2 months)',
-                    'DPIN / DIN allotment proof',
-                    'Digital Signature Certificate (DSC)'
+                    'Aadhaar Card (for Indian residents) or Passport (for foreign nationals)',
+                    'Passport-size photograph (recent, white background)',
+                    'Proof of residential address (utility bill, bank statement, or telephone bill not older than 2 months)',
+                    'DPIN / DIN allotment letter or proof of allotment'
                 ]
             },
             {
                 category: 'LLP Documents',
                 items: [
                     'Certificate of Incorporation of the LLP',
-                    'Existing LLP Agreement',
-                    'Supplementary LLP Agreement (to be drafted)',
-                    'Consent letter from the incoming Designated Partner',
-                    'PAN Card of the LLP'
+                    'Existing LLP Agreement (original or certified copy)',
+                    'PAN Card of the LLP',
+                    'Supplementary LLP Agreement (to be drafted by Your Professional)',
+                    'Consent letter from the incoming Designated Partner (in prescribed format)'
                 ]
             },
             {
-                category: 'Statutory Forms',
+                category: 'Digital & Statutory Forms',
                 items: [
-                    'Form 4 (Notice of appointment/cessation of partner/designated partner)',
-                    'Form 3 (Information with regard to LLP Agreement — for supplementary agreement)',
-                    'Prior consent in writing from the incoming partner'
+                    'Digital Signature Certificate (DSC) of the incoming Designated Partner',
+                    'DSC of existing Designated Partners (for form authentication)',
+                    'Form 4 — Notice of appointment/cessation of partner or Designated Partner',
+                    'Form 3 — Information with regard to LLP Agreement (for supplementary agreement filing)',
+                    'Prior written consent of the incoming partner as prescribed under the LLP Rules'
                 ]
             }
         ],
         process: [
-            { title: 'Initial Consultation', desc: 'Your Professional evaluates the LLP structure, existing agreement terms, and advises on the process for adding the new Designated Partner.', time: '1 day' },
-            { title: 'DPIN / DIN Verification', desc: 'The incoming partner\'s DPIN or DIN is verified. If not available, a fresh DIN application is filed through DIR-3.', time: '1–3 days' },
-            { title: 'Supplementary Agreement Drafting', desc: 'A Supplementary LLP Agreement is drafted incorporating the new Designated Partner\'s details, profit-sharing ratio, and responsibilities.', time: '2–3 days' },
-            { title: 'Partner Consent & DSC', desc: 'The incoming Designated Partner signs the consent letter and provides the DSC. All existing partners execute the supplementary agreement.', time: '1–2 days' },
-            { title: 'Filing Form 4 with MCA', desc: 'Form 4 (notice of appointment of Designated Partner) is filed electronically on the MCA portal with all supporting documents attached.', time: '1 day' },
-            { title: 'Filing Form 3 with MCA', desc: 'Form 3 is filed to intimate the ROC about the changes in the LLP Agreement within 30 days of execution of the supplementary agreement.', time: '1 day' },
-            { title: 'ROC Processing & Confirmation', desc: 'The Registrar processes the application and updates the LLP master data. Your Professional tracks the status and handles any queries.', time: '3–5 working days' },
-            { title: 'Final Documentation', desc: 'Updated LLP master data and filed forms are shared with the client. Statutory records are updated accordingly.', time: '1–2 days' }
+            { title: 'Initial Consultation & Eligibility Review', desc: 'Your Professional evaluates the current LLP structure, reviews the existing LLP Agreement terms, checks partner eligibility, and advises on the complete process for adding the new Designated Partner.', time: '1 day' },
+            { title: 'DPIN / DIN Verification or Application', desc: 'The incoming partner\'s DPIN or DIN is verified on the MCA portal. If not available, a fresh DIN application is filed through the DIR-3 e-form with supporting identity and address proof.', time: '1–3 days' },
+            { title: 'DSC Procurement & Validation', desc: 'Digital Signature Certificates are procured for the incoming partner (if not already held) and existing DSCs are validated for MCA form signing. Class 3 DSC with 2-year validity is recommended.', time: '1–2 days' },
+            { title: 'Supplementary LLP Agreement Drafting', desc: 'A comprehensive Supplementary LLP Agreement is drafted incorporating the new Designated Partner\'s details, profit-sharing ratio, capital contribution, and management responsibilities.', time: '2–3 days' },
+            { title: 'Partner Consent & Agreement Execution', desc: 'The incoming Designated Partner signs the consent letter in the prescribed format. All partners execute the Supplementary LLP Agreement on appropriate stamp paper as per state requirements.', time: '1–2 days' },
+            { title: 'Filing Form 4 with MCA', desc: 'Form 4 (notice of appointment of Designated Partner) is prepared, digitally signed by a current Designated Partner, and filed electronically on the MCA portal with all supporting documents attached.', time: '1 day' },
+            { title: 'Filing Form 3 with MCA', desc: 'Form 3 is filed to intimate the ROC about the amendments to the LLP Agreement within 30 days of execution of the Supplementary Agreement, along with a certified copy of the agreement.', time: '1 day' },
+            { title: 'ROC Approval & Final Documentation', desc: 'The Registrar processes the application and updates the LLP master data. Your Professional tracks the status, handles any ROC queries, and shares the updated master data and filed form receipts with the client.', time: '3–5 working days' }
         ],
         fees: [
             { item: 'Form 4 Government Filing Fee', cost: '₹50 – ₹200 (based on LLP contribution)' },
@@ -932,38 +936,47 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
             { violation: 'Designated Partner acting without valid DPIN/DIN', penalty: '₹50,000 fine under Section 7 of the LLP Act' }
         ],
         advantages: [
-            { icon: '📈', title: 'Strengthened Management', desc: 'Adding a Designated Partner brings fresh expertise and shared decision-making responsibilities to the LLP.' },
-            { icon: '⚖️', title: 'Statutory Compliance', desc: 'Ensures the LLP meets the mandatory requirement of having at least two Designated Partners under the LLP Act, 2008.' },
-            { icon: '📄', title: 'Agreement Drafting Included', desc: 'Your Professional drafts the Supplementary LLP Agreement, ensuring all clauses are legally sound and comprehensive.' },
-            { icon: '⏱️', title: 'Quick Turnaround', desc: 'The complete process — from DPIN verification to ROC confirmation — is handled within 7–10 working days.' },
-            { icon: '🛡️', title: 'Penalty Avoidance', desc: 'Timely filing within 30 days prevents daily penalties of ₹100/day under the LLP Act for delayed compliance.' },
-            { icon: '🤝', title: 'End-to-End Support', desc: 'Your Professional handles all MCA filings, DSC procurement, and ROC correspondence — no back-and-forth for the client.' },
-            { icon: '💼', title: 'Improved Credibility', desc: 'An updated LLP structure with a new Designated Partner enhances trust with banks, clients, and regulatory authorities.' }
+            { icon: '📈', title: 'Strengthened Management', desc: 'Adding a Designated Partner brings fresh expertise and shared decision-making responsibilities to the LLP, improving operational efficiency.' },
+            { icon: '⚖️', title: 'Statutory Compliance Assured', desc: 'Ensures the LLP meets the mandatory requirement of having at least two Designated Partners under Section 7 of the LLP Act, 2008.' },
+            { icon: '📄', title: 'Agreement Drafting Included', desc: 'Your Professional drafts the Supplementary LLP Agreement with legally sound clauses covering profit-sharing, capital contribution, and management duties.' },
+            { icon: '⏱️', title: 'Quick Turnaround', desc: 'The complete process — from DPIN verification to ROC confirmation — is handled within 7–10 working days with no delays.' },
+            { icon: '🛡️', title: 'Penalty Avoidance', desc: 'Timely filing within 30 days prevents daily penalties of ₹100/day (no cap) under the LLP Act for delayed compliance.' },
+            { icon: '🤝', title: 'End-to-End Support', desc: 'Your Professional handles all MCA filings, DSC procurement, consent management, and ROC correspondence — zero back-and-forth for the client.' },
+            { icon: '💼', title: 'Improved Credibility', desc: 'An updated LLP structure with additional Designated Partners enhances trust and confidence with banks, clients, and regulatory authorities.' },
+            { icon: '🔑', title: 'DPIN/DIN Assistance', desc: 'If the incoming partner does not hold a DIN, Your Professional files the DIR-3 application and obtains the DIN before initiating Form 4 filing.' },
+            { icon: '📋', title: 'Complete Documentation Trail', desc: 'Every document — consent letters, supplementary agreement, MCA receipts — is systematically organized and shared with the client for future reference.' }
         ],
         disadvantages: [
-            'DPIN/DIN procurement adds 3–5 days if the incoming partner does not already have one',
-            'All existing partners must consent to the change, which may cause delays',
-            'Late filing of Form 4 attracts ₹100/day penalty with no upper cap',
-            'Supplementary agreement must be executed on stamp paper, which varies by state'
+            'DPIN/DIN procurement adds 3–5 working days if the incoming partner does not already have one allotted',
+            'All existing partners must consent to the change, which may cause delays in multi-partner LLPs',
+            'Late filing of Form 4 attracts ₹100/day penalty with no upper cap under the LLP Act',
+            'Supplementary agreement must be executed on stamp paper, and stamp duty rates vary by state',
+            'The incoming partner must obtain a valid Digital Signature Certificate (DSC) before the filing can proceed',
+            'If the existing LLP Agreement has restrictive clauses on partner admission, legal review may be required before proceeding'
         ],
         faqs: [
-            { q: 'What is Form 4 in LLP?', a: 'Form 4 is the statutory form prescribed under the LLP Act, 2008 to notify the ROC about the appointment or cessation of a partner or Designated Partner. It must be filed within 30 days of the change.' },
-            { q: 'Is DPIN the same as DIN?', a: 'Yes. Since the MCA notification dated 2015, the Designated Partner Identification Number (DPIN) has been replaced by the Director Identification Number (DIN). A DIN is sufficient for acting as a Designated Partner of an LLP.' },
-            { q: 'Can a body corporate be a Designated Partner?', a: 'No. Only individuals can be Designated Partners of an LLP. However, a body corporate can be a partner (not Designated Partner) through its nominee.' },
-            { q: 'What happens if an LLP has fewer than 2 Designated Partners?', a: 'If the number of Designated Partners falls below two, the remaining Designated Partner must appoint a replacement within 30 days. Failing to do so attracts penalties under the LLP Act.' },
-            { q: 'Is a Supplementary LLP Agreement mandatory?', a: 'Yes. Any change in the LLP structure — including addition of a Designated Partner — requires execution of a Supplementary LLP Agreement, which must be filed with the ROC via Form 3 within 30 days.' },
-            { q: 'What is the residency requirement for Designated Partners?', a: 'At least one Designated Partner must have stayed in India for a minimum of 120 days during the immediately preceding financial year. This is a mandatory requirement under the LLP Act, 2008.' },
-            { q: 'How long does the entire process take with Your Professional?', a: 'The typical turnaround is 7–10 working days from the date of document submission, including Form 4 filing and ROC approval.' },
-            { q: 'Can a minor be appointed as a Designated Partner?', a: 'No. A minor cannot be a Designated Partner of an LLP. The individual must be at least 18 years of age and must not be disqualified under the LLP Act, 2008.' }
+            { q: 'What is Form 4 in LLP?', a: 'Form 4 is the statutory form prescribed under the LLP Act, 2008 to notify the ROC about the appointment or cessation of a partner or Designated Partner. It must be filed within 30 days of the change, along with supporting documents including the consent letter and DPIN/DIN details.' },
+            { q: 'Is DPIN the same as DIN?', a: 'Yes. Since the MCA notification dated 2015, the Designated Partner Identification Number (DPIN) has been unified with the Director Identification Number (DIN). A DIN is sufficient for acting as a Designated Partner of an LLP, and no separate DPIN application is required.' },
+            { q: 'Can a body corporate be a Designated Partner?', a: 'No. Only individuals can be Designated Partners of an LLP. However, a body corporate can become a partner (not Designated Partner) of an LLP through its authorized nominee, who may then be appointed as a Designated Partner in an individual capacity.' },
+            { q: 'What happens if an LLP has fewer than 2 Designated Partners?', a: 'If the number of Designated Partners falls below two, the remaining Designated Partner must appoint a replacement within 30 days. Failing to do so attracts a penalty of ₹10,000 plus ₹100 per day until the shortfall is rectified, applicable to the LLP and its Designated Partners.' },
+            { q: 'Is a Supplementary LLP Agreement mandatory?', a: 'Yes. Any change in the LLP structure — including addition or removal of a Designated Partner — requires execution of a Supplementary LLP Agreement. This agreement must be filed with the ROC via Form 3 within 30 days of its execution.' },
+            { q: 'What is the residency requirement for Designated Partners?', a: 'At least one Designated Partner must have stayed in India for a minimum of 120 days during the immediately preceding financial year. This is a mandatory requirement under the LLP Act, 2008, and non-compliance may attract regulatory scrutiny.' },
+            { q: 'How long does the entire process take with Your Professional?', a: 'The typical turnaround is 7–10 working days from the date of document submission, including DPIN/DIN verification, agreement drafting, Form 4 and Form 3 filing, and ROC approval. If a new DIN is required, an additional 3–5 days may be needed.' },
+            { q: 'Can a minor be appointed as a Designated Partner?', a: 'No. A minor cannot be a Designated Partner of an LLP. The individual must be at least 18 years of age, of sound mind, not an undischarged insolvent, and must not be disqualified under any provision of the LLP Act, 2008.' },
+            { q: 'What is the consent requirement for the incoming Designated Partner?', a: 'The incoming Designated Partner must provide prior written consent to act in that capacity. This consent letter, in the format prescribed under the LLP Rules, must be filed along with Form 4 as an attachment on the MCA portal.' },
+            { q: 'Can a foreign national be added as a Designated Partner?', a: 'Yes. A foreign national can be appointed as a Designated Partner, provided they hold a valid DIN and a Digital Signature Certificate. However, the LLP must still ensure that at least one Designated Partner is an Indian resident as per the 120-day residency requirement.' },
+            { q: 'What documents does Your Professional need from the client?', a: 'Your Professional requires the incoming partner\'s PAN Card, Aadhaar/Passport, address proof, photograph, and DIN details. For the LLP, we need the Certificate of Incorporation, existing LLP Agreement, and PAN Card. All statutory forms and the Supplementary Agreement are prepared by our team.' },
+            { q: 'Is stamp duty payable on the Supplementary LLP Agreement?', a: 'Yes. The Supplementary LLP Agreement must be executed on non-judicial stamp paper, and the stamp duty amount varies by state. Your Professional advises on the applicable stamp duty based on the state of the LLP\'s registered office and ensures proper execution.' }
         ],
         cta: {
             heading: 'Adding a Designated Partner to Your LLP? Let Your Professional Handle It.',
-            subheading: 'From DPIN verification to Form 4 filing — we ensure seamless compliance with the LLP Act.',
+            subheading: 'From DPIN/DIN verification and consent management to Form 4 filing and LLP Agreement amendment — we ensure seamless, penalty-free compliance with the LLP Act.',
             features: [
-                'Complete Form 4 & Form 3 filing',
-                'Supplementary LLP Agreement drafting',
-                'DPIN/DIN verification & DSC assistance',
-                'Post-filing master data update'
+                'Complete Form 4 & Form 3 filing with MCA',
+                'Supplementary LLP Agreement drafting & execution',
+                'DPIN/DIN verification, allotment & DSC assistance',
+                'Partner consent coordination & document management',
+                'Post-filing ROC master data update & tracking'
             ]
         }
     },
@@ -971,78 +984,84 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
     'dir-3-kyc-for-directors': {
         slug: 'dir-3-kyc-for-directors',
         title: 'DIR-3 KYC for Directors',
-        subtitle: 'Annual KYC compliance for all DIN holders — file DIR-3 KYC on time with Your Professional and avoid deactivation.',
+        subtitle: 'Mandatory annual KYC compliance for all DIN holders — file DIR-3 KYC before September 30 with Your Professional and keep your DIN active.',
         heroFeatures: [
-            'Annual DIR-3 KYC Filing',
-            'DIN Reactivation Support',
-            'Aadhaar & Mobile OTP Verification',
-            'Due Date: 30th September Every Year'
+            'Annual DIR-3 KYC Filing (e-Form & Web)',
+            'Due Date: 30th September Every Year',
+            'Aadhaar OTP & Email Verification',
+            'DIN Reactivation with Late Fee Support',
+            'Dedicated Compliance Expert Assigned'
         ],
         overview: {
             heading: 'What is DIR-3 KYC for Directors?',
             paragraphs: [
-                'DIR-3 KYC is an annual compliance requirement introduced by the Ministry of Corporate Affairs (MCA) under Rule 12A of the Companies (Appointment and Qualification of Directors) Rules, 2014. Every individual holding an allotted Director Identification Number (DIN) — whether currently associated with a company or not — must file DIR-3 KYC before 30th September of every financial year.',
-                'The purpose of DIR-3 KYC is to maintain an updated database of director information, including personal details, contact information, and identity verification. The MCA uses Aadhaar-based OTP and email verification to validate the details submitted. Failure to file DIR-3 KYC by the due date results in deactivation of the DIN, rendering the director unable to sign or file any MCA forms.',
-                'Your Professional ensures your DIR-3 KYC is filed accurately and on time — whether you are filing for the first time (e-form) or submitting an annual update (web-based). We also assist with DIN reactivation if your DIN has been deactivated due to non-filing.'
+                '<p>DIR-3 KYC is a <strong>mandatory annual compliance requirement</strong> introduced by the Ministry of Corporate Affairs (MCA) under <strong>Rule 12A of the Companies (Appointment and Qualification of Directors) Rules, 2014</strong>. Every individual who has been allotted a Director Identification Number (DIN) — whether currently serving as a director in any company, having resigned from all directorships, or even never having joined a company — must file DIR-3 KYC before <strong>30th September of every financial year</strong>. This requirement was introduced in 2018 to ensure the MCA maintains an accurate, verified database of all DIN holders across India.</p>',
+                '<p>The MCA offers two modes of filing: the <strong>DIR-3 KYC e-Form</strong> and the <strong>DIR-3 KYC Web-Based Form</strong>. The e-Form must be used for first-time filing or whenever there is a change in the director\'s personal details (mobile number, email address, or residential address) — it requires certification by a practicing professional (CA, CS, or CWA) and a Digital Signature Certificate (DSC). The web-based form is a simplified version for subsequent years when no details have changed — it requires only Aadhaar-based OTP verification and email confirmation, with no professional certification or DSC needed. Understanding which form applies is critical, as filing the wrong form can lead to rejection or delays.</p>',
+                '<p>The consequences of non-filing are severe and immediate. If DIR-3 KYC is not filed by the 30th September deadline, the MCA <strong>automatically deactivates the DIN</strong> with the status marked as "Deactivated due to non-filing of DIR-3 KYC." A deactivated DIN renders the director completely unable to sign or file any form on the MCA portal, which can cascade into compliance failures for every company where the director holds a position. Reactivation requires filing the DIR-3 KYC form along with a <strong>late fee of ₹5,000</strong>, with no provision for waiver or reduction of this penalty.</p>',
+                '<p>Your Professional provides complete DIR-3 KYC filing support — from determining the correct form type (e-Form vs. web-based), collecting and verifying documents, coordinating real-time Aadhaar OTP and email verification with the director, to affixing the DSC and submitting the form on the MCA portal. We also offer an <strong>annual reminder service</strong> to ensure you never miss the September 30 deadline, and provide full DIN reactivation assistance if your DIN has already been deactivated due to past non-filing.</p>'
             ],
             highlights: [
-                { icon: '📅', text: 'Annual due date: 30th September' },
-                { icon: '🔒', text: 'DIN deactivated on non-filing' },
-                { icon: '📱', text: 'Aadhaar OTP verification mandatory' },
-                { icon: '👤', text: 'Applicable to all DIN holders' }
+                { icon: '📅', text: 'Annual due date: 30th September every year' },
+                { icon: '🔒', text: 'DIN automatically deactivated on non-filing' },
+                { icon: '📱', text: 'Aadhaar OTP verification mandatory for Indian residents' },
+                { icon: '👤', text: 'Applicable to ALL DIN holders — active, resigned, or unused' }
             ]
         },
         types: [
-            { title: 'DIR-3 KYC (e-Form)', desc: 'Filed for the first time or when there is a change in personal details (mobile number, email, address). This requires a practicing professional (CA/CS/CWA) to certify the form.' },
-            { title: 'DIR-3 KYC (Web-Based)', desc: 'Filed for subsequent years when there is no change in personal details. This is a simplified web-based form that requires only OTP verification — no professional certification needed.' },
+            { title: 'DIR-3 KYC (e-Form)', desc: 'Filed for the first time or when there is a change in personal details (mobile number, email, address). This requires a practicing professional (CA/CS/CWA) to certify the form and a valid DSC.' },
+            { title: 'DIR-3 KYC (Web-Based)', desc: 'Filed for subsequent years when there is no change in personal details. This is a simplified web-based form that requires only Aadhaar OTP and email verification — no professional certification or DSC needed.' },
             { title: 'DIN Reactivation (after deactivation)', desc: 'If a director\'s DIN has been deactivated due to non-filing of DIR-3 KYC, the DIN can be reactivated by filing the KYC form along with the prescribed late fee of ₹5,000.' }
         ],
         eligibility: [
-            'Every individual who has been allotted a DIN (irrespective of whether they hold a directorship)',
-            'Directors of all company types — Private Limited, Public Limited, OPC, Section 8, etc.',
-            'Designated Partners of LLPs holding a DIN',
-            'Directors who have resigned but still hold an active DIN',
-            'DIN holders whose DIN has been deactivated due to non-filing (for reactivation)',
-            'Individuals who obtained DIN but never joined any company'
+            'Every individual who has been allotted a DIN by the MCA — irrespective of whether they currently hold any directorship',
+            'Directors of all company types — Private Limited, Public Limited, One Person Company (OPC), Section 8, Producer Company, Nidhi Company, etc.',
+            'Designated Partners of LLPs who hold a DIN allotted by the MCA',
+            'Directors who have resigned from all companies but still hold an active or deactivated DIN',
+            'DIN holders whose DIN has been deactivated due to non-filing in previous years (for reactivation with ₹5,000 late fee)',
+            'Individuals who obtained a DIN but never joined or were appointed to any company',
+            'Foreign nationals holding an Indian DIN — must use passport-based verification instead of Aadhaar',
+            'Nominee directors, independent directors, and additional directors holding a valid DIN'
         ],
         documents: [
             {
                 category: 'Identity & Address Proof',
                 items: [
-                    'PAN Card (mandatory)',
-                    'Aadhaar Card (mandatory for Indian residents)',
-                    'Passport (mandatory for foreign nationals)',
-                    'Proof of current residential address (utility bill or bank statement not older than 2 months)',
-                    'Passport-size photograph (recent)'
+                    'PAN Card (mandatory for all Indian residents)',
+                    'Aadhaar Card (mandatory for Indian residents — used for OTP verification)',
+                    'Passport (mandatory for foreign nationals; optional for Indian residents)',
+                    'Proof of current residential address (utility bill, bank statement, or telephone bill not older than 2 months)',
+                    'Passport-size photograph (recent, white background)'
                 ]
             },
             {
-                category: 'Verification Details',
+                category: 'Verification & Digital Details',
                 items: [
-                    'Personal mobile number linked to Aadhaar (for OTP)',
-                    'Personal email ID (for email verification)',
-                    'Digital Signature Certificate (DSC) — required for e-form filing',
-                    'DIN allotment number'
+                    'Personal mobile number linked to Aadhaar (for real-time OTP during filing)',
+                    'Personal email ID (for email verification link from MCA)',
+                    'Digital Signature Certificate (DSC) — required for e-form filing only',
+                    'DIN allotment number and date of allotment',
+                    'Details of all companies where the individual is currently a director (CIN, name)'
                 ]
             },
             {
-                category: 'Professional Certification (e-Form only)',
+                category: 'Professional Certification (e-Form Only)',
                 items: [
-                    'Certification by a practicing Chartered Accountant (CA)',
-                    'Or certification by a practicing Company Secretary (CS)',
-                    'Or certification by a practicing Cost Accountant (CWA)',
-                    'Membership number of the certifying professional'
+                    'Certification by a practicing Chartered Accountant (CA) with membership number',
+                    'Or certification by a practicing Company Secretary (CS) with membership number',
+                    'Or certification by a practicing Cost Accountant (CWA) with membership number',
+                    'UDIN (Unique Document Identification Number) generated by the certifying professional'
                 ]
             }
         ],
         process: [
-            { title: 'Document Collection', desc: 'Your Professional collects all necessary documents — PAN, Aadhaar, address proof, DSC, and current contact details of the director.', time: '1 day' },
-            { title: 'DIN Status Check', desc: 'We verify the current status of the DIN on the MCA portal — whether it is active, deactivated, or flagged for any compliance issues.', time: '1 day' },
-            { title: 'Form Preparation', desc: 'Based on whether details have changed, we prepare either the e-form (with professional certification) or the web-based DIR-3 KYC form.', time: '1–2 days' },
-            { title: 'Aadhaar OTP Verification', desc: 'An OTP is sent to the director\'s Aadhaar-linked mobile number for identity verification. The director must share the OTP promptly for filing.', time: 'Same day' },
-            { title: 'Email Verification', desc: 'A verification link is sent to the director\'s registered email. The director clicks the link to confirm the email address.', time: 'Same day' },
-            { title: 'DSC Affixing & Submission', desc: 'The Digital Signature Certificate is affixed, and the DIR-3 KYC form is submitted on the MCA portal.', time: '1 day' },
-            { title: 'Filing Confirmation', desc: 'Your Professional provides the SRN (Service Request Number) and the filing receipt as confirmation. DIN status is verified post-filing.', time: '1–2 days' }
+            { title: 'Document Collection & Form Type Assessment', desc: 'Your Professional collects all necessary documents — PAN, Aadhaar, address proof, DSC, and current contact details — and determines whether the e-form or web-based form is applicable based on changes in personal details.', time: '1 day' },
+            { title: 'DIN Status Verification', desc: 'We verify the current status of the DIN on the MCA portal — whether it is active, deactivated due to non-filing, or flagged for any compliance issue. If deactivated, the reactivation process with late fee is initiated.', time: '1 day' },
+            { title: 'Form Preparation & Data Entry', desc: 'Based on the applicable form type, Your Professional prepares either the e-form (with all personal details, address, and professional certification) or initiates the web-based DIR-3 KYC form on the MCA portal.', time: '1–2 days' },
+            { title: 'Aadhaar OTP Verification', desc: 'An OTP is sent to the director\'s Aadhaar-linked mobile number for identity verification. The director must be available to share the OTP in real-time, as it expires within a short window.', time: 'Same day' },
+            { title: 'Email Verification', desc: 'A verification link is sent by the MCA to the director\'s registered personal email. The director clicks the link to confirm the email address — this step must be completed before form submission.', time: 'Same day' },
+            { title: 'Professional Certification & DSC Affixing', desc: 'For e-form filings, the practicing professional (CA/CS/CWA) certifies the form and generates a UDIN. The director\'s DSC is affixed, and the form is submitted on the MCA portal.', time: '1 day' },
+            { title: 'Filing Submission & SRN Generation', desc: 'The DIR-3 KYC form is submitted on the MCA portal. Your Professional provides the SRN (Service Request Number) and filing receipt as confirmation of successful submission.', time: '1 day' },
+            { title: 'Post-Filing DIN Status Verification', desc: 'Your Professional verifies the DIN status on the MCA portal after filing to confirm it remains active (or has been reactivated). The filing receipt and status confirmation are shared with the director.', time: '1–2 days' }
         ],
         fees: [
             { item: 'DIR-3 KYC Government Fee (on time)', cost: '₹0 (no government fee if filed before 30th September)' },
@@ -1052,44 +1071,52 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
         ],
         penalties: [
             { violation: 'Non-filing of DIR-3 KYC by 30th September', penalty: 'DIN is deactivated with status marked as "Deactivated due to non-filing of DIR-3 KYC"' },
-            { violation: 'Filing after deactivation', penalty: '₹5,000 late fee to reactivate the DIN' },
+            { violation: 'Filing after deactivation', penalty: '₹5,000 late fee to reactivate the DIN — no waiver provision available' },
             { violation: 'Providing false/incorrect details', penalty: 'Penalty under Section 448/449 of the Companies Act — imprisonment up to 6 months and/or fine' },
             { violation: 'Director continuing to act with deactivated DIN', penalty: 'All MCA filings signed by the director will be rejected; potential personal liability under Section 164' }
         ],
         advantages: [
-            { icon: '✅', title: 'DIN Remains Active', desc: 'Timely filing of DIR-3 KYC ensures your DIN stays active, allowing you to sign MCA forms and act as a director without interruption.' },
-            { icon: '💰', title: 'Zero Government Fee', desc: 'If filed before 30th September, there is no government fee for DIR-3 KYC — you only pay the professional service charges.' },
-            { icon: '⏱️', title: 'Quick & Simple Process', desc: 'Your Professional completes the entire filing in 2–3 working days, including OTP verification and DSC submission.' },
-            { icon: '🔄', title: 'DIN Reactivation Support', desc: 'If your DIN has been deactivated, we handle the reactivation process including late fee payment and form resubmission.' },
-            { icon: '🛡️', title: 'Avoid Compliance Risks', desc: 'Non-filing of DIR-3 KYC can lead to DIN deactivation and cascading compliance failures for all associated companies.' },
-            { icon: '📋', title: 'Annual Reminder Service', desc: 'Your Professional sends timely reminders before the due date so you never miss a DIR-3 KYC deadline.' },
-            { icon: '🤝', title: 'Dedicated Expert Assistance', desc: 'A compliance expert is assigned to handle your filing, including coordination for Aadhaar OTP and email verification.' },
-            { icon: '🌐', title: 'Supports Foreign Directors', desc: 'For directors who are foreign nationals, we assist with passport-based verification and alternate filing procedures.' }
+            { icon: '✅', title: 'DIN Remains Active', desc: 'Timely filing of DIR-3 KYC ensures your DIN stays active, allowing you to sign MCA forms and act as a director without any interruption to your duties.' },
+            { icon: '💰', title: 'Zero Government Fee', desc: 'If filed before 30th September, there is no government fee for DIR-3 KYC — you only pay the professional service charges starting at ₹999.' },
+            { icon: '⏱️', title: 'Quick & Simple Process', desc: 'Your Professional completes the entire filing in 2–3 working days, including document collection, OTP verification, and DSC submission on the MCA portal.' },
+            { icon: '🔄', title: 'DIN Reactivation Support', desc: 'If your DIN has been deactivated due to past non-filing, we handle the complete reactivation process including late fee payment and form resubmission.' },
+            { icon: '🛡️', title: 'Avoid Compliance Cascade', desc: 'Non-filing of DIR-3 KYC can lead to DIN deactivation, which cascades into compliance failures for every company where you hold a directorship.' },
+            { icon: '📋', title: 'Annual Reminder Service', desc: 'Your Professional sends timely reminders well before the September 30 due date, so you never miss a DIR-3 KYC deadline across multiple financial years.' },
+            { icon: '🤝', title: 'Dedicated Expert Assistance', desc: 'A compliance expert is personally assigned to handle your filing, including real-time coordination for Aadhaar OTP and email verification steps.' },
+            { icon: '🌐', title: 'Foreign Director Support', desc: 'For directors who are foreign nationals, we assist with passport-based verification, alternate filing procedures, and DSC procurement from authorized agencies.' },
+            { icon: '📊', title: 'Multi-Director Bulk Filing', desc: 'For companies with multiple directors, Your Professional offers bulk filing packages with centralized coordination and status tracking for all DIN holders.' }
         ],
         disadvantages: [
-            'Aadhaar OTP is required in real-time, so the director must be available during filing',
-            'DSC must be valid and active — expired DSCs need renewal before filing',
-            'Deactivated DINs attract a ₹5,000 late fee with no waiver provision',
-            'Foreign directors face additional documentation requirements for verification'
+            'Aadhaar OTP is required in real-time during filing, so the director must be personally available and reachable',
+            'DSC must be valid and active at the time of filing — expired DSCs require renewal before the e-form can be submitted',
+            'Deactivated DINs attract a flat ₹5,000 late fee with no waiver, reduction, or installment provision',
+            'Foreign directors face additional documentation requirements and may need passport attestation for verification',
+            'The web-based form cannot be used if any personal details have changed — the full e-form with professional certification is required instead',
+            'OTP and email verification links expire within a short time window, requiring the director to act promptly during the filing session'
         ],
         faqs: [
-            { q: 'Who needs to file DIR-3 KYC?', a: 'Every individual who holds an allotted DIN must file DIR-3 KYC annually — regardless of whether they are currently appointed as a director in any company. Even resigned directors with active DINs must file.' },
-            { q: 'What is the due date for DIR-3 KYC?', a: 'The due date for filing DIR-3 KYC is 30th September of every financial year. Filing after this date results in DIN deactivation and a ₹5,000 late fee for reactivation.' },
-            { q: 'What happens if I don\'t file DIR-3 KYC?', a: 'Your DIN will be deactivated by the MCA. A deactivated DIN means you cannot sign or file any MCA form, and all companies where you are a director may face compliance issues.' },
-            { q: 'Is DIR-3 KYC different from the web-based form?', a: 'Yes. DIR-3 KYC (e-form) is used for first-time filing or when personal details change — it requires professional certification. The web-based form is for subsequent years with no changes — it only needs OTP and email verification.' },
-            { q: 'Can a deactivated DIN be reactivated?', a: 'Yes. A deactivated DIN can be reactivated by filing DIR-3 KYC along with a late fee of ₹5,000. Your Professional handles the entire reactivation process.' },
-            { q: 'Is Aadhaar mandatory for DIR-3 KYC?', a: 'Yes, for Indian residents. Aadhaar is mandatory for identity verification via OTP. Foreign nationals must use their passport number instead.' },
-            { q: 'How much does DIR-3 KYC cost if filed on time?', a: 'There is no government fee if DIR-3 KYC is filed before 30th September. You only pay the professional service charges, which start at ₹999 with Your Professional.' },
-            { q: 'Do I need a DSC for DIR-3 KYC?', a: 'A DSC is required for the e-form version of DIR-3 KYC. The web-based form (for subsequent years with no changes) does not require a DSC — only Aadhaar OTP and email verification.' }
+            { q: 'Who needs to file DIR-3 KYC?', a: 'Every individual who holds an allotted DIN must file DIR-3 KYC annually — regardless of whether they are currently appointed as a director in any company. Even resigned directors with active DINs, inactive DIN holders, and individuals who never joined any company must file.' },
+            { q: 'What is the due date for DIR-3 KYC?', a: 'The due date for filing DIR-3 KYC is 30th September of every financial year. Filing after this date results in automatic DIN deactivation by the MCA and a mandatory ₹5,000 late fee for reactivation.' },
+            { q: 'What happens if I miss the DIR-3 KYC deadline?', a: 'Your DIN will be deactivated by the MCA with the status "Deactivated due to non-filing of DIR-3 KYC." A deactivated DIN means you cannot sign or file any MCA form, and all companies where you are a director may face compliance issues due to inability to file returns.' },
+            { q: 'What is the difference between DIR-3 KYC e-Form and the web-based form?', a: 'The DIR-3 KYC e-Form is used for first-time filing or when personal details (mobile, email, address) have changed — it requires professional certification by a CA/CS/CWA and a DSC. The web-based form is for subsequent years with no changes — it only needs Aadhaar OTP and email verification, with no professional certification or DSC required.' },
+            { q: 'Can a deactivated DIN be reactivated?', a: 'Yes. A deactivated DIN can be reactivated by filing the DIR-3 KYC form along with a late fee of ₹5,000. The reactivation typically takes 2–3 working days after filing. Your Professional handles the entire reactivation process end-to-end.' },
+            { q: 'Is Aadhaar mandatory for DIR-3 KYC?', a: 'Yes, for Indian residents. Aadhaar is mandatory for identity verification via OTP during the filing process. Foreign nationals must use their passport number for identity verification instead of Aadhaar.' },
+            { q: 'How much does DIR-3 KYC cost if filed on time?', a: 'There is no government fee if DIR-3 KYC is filed before 30th September. You only pay the professional service charges, which start at ₹999 per director with Your Professional. If filed after the due date, an additional ₹5,000 government late fee applies.' },
+            { q: 'Do I need a DSC for DIR-3 KYC?', a: 'A DSC is required only for the e-Form version of DIR-3 KYC (first-time filing or when details have changed). The web-based form for subsequent years with no changes does not require a DSC — only Aadhaar OTP and email verification are needed.' },
+            { q: 'What if my mobile number linked to Aadhaar has changed?', a: 'If your Aadhaar-linked mobile number has changed, you must first update it with UIDAI before filing DIR-3 KYC, as the OTP will be sent to the Aadhaar-linked number. Your Professional can guide you on the Aadhaar update process.' },
+            { q: 'Can DIR-3 KYC be filed for multiple directors at once?', a: 'DIR-3 KYC must be filed individually for each DIN holder. However, Your Professional offers bulk filing packages for companies with multiple directors, with centralized coordination and tracking for all filings.' },
+            { q: 'Is DIR-3 KYC applicable to Designated Partners of LLPs?', a: 'Yes. Designated Partners of LLPs who hold a DIN allotted by the MCA must file DIR-3 KYC annually, just like directors of companies. The same due date and penalty provisions apply.' },
+            { q: 'What is a UDIN and why is it required?', a: 'UDIN (Unique Document Identification Number) is a unique number generated by the certifying professional (CA/CS/CWA) for every document they certify. It is mandatory for e-form DIR-3 KYC filings and must be mentioned in the form for verification purposes.' }
         ],
         cta: {
-            heading: 'Don\'t Let Your DIN Get Deactivated — File DIR-3 KYC Today.',
-            subheading: 'Your Professional ensures on-time filing with Aadhaar verification and DSC support.',
+            heading: 'Keep Your DIN Active — File DIR-3 KYC Before September 30.',
+            subheading: 'Your Professional ensures on-time filing with Aadhaar verification, DSC support, and DIN reactivation assistance — so you never face deactivation or penalties.',
             features: [
-                'Annual DIR-3 KYC filing for all DIN holders',
-                'DIN reactivation with late fee assistance',
-                'Aadhaar OTP & email verification coordination',
-                'Timely annual reminder service'
+                'Annual DIR-3 KYC filing for all DIN holders (e-Form & web-based)',
+                'DIN reactivation with ₹5,000 late fee assistance',
+                'Real-time Aadhaar OTP & email verification coordination',
+                'Timely annual reminder service before September 30 deadline',
+                'Multi-director bulk filing with centralized tracking'
             ]
         }
     },
@@ -1097,82 +1124,88 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
     'strike-off-section-8-companies': {
         slug: 'strike-off-section-8-companies',
         title: 'Strike off Section 8 Companies',
-        subtitle: 'Close your Section 8 Company legally by filing STK-2 with the MCA — complete compliance managed by Your Professional.',
+        subtitle: 'Legally close your Section 8 (non-profit) Company by filing STK-2 with the MCA — Regional Director approval, compliance clearance, and Gazette notification managed by Your Professional.',
         heroFeatures: [
-            'STK-2 Filing with ROC',
-            'Section 8 Company Closure',
-            'No Business Activity Certification',
-            'ROC Approval & Gazette Notification'
+            'STK-2 Filing with ROC for Section 8 Companies',
+            'Regional Director (RD) Approval Coordination',
+            'Pending Compliance Clearance & Filing',
+            'Special Resolution & Affidavit Drafting',
+            'Official Gazette Notification Tracking'
         ],
         overview: {
             heading: 'What is Strike Off of a Section 8 Company?',
             paragraphs: [
-                'Strike off of a Section 8 Company is the process of voluntarily removing the company\'s name from the Register of Companies maintained by the Registrar of Companies (ROC). Section 8 Companies — formed for charitable purposes such as promoting education, art, science, sports, or social welfare — may be struck off when they have ceased operations or fulfilled their objectives under Section 248 of the Companies Act, 2013.',
-                'The company or its directors may apply for strike off by filing Form STK-2 with the ROC. Before filing, the company must ensure that all statutory filings are up to date, all liabilities are settled, all assets are disposed of or transferred, and the company has not carried on any business or operations for the preceding two financial years.',
-                'Your Professional manages the entire closure process — from passing the special resolution and obtaining necessary affidavits to filing STK-2, handling ROC correspondence, and ensuring the company\'s name is published in the Official Gazette upon strike off.'
+                '<p>Strike off of a Section 8 Company is the process of voluntarily removing the company\'s name from the Register of Companies maintained by the Registrar of Companies (ROC) under <strong>Section 248 of the Companies Act, 2013</strong>. Section 8 Companies — formed exclusively for promoting charitable objects such as education, art, science, sports, commerce, social welfare, religion, or environmental protection — enjoy special privileges under the Act, including exemption from the requirement to use "Limited" or "Private Limited" in their name, and certain tax benefits. However, when such a company has ceased operations, fulfilled its objectives, or is no longer viable, the promoters and directors may seek to close it through the strike off process.</p>',
+                '<p>Unlike ordinary companies, the strike off of a Section 8 Company involves <strong>additional regulatory considerations</strong> due to its non-profit nature and the special license granted under Section 8(1) of the Companies Act. The company must first obtain approval or a No Objection Certificate (NOC) from the <strong>Regional Director (RD)</strong> of the MCA, as Section 8 companies operate under a license that imposes conditions on the application of profits and assets. Any remaining assets at the time of dissolution cannot be distributed among members — they must be transferred to another Section 8 Company with similar objects, or to the Central or State Government, as per the conditions of the license and the provisions of the Memorandum of Association.</p>',
+                '<p>The procedural requirements under <strong>Section 248(2)</strong> mandate that the company must not have carried on any business or operations for the preceding two financial years, all statutory filings must be current, all liabilities must be fully settled, and all assets must be properly disposed of or transferred. A <strong>special resolution</strong> must be passed by at least 75% of the members, directors must execute sworn affidavits and indemnity bonds, and a statement of accounts not older than 30 days must be prepared and certified by a Chartered Accountant. The ROC publishes a public notice in the Official Gazette allowing 30 days for objections from stakeholders before proceeding with the final strike off.</p>',
+                '<p>Your Professional manages every step of this complex process — from initial eligibility assessment, clearing all pending ROC filings, coordinating with the Regional Director for NOC or approval, drafting the special resolution and board minutes, preparing notarized affidavits and indemnity bonds, to filing <strong>Form STK-2</strong> on the MCA portal, handling ROC queries, and tracking the Official Gazette notification. Our team has extensive experience with Section 8 Company closures and ensures the process is completed in <strong>3–6 months</strong> with full legal compliance and zero risk of personal liability for the directors.</p>'
             ],
             highlights: [
                 { icon: '🏛️', text: 'Governed by Section 248 of Companies Act, 2013' },
-                { icon: '📝', text: 'STK-2 filing with ROC required' },
-                { icon: '⏳', text: 'Company must be inactive for 2 years' },
-                { icon: '📰', text: 'Name published in Official Gazette post strike off' }
+                { icon: '📝', text: 'STK-2 filing with ROC required for voluntary strike off' },
+                { icon: '⏳', text: 'Company must be inactive for 2 consecutive financial years' },
+                { icon: '📰', text: 'Name published in Official Gazette with 30-day objection period' }
             ]
         },
         types: [
-            { title: 'Voluntary Strike Off (by Company)', desc: 'The company itself applies to the ROC for strike off by filing STK-2 after passing a special resolution and meeting all preconditions under Section 248(2).' },
+            { title: 'Voluntary Strike Off (by Company)', desc: 'The company itself applies to the ROC for strike off by filing STK-2 after passing a special resolution and meeting all preconditions under Section 248(2), including Regional Director approval.' },
             { title: 'Strike Off by ROC (Suo Motu)', desc: 'The ROC may strike off a company on its own if it has reasonable cause to believe the company is not carrying on business — under Section 248(1). The company is given a 30-day notice before removal.' },
             { title: 'Strike Off Post-Amalgamation', desc: 'If a Section 8 Company has been amalgamated with another company or entity, the transferor company may apply for strike off after the NCLT order is executed.' }
         ],
         eligibility: [
-            'The Section 8 Company must not have carried on any business or operations for two consecutive financial years',
-            'The company must not have applied for change of name or conversion in the last 3 months',
-            'All statutory filings with the ROC must be up to date (annual returns, financial statements)',
-            'All liabilities of the company must be fully settled or adequately provided for',
-            'All assets must be disposed of, transferred, or their nil value must be declared',
-            'No proceedings are pending against the company before any court or tribunal',
-            'A special resolution must be passed by the members authorizing the strike off application'
+            'The Section 8 Company must not have carried on any business or operations for two consecutive financial years preceding the application',
+            'The company must not have applied for any change of name, conversion, or alteration of objects in the last 3 months',
+            'All statutory filings with the ROC must be up to date — including annual returns (MGT-7/MGT-7A), financial statements (AOC-4), and auditor appointments (ADT-1)',
+            'All liabilities of the company must be fully settled or adequately provided for, with no outstanding debts to creditors',
+            'All assets must be disposed of, transferred to another Section 8 Company with similar objects, or their nil value must be declared — assets cannot be distributed among members',
+            'No legal proceedings must be pending against the company before any court, tribunal, or regulatory authority',
+            'A special resolution must be passed by at least 75% of the members present and voting, authorizing the directors to file the strike off application',
+            'Approval or NOC from the Regional Director (RD) of the MCA must be obtained, as Section 8 companies operate under a special license'
         ],
         documents: [
             {
-                category: 'Company Documents',
+                category: 'Company Incorporation & Governance Documents',
                 items: [
-                    'Certificate of Incorporation',
+                    'Certificate of Incorporation of the Section 8 Company',
+                    'License granted under Section 8(1) of the Companies Act, 2013',
                     'Memorandum of Association (MOA) and Articles of Association (AOA)',
                     'Board Resolution for initiating strike off proceedings',
-                    'Special Resolution passed by members (Form MGT-14)',
-                    'Latest audited financial statements (Balance Sheet, P&L)',
-                    'Latest Annual Return (Form MGT-7)'
+                    'Special Resolution passed by members at a general meeting',
+                    'Form MGT-14 (Filing of special resolution with ROC)'
                 ]
             },
             {
-                category: 'Affidavits & Declarations',
+                category: 'Financial & Compliance Documents',
                 items: [
-                    'Affidavit by directors confirming no business operations for 2 years',
-                    'Indemnity bond by directors (in prescribed format)',
-                    'Statement of accounts (not older than 30 days from the date of application)',
-                    'Declaration that all liabilities are settled and assets disposed of',
-                    'NOC from regulatory authorities (if applicable)'
+                    'Latest audited financial statements (Balance Sheet, Profit & Loss Account)',
+                    'Latest Annual Return (Form MGT-7 or MGT-7A)',
+                    'Statement of accounts not older than 30 days from the date of STK-2 application',
+                    'Income Tax returns and clearance certificate (if applicable)',
+                    'NOC from the Regional Director (RD) of the MCA'
                 ]
             },
             {
-                category: 'Statutory Forms',
+                category: 'Affidavits, Declarations & Statutory Forms',
                 items: [
-                    'Form STK-2 (Application for strike off by company)',
-                    'Form MGT-14 (Filing of special resolution)',
-                    'Form ADT-1 (Auditor appointment, if pending)',
-                    'CTC of special resolution certified by a director'
+                    'Affidavit by all directors confirming no business operations for 2 consecutive financial years',
+                    'Indemnity bond by all directors in the prescribed format (notarized)',
+                    'Declaration that all liabilities are settled, assets disposed of or transferred, and no proceedings are pending',
+                    'NOC from regulatory authorities — Charity Commissioner, FCRA authority, or other licensing bodies (if applicable)',
+                    'Form STK-2 (Application for voluntary strike off by the company)',
+                    'Form ADT-1 (Auditor appointment — if any pending filing exists)',
+                    'CTC of special resolution certified by a director and the Company Secretary (if applicable)'
                 ]
             }
         ],
         process: [
-            { title: 'Preliminary Assessment', desc: 'Your Professional reviews the company\'s filing status, liabilities, assets, and pending proceedings to confirm eligibility for strike off under Section 248.', time: '2–3 days' },
-            { title: 'Clearing Pending Compliances', desc: 'All overdue ROC filings — including annual returns (MGT-7), financial statements (AOC-4), and auditor appointments (ADT-1) — are brought up to date.', time: '5–15 days' },
-            { title: 'Board Meeting & Special Resolution', desc: 'A board meeting is convened to pass a resolution for strike off. A general meeting is held to pass the special resolution, and Form MGT-14 is filed with the ROC.', time: '3–5 days' },
-            { title: 'Affidavit & Indemnity Bond Preparation', desc: 'Directors\' affidavits confirming no business operations and indemnity bonds are drafted and notarized as per MCA requirements.', time: '2–3 days' },
-            { title: 'Statement of Accounts Preparation', desc: 'A statement of accounts is prepared showing nil or settled liabilities and assets, certified by a Chartered Accountant, not older than 30 days from filing.', time: '2–3 days' },
-            { title: 'Filing STK-2 with ROC', desc: 'Form STK-2 is filed electronically on the MCA portal along with all attachments — special resolution, affidavits, indemnity bond, and statement of accounts.', time: '1–2 days' },
-            { title: 'ROC Processing & Public Notice', desc: 'The ROC publishes a notice on the MCA portal and in the Official Gazette, giving 30 days for objections from stakeholders.', time: '30–45 days' },
-            { title: 'Final Strike Off & Gazette Publication', desc: 'If no objections are received, the ROC strikes off the company and publishes the final notice in the Official Gazette. Your Professional provides the final order.', time: '15–30 days' }
+            { title: 'Preliminary Eligibility Assessment', desc: 'Your Professional reviews the company\'s incorporation documents, Section 8 license conditions, filing status, financial position, asset disposition, and pending proceedings to confirm eligibility for strike off under Section 248.', time: '2–3 days' },
+            { title: 'Clearing Pending Compliances', desc: 'All overdue ROC filings — including annual returns (MGT-7/MGT-7A), financial statements (AOC-4), auditor appointments (ADT-1), and any other pending forms — are prepared and filed to bring the company into full compliance.', time: '5–15 days' },
+            { title: 'Regional Director Approval / NOC', desc: 'An application or communication is made to the Regional Director (RD) of the MCA seeking approval or NOC for the strike off of the Section 8 Company, as required due to its special license and non-profit status.', time: '15–30 days' },
+            { title: 'Board Meeting & Special Resolution', desc: 'A board meeting is convened to pass a resolution for initiating strike off proceedings. A general meeting is held to pass the special resolution with at least 75% majority, and Form MGT-14 is filed with the ROC.', time: '3–5 days' },
+            { title: 'Affidavit, Indemnity Bond & Statement of Accounts', desc: 'Directors\' affidavits confirming no business operations and indemnity bonds are drafted, executed, and notarized. A statement of accounts (not older than 30 days) is prepared and certified by a Chartered Accountant.', time: '3–5 days' },
+            { title: 'Asset Transfer & Liability Settlement Confirmation', desc: 'All remaining assets are transferred to another Section 8 Company with similar objects or to the government, as required by the license conditions. Final confirmation of liability settlement is documented.', time: '5–10 days' },
+            { title: 'Filing STK-2 with ROC', desc: 'Form STK-2 is prepared and filed electronically on the MCA portal with all attachments — special resolution, RD approval/NOC, affidavits, indemnity bonds, statement of accounts, and asset transfer confirmation.', time: '1–2 days' },
+            { title: 'ROC Processing, Public Notice & Final Strike Off', desc: 'The ROC publishes a notice on the MCA portal and in the Official Gazette, allowing 30 days for objections. If no objections are received, the ROC strikes off the company and publishes the final notice. Your Professional tracks every stage and provides the final strike off order.', time: '45–90 days' }
         ],
         fees: [
             { item: 'STK-2 Government Filing Fee', cost: '₹5,000 (prescribed fee under Companies Act)' },
@@ -1188,40 +1221,48 @@ export const MCA_SERVICES: Record<string, ServiceData> = {
             { violation: 'Revival application by aggrieved party post strike off', penalty: 'NCLT can restore the company within 20 years; directors may face cost orders' }
         ],
         advantages: [
-            { icon: '🏁', title: 'Clean & Legal Closure', desc: 'Strike off provides a lawful way to close a Section 8 Company that has ceased operations, avoiding perpetual compliance obligations.' },
-            { icon: '💰', title: 'Cost-Effective Alternative', desc: 'Strike off via STK-2 is significantly cheaper than winding up through the NCLT, which involves extensive legal proceedings.' },
-            { icon: '⏱️', title: 'Faster Than Winding Up', desc: 'While NCLT winding up can take 1–2 years, strike off is typically completed within 3–6 months including the public notice period.' },
-            { icon: '📋', title: 'Complete Compliance Clearance', desc: 'Your Professional ensures all pending ROC filings are cleared before applying, eliminating the risk of STK-2 rejection.' },
-            { icon: '🛡️', title: 'Director Liability Protection', desc: 'Proper closure with settled liabilities protects directors from future claims and personal liability under the Companies Act.' },
-            { icon: '📄', title: 'End-to-End Documentation', desc: 'From special resolution drafting to affidavit notarization — every document is prepared and filed by Your Professional.' },
-            { icon: '🤝', title: 'ROC Correspondence Handling', desc: 'All queries raised by the ROC during processing are handled by our compliance team at no additional cost.' },
-            { icon: '📰', title: 'Gazette Notification Tracking', desc: 'We track the Official Gazette publication and provide the final strike off order for your records.' }
+            { icon: '🏁', title: 'Clean & Legal Closure', desc: 'Strike off provides a lawful and definitive way to close a Section 8 Company that has ceased operations, avoiding perpetual compliance obligations and annual filing requirements.' },
+            { icon: '💰', title: 'Cost-Effective Alternative', desc: 'Strike off via STK-2 is significantly cheaper than winding up through the NCLT, which involves extensive legal proceedings, tribunal fees, and liquidator costs.' },
+            { icon: '⏱️', title: 'Faster Than Winding Up', desc: 'While NCLT winding up can take 1–2 years, strike off is typically completed within 3–6 months including the RD approval and public notice period.' },
+            { icon: '📋', title: 'Complete Compliance Clearance', desc: 'Your Professional ensures all pending ROC filings are cleared before applying, eliminating the risk of STK-2 rejection due to non-compliance.' },
+            { icon: '🛡️', title: 'Director Liability Protection', desc: 'Proper closure with fully settled liabilities and documented asset transfer protects directors from future claims and personal liability under the Companies Act.' },
+            { icon: '📄', title: 'End-to-End Documentation', desc: 'From special resolution drafting and RD application to affidavit notarization and asset transfer documentation — every document is prepared and filed by Your Professional.' },
+            { icon: '🤝', title: 'ROC & RD Correspondence Handling', desc: 'All queries raised by the ROC or the Regional Director during processing are handled by our compliance team at no additional cost.' },
+            { icon: '📰', title: 'Gazette Notification Tracking', desc: 'We track the Official Gazette publication, monitor the 30-day objection window, and provide the final strike off order for the client\'s records.' },
+            { icon: '🏛️', title: 'Section 8 Expertise', desc: 'Your Professional has specialized experience with Section 8 Company closures, including handling the unique requirements around non-profit asset transfer, RD approvals, and Charity Commissioner NOCs.' }
         ],
         disadvantages: [
-            'The company must have been inactive for at least 2 financial years before applying',
-            'All pending ROC filings must be cleared first, which may involve additional fees and penalties',
-            'The ROC process includes a mandatory 30-day public notice period for objections',
-            'Creditors or other stakeholders can object to the strike off, potentially delaying or blocking the process',
-            'An aggrieved party can apply for company revival through NCLT within 20 years of strike off'
+            'The company must have been inactive for at least 2 consecutive financial years before applying for strike off',
+            'All pending ROC filings must be cleared first, which may involve significant additional fees and late penalties for long-dormant companies',
+            'Regional Director (RD) approval or NOC adds 15–30 days to the timeline compared to ordinary company strike off',
+            'The ROC process includes a mandatory 30-day public notice period in the Official Gazette for stakeholder objections',
+            'Creditors, members, or other stakeholders (including the Charity Commissioner) can object to the strike off, potentially delaying or blocking the process',
+            'Remaining assets cannot be distributed among members — they must be transferred to another Section 8 Company with similar objects or to the government',
+            'An aggrieved party can apply for company revival through the NCLT within 20 years of strike off, creating long-term residual risk for directors'
         ],
         faqs: [
-            { q: 'What is Form STK-2?', a: 'Form STK-2 is the application form prescribed under Section 248(2) of the Companies Act, 2013 for voluntary strike off of a company by its directors. It is filed with the ROC along with affidavits, indemnity bonds, and a statement of accounts.' },
-            { q: 'Can a Section 8 Company be struck off while it has liabilities?', a: 'No. All liabilities of the company must be fully settled or adequately provided for before filing STK-2. The directors must submit an affidavit confirming that all debts and obligations have been discharged.' },
-            { q: 'How long does the strike off process take?', a: 'The entire process typically takes 3–6 months. This includes clearing pending filings (5–15 days), filing STK-2 (1–2 days), the mandatory 30-day public notice period, and final ROC processing (15–30 days).' },
-            { q: 'Is a special resolution required for strike off?', a: 'Yes. A special resolution must be passed by at least 75% of the members present and voting at a general meeting, authorizing the directors to file the strike off application. This resolution is filed via Form MGT-14.' },
-            { q: 'Can a struck-off Section 8 Company be revived?', a: 'Yes. Under Section 252, any member, creditor, or aggrieved party may apply to the NCLT for revival of the company within 20 years from the date of strike off, if they can demonstrate sufficient cause.' },
-            { q: 'What is the difference between strike off and winding up?', a: 'Strike off is a simpler, faster, and cheaper process for closing an inactive company. Winding up through NCLT is a formal insolvency process used when a company has significant debts or is ordered to close by the tribunal.' },
-            { q: 'What happens to the assets of a struck-off company?', a: 'All assets must be disposed of or transferred before filing STK-2. Any remaining assets after strike off vest in the government. Directors should ensure proper disposal to avoid complications.' },
-            { q: 'Can Your Professional handle pending compliances before strike off?', a: 'Yes. Your Professional clears all pending annual returns, financial statements, and auditor appointments before filing STK-2, ensuring the application is not rejected by the ROC.' }
+            { q: 'What is Form STK-2?', a: 'Form STK-2 is the application form prescribed under Section 248(2) of the Companies Act, 2013 for voluntary strike off of a company by its directors. It is filed with the ROC along with the special resolution, affidavits, indemnity bonds, statement of accounts, and RD approval/NOC for Section 8 companies.' },
+            { q: 'Can a Section 8 Company be struck off while it has liabilities?', a: 'No. All liabilities of the company must be fully settled or adequately provided for before filing STK-2. The directors must submit a sworn affidavit confirming that all debts and obligations have been discharged in full.' },
+            { q: 'How long does the strike off process take for a Section 8 Company?', a: 'The entire process typically takes 3–6 months. This includes clearing pending filings (5–15 days), obtaining RD approval (15–30 days), filing STK-2 (1–2 days), the mandatory 30-day public notice period, and final ROC processing (15–30 days).' },
+            { q: 'Is Regional Director approval mandatory for Section 8 Company strike off?', a: 'Yes. Since Section 8 Companies operate under a special license granted by the Central Government (through the Regional Director), any major change including closure requires RD approval or NOC. This is an additional step not required for ordinary company strike off.' },
+            { q: 'What happens to the assets of a Section 8 Company upon strike off?', a: 'Assets of a Section 8 Company cannot be distributed among its members. They must be transferred to another Section 8 Company with similar objects, or to the Central or State Government, as per the conditions of the Section 8 license and the MOA of the company.' },
+            { q: 'Is a special resolution required for strike off?', a: 'Yes. A special resolution must be passed by at least 75% of the members present and voting at a general meeting, authorizing the directors to file the strike off application. This resolution is filed with the ROC via Form MGT-14.' },
+            { q: 'Can a struck-off Section 8 Company be revived?', a: 'Yes. Under Section 252 of the Companies Act, 2013, any member, creditor, or aggrieved party may apply to the NCLT for revival of the company within 20 years from the date of strike off, if they can demonstrate sufficient cause for restoration.' },
+            { q: 'What is the difference between strike off and winding up for Section 8 Companies?', a: 'Strike off is a simpler, faster, and cheaper process for closing an inactive Section 8 Company. Winding up through NCLT is a formal insolvency process used when a company has significant debts, disputed liabilities, or is ordered to close by the tribunal. Strike off is suitable only when all liabilities are settled.' },
+            { q: 'Do we need a NOC from the Charity Commissioner?', a: 'It depends on the state. In states where the Section 8 Company is registered with the Charity Commissioner or any similar regulatory authority, a NOC from that authority may be required before filing STK-2. Your Professional advises on state-specific requirements.' },
+            { q: 'Can Your Professional handle pending compliances before strike off?', a: 'Yes. Your Professional clears all pending annual returns (MGT-7/MGT-7A), financial statements (AOC-4), auditor appointments (ADT-1), and any other overdue filings before filing STK-2, ensuring the application is not rejected by the ROC.' },
+            { q: 'What are the tax implications of striking off a Section 8 Company?', a: 'The company should file all pending income tax returns and obtain tax clearance before strike off. Any tax liabilities must be settled. The transfer of assets to another Section 8 Company or the government may have tax implications that should be reviewed by a tax professional.' },
+            { q: 'Is FCRA clearance required for Section 8 Companies receiving foreign contributions?', a: 'Yes. If the Section 8 Company holds an FCRA registration and has received foreign contributions, clearance from the FCRA authority (Ministry of Home Affairs) may be required before closure. Your Professional coordinates with all relevant regulatory authorities as part of the strike off process.' }
         ],
         cta: {
             heading: 'Ready to Close Your Section 8 Company? Your Professional Makes It Simple.',
-            subheading: 'From compliance clearance to Official Gazette notification — we handle every step of the strike off process.',
+            subheading: 'From Regional Director approval and compliance clearance to STK-2 filing and Official Gazette notification — we handle every step of the strike off process for non-profit companies.',
             features: [
-                'Complete STK-2 filing with ROC',
-                'Pending compliance clearance',
-                'Special resolution & affidavit drafting',
-                'ROC correspondence & Gazette tracking'
+                'Complete STK-2 filing with ROC for Section 8 Companies',
+                'Regional Director approval & NOC coordination',
+                'Pending compliance clearance (annual returns, financials, auditor)',
+                'Special resolution, affidavit & indemnity bond drafting',
+                'Asset transfer documentation & Gazette notification tracking'
             ]
         }
     }
